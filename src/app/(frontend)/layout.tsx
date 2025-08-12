@@ -1,6 +1,8 @@
 import * as React from 'react';
 import cssVariables from '@/lib/css-variables';
 import oklchToHex from '@/lib/color-manipulation/oklch-to-hext';
+import Header from '@/components/frontend/header';
+import Footer from '@/components/frontend/footer';
 import Providers from './providers';
 import classes from './layout.module.css';
 
@@ -26,7 +28,9 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
       <body>
         <Providers>
           <div className={classes.root}>
+            <Header />
             <main className={classes.main}>{children}</main>
+            <Footer />
           </div>
         </Providers>
       </body>

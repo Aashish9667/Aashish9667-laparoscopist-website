@@ -26,11 +26,12 @@ const seoConfig = seoPluginConfig();
 export default buildConfig({
   admin: {
     components: {
-      beforeNavLinks: ['@/payload/graphics/NavLogo'],
-      graphics: {
-        Icon: '@/payload/graphics/Icon',
-        Logo: '@/payload/graphics/Logo',
-      },
+      // Uncomment and adjust the following lines if you have custom graphics
+      // beforeNavLinks: ['@/payload/graphics/NavLogo'],
+      // graphics: {
+      //   Icon: '@/payload/graphics/Icon',
+      //   Logo: '@/payload/graphics/Logo',
+      // },
     },
     importMap: {
       baseDir: path.resolve(dirname),
