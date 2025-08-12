@@ -10,8 +10,7 @@ import {
   LinkJSXConverter,
   RichText as ConvertRichText,
 } from '@payloadcms/richtext-lexical/react';
-import cn from '@/lib/cn';
-import classes from './rich-text.module.css';
+import Prose from '@/components/piplup-jsrepo/prose/prose';
 
 type NodeTypes = DefaultNodeTypes | SerializedBlockNode;
 
@@ -21,7 +20,7 @@ const internalDocToHref = ({ linkNode }: { linkNode: SerializedLinkNode }) => {
     throw new Error('Expected value to be an object');
   }
   const slug = value.slug;
-  return relationTo === 'posts' ? `/posts/${slug}` : `/${slug}`;
+  return relationTo === 'posts' ? `/blog/${slug}` : `/${slug}`;
 };
 
 const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) => ({
@@ -31,26 +30,21 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) 
 
 export type RichTextProps = {
   data: DefaultTypedEditorState;
-  enableGutter?: boolean;
+  enableContainer?: boolean;
   enableProse?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function RichText(props: RichTextProps) {
-  const { className, enableGutter = true, enableProse = true, ...rest } = props;
+  const { className, enableContainer = true, enableProse = true, ...rest } = props;
   return (
-    <ConvertRichText
-      className={cn(
-        {
-          [classes.container]: enableGutter,
-          [classes.prose]: enableProse,
-          [classes['max-w-none']]: !enableGutter,
-        },
-        'payload-richtext',
-        className,
-      )}
-      converters={jsxConverters}
-      {...rest}
-    />
+    <Prose
+      className={className}
+      enableContainer={enableContainer}
+      enableProse={enableProse}
+      asChild
+    >
+      <ConvertRichText converters={jsxConverters} {...rest} />
+    </Prose>
   );
 }
 
