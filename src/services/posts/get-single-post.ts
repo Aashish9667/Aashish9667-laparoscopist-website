@@ -1,17 +1,17 @@
-import { type BasePayload, type PayloadRequest } from 'payload'
+import { type BasePayload, type PayloadRequest } from 'payload';
 
 export type GetSinglePostProps = {
-  content?: boolean
-  id?: string
-  page?: number
-  payload: BasePayload
-  req?: Partial<PayloadRequest>
-  slug?: string
-}
+  content?: boolean;
+  id?: string;
+  page?: number;
+  payload: BasePayload;
+  req?: Partial<PayloadRequest>;
+  slug?: string;
+};
 export async function getSinglePost(props: GetSinglePostProps) {
-  const { content = true, id, page, payload, req, slug } = props
+  const { content = true, id, page, payload, req, slug } = props;
   if (!slug && !id && !page) {
-    throw new Error('Either slug, id or page must be provided')
+    throw new Error('Either slug, id or page must be provided');
   }
   const posts = await payload.find({
     collection: 'posts',
@@ -46,25 +46,23 @@ export async function getSinglePost(props: GetSinglePostProps) {
     },
     showHiddenFields: true,
     sort: '-publishedAt',
-    where: slug
-      ? { slug: { equals: slug }, status: { equals: 'published' } }
-      : { id: { equals: id }, status: { equals: 'published' } },
-  })
+    where: slug ? { slug: { equals: slug } } : { id: { equals: id } },
+  });
 
-  return posts.docs[0]
+  return posts.docs[0];
 }
 
 export type GetSinglePostSeoProps = {
-  id?: string
-  payload: BasePayload
-  req?: Partial<PayloadRequest>
-  slug?: string
-}
+  id?: string;
+  payload: BasePayload;
+  req?: Partial<PayloadRequest>;
+  slug?: string;
+};
 
 export async function getSinglePostSeo(props: GetSinglePostSeoProps) {
-  const { id, payload, req, slug } = props
+  const { id, payload, req, slug } = props;
   if (!slug && !id) {
-    throw new Error('Either slug, id or page must be provided')
+    throw new Error('Either slug, id or page must be provided');
   }
   const posts = await payload.find({
     collection: 'posts',
@@ -89,10 +87,8 @@ export async function getSinglePostSeo(props: GetSinglePostSeoProps) {
       title: true,
     },
     showHiddenFields: true,
-    where: slug
-      ? { slug: { equals: slug }, status: { equals: 'published' } }
-      : { id: { equals: id }, status: { equals: 'published' } },
-  })
+    where: slug ? { slug: { equals: slug } } : { id: { equals: id } },
+  });
 
-  return posts.docs[0]
+  return posts.docs[0];
 }

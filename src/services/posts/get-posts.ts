@@ -1,23 +1,23 @@
-import { type BasePayload, type PayloadRequest, type Where } from 'payload'
+import { type BasePayload, type PayloadRequest, type Where } from 'payload';
 
 export type GetPostProps = {
-  categories?: string[]
-  limit: number
-  page: number
-  payload: BasePayload
-  req?: Partial<PayloadRequest>
-  tags?: string[]
-}
+  categories?: string[];
+  limit: number;
+  page: number;
+  payload: BasePayload;
+  req?: Partial<PayloadRequest>;
+  tags?: string[];
+};
 
 export async function getPosts(props: GetPostProps) {
-  const { categories, limit, page, payload, req, tags } = props
+  const { categories, limit, page, payload, req, tags } = props;
   // Build where clause
-  const where: Where = { status: { equals: 'published' } }
+  const where: Where = { status: { equals: 'published' } };
   if (categories && categories.length > 0) {
-    where.category = { in: categories }
+    where.category = { in: categories };
   }
   if (tags && tags.length > 0) {
-    where.tags = { in: tags }
+    where.tags = { in: tags };
   }
   return payload.find({
     collection: 'posts',
@@ -56,21 +56,17 @@ export async function getPosts(props: GetPostProps) {
     showHiddenFields: true,
     sort: '-publishedAt',
     where,
-  })
+  });
 }
 
 export type GetPostsForSitemapProps = {
-  limit?: number
-  page?: number
-  payload: BasePayload
-}
+  limit?: number;
+  page?: number;
+  payload: BasePayload;
+};
 
 export async function getPostsForSitemap(props: GetPostsForSitemapProps) {
-  const { limit, page, payload } = props
-
-  const where: Where = {
-    status: { equals: 'published' },
-  }
+  const { limit, page, payload } = props;
 
   return payload.find({
     collection: 'posts',
@@ -89,6 +85,5 @@ export async function getPostsForSitemap(props: GetPostsForSitemapProps) {
       slug: true,
     },
     showHiddenFields: true,
-    where,
-  })
+  });
 }

@@ -1,5 +1,5 @@
-import type { CollectionConfig } from 'payload'
-import { admin, anyone, editor } from './helpers/access'
+import type { CollectionConfig } from 'payload';
+import { admin, anyone, editor } from './helpers/access';
 
 const Media: CollectionConfig = {
   access: {
@@ -10,7 +10,7 @@ const Media: CollectionConfig = {
     update: editor,
   },
   admin: {
-    group: 'Storage',
+    group: 'Media',
   },
   fields: [
     {
@@ -21,6 +21,6 @@ const Media: CollectionConfig = {
   ],
   slug: 'media',
   upload: true,
-}
+};
 
-export default Media
+export default Media;

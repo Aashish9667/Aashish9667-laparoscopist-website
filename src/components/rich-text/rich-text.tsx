@@ -10,7 +10,6 @@ import {
   LinkJSXConverter,
   RichText as ConvertRichText,
 } from '@payloadcms/richtext-lexical/react';
-import Prose from '@/components/piplup-jsrepo/prose/prose';
 
 type NodeTypes = DefaultNodeTypes | SerializedBlockNode;
 
@@ -30,22 +29,11 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({ defaultConverters }) 
 
 export type RichTextProps = {
   data: DefaultTypedEditorState;
-  enableContainer?: boolean;
-  enableProse?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function RichText(props: RichTextProps) {
-  const { className, enableContainer = true, enableProse = true, ...rest } = props;
-  return (
-    <Prose
-      className={className}
-      enableContainer={enableContainer}
-      enableProse={enableProse}
-      asChild
-    >
-      <ConvertRichText converters={jsxConverters} {...rest} />
-    </Prose>
-  );
+  const { ...rest } = props;
+  return <ConvertRichText converters={jsxConverters} {...rest} />;
 }
 
 export default RichText;

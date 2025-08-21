@@ -12,16 +12,16 @@ import { payloadAiPlugin } from '@ai-stack/payloadcms';
 import { getServerSideURL } from '@/lib/get-url';
 import Users from '@/payload/collections/Users';
 import Media from '@/payload/collections/Media';
-import Consultations from '@/payload/collections/Consultations';
 import Posts from '@/payload/collections/Posts';
 import PostCategories from '@/payload/collections/PostCategories';
 import PostTags from '@/payload/collections/PostTags';
-import { cloudinary, cloudinaryAdapter } from '@/payload/config/cloudinary.config';
+import cloudStorageConfig from '@/payload/config/cloudinary.config';
 import seoPluginConfig from '@/payload/config/seo.config';
+import { siteName } from '@/constants/site-info';
+import aiPluginConfig from '@/payload/config/ai.config';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
-const seoConfig = seoPluginConfig();
 
 export default buildConfig({
   admin: {
@@ -60,11 +60,11 @@ export default buildConfig({
     },
     meta: {
       icons: '/favicon.ico',
-      titleSuffix: '| Vivek Narayan Sharma',
+      titleSuffix: `| ${siteName}`,
     },
     user: Users.slug,
   },
-  collections: [Posts, PostCategories, PostTags, Consultations, Media, Users],
+  collections: [Posts, PostCategories, PostTags, Media, Users],
   cors: [getServerSideURL()].filter(Boolean),
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',
@@ -72,25 +72,9 @@ export default buildConfig({
   editor: lexicalEditor(),
   plugins: [
     payloadCloudPlugin(),
-    cloudStoragePlugin({
-      collections: {
-        media: {
-          adapter: cloudinaryAdapter,
-          disableLocalStorage: true,
-          // eslint-disable-next-line @typescript-eslint/no-shadow
-          generateFileURL: ({ filename }) => {
-            return cloudinary.url(`media/${filename}`, { secure: true });
-          },
-        },
-      },
-    }),
-    payloadAiPlugin({
-      collections: {
-        [Posts.slug]: true,
-      },
-      debugging: false,
-    }),
-    seoPlugin(seoConfig),
+    cloudStoragePlugin(cloudStorageConfig()),
+    payloadAiPlugin(aiPluginConfig()),
+    seoPlugin(seoPluginConfig()),
   ],
   secret: process.env.PAYLOAD_SECRET || '',
   sharp,

@@ -1,16 +1,16 @@
-import { slug } from '@/payload/fields/slug/config'
-import readingTime from 'reading-time'
-import { convertLexicalToPlaintext } from '@payloadcms/richtext-lexical/plaintext'
-import type { CollectionConfig } from 'payload'
-import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical'
-import { admin, anyone, editor } from './helpers/access'
+import { slug } from '@/payload/fields/slug/config';
+import readingTime from 'reading-time';
+import { convertLexicalToPlaintext } from '@payloadcms/richtext-lexical/plaintext';
+import type { CollectionConfig } from 'payload';
+import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
+import { admin, anyone, editor } from './helpers/access';
 
 type GetPlainTextProps = {
-  data: SerializedEditorState
-}
+  data: SerializedEditorState;
+};
 
 function getPlanText(props: GetPlainTextProps): string {
-  return props?.data ? convertLexicalToPlaintext({ data: props.data }) : ''
+  return props?.data ? convertLexicalToPlaintext({ data: props.data }) : '';
 }
 
 const Posts: CollectionConfig = {
@@ -21,7 +21,7 @@ const Posts: CollectionConfig = {
     update: editor,
   },
   admin: {
-    defaultColumns: ['title', 'author', 'status', 'publishedAt', 'category', 'tags'],
+    defaultColumns: ['title', 'author', 'publishedAt', 'category', 'tags'],
     group: 'Blog',
     useAsTitle: 'title',
   },
@@ -38,11 +38,11 @@ const Posts: CollectionConfig = {
       {
         required: true,
         validate: (value: string) => {
-          const reserved = ['page', 'post', 'categories', 'tags', 'users', 'archives']
+          const reserved = ['page', 'post', 'categories', 'tags', 'users', 'archives'];
           if (reserved.includes(value)) {
-            return 'This slug is reserved and cannot be used.'
+            return 'This slug is reserved and cannot be used.';
           }
-          return true
+          return true;
         },
       },
     ),
@@ -77,8 +77,8 @@ const Posts: CollectionConfig = {
       hooks: {
         beforeValidate: [
           ({ data }) => {
-            const plainText = getPlanText({ data: data?.content })
-            return readingTime(plainText).text
+            const plainText = getPlanText({ data: data?.content });
+            return readingTime(plainText).text;
           },
         ],
       },
@@ -91,7 +91,7 @@ const Posts: CollectionConfig = {
       hooks: {
         beforeValidate: [
           ({ data }) => {
-            return data?.excerpt || getPlanText({ data: data?.content }).substring(0, 180)
+            return data?.excerpt || getPlanText({ data: data?.content }).substring(0, 180);
           },
         ],
       },
@@ -109,20 +109,6 @@ const Posts: CollectionConfig = {
       relationTo: 'users',
       required: true,
       type: 'relationship',
-    },
-    {
-      admin: {
-        position: 'sidebar',
-      },
-      defaultValue: 'draft',
-      label: 'Status',
-      name: 'status',
-      options: [
-        { label: 'Draft', value: 'draft' },
-        { label: 'Published', value: 'published' },
-      ],
-      required: true,
-      type: 'select',
     },
     {
       admin: {
@@ -145,6 +131,14 @@ const Posts: CollectionConfig = {
   },
   slug: 'posts',
   timestamps: true,
-}
+  versions: {
+    drafts: {
+      autosave: false,
+      schedulePublish: true,
+      validate: true,
+    },
+    maxPerDoc: 5,
+  },
+};
 
-export default Posts
+export default Posts;

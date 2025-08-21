@@ -1,12 +1,13 @@
-import { v2 as cloudinary } from 'cloudinary'
-import { type HandleUpload, type HandleDelete } from '@payloadcms/plugin-cloud-storage/types'
-import { type UploadApiResponse } from 'cloudinary'
+import { v2 as cloudinary } from 'cloudinary';
+import { type HandleUpload, type HandleDelete } from '@payloadcms/plugin-cloud-storage/types';
+import type { UploadApiResponse } from 'cloudinary';
+import type { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage';
 
 cloudinary.config({
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
   cloud_name: process.env.CLOUDINARY_NAME,
-})
+});
 
 const cloudinaryAdapter = () => ({
   /**
@@ -17,10 +18,10 @@ const cloudinaryAdapter = () => ({
     try {
       // We remove the file extension from the filename and then target the file
       // inside the "media/" folder on Cloudinary (which we used as the upload path)
-      await cloudinary.uploader.destroy(`media/${filename.replace(/\.[^/.]+$/, '')}`)
+      await cloudinary.uploader.destroy(`media/${filename.replace(/\.[^/.]+$/, '')}`);
     } catch (error) {
       // if something error occured we will catch the error and respond the error in console
-      console.error('Cloudinary Delete Error:', error)
+      console.error('Cloudinary Delete Error:', error);
     }
   },
   /**
@@ -43,21 +44,21 @@ const cloudinaryAdapter = () => ({
           },
           (error, result) => {
             if (error) {
-              return reject(error)
+              return reject(error);
             }
             if (!result) {
-              return reject(new Error('No result returned from Cloudinary'))
+              return reject(new Error('No result returned from Cloudinary'));
             }
-            return resolve(result) // hanlde result
+            return resolve(result); // hanlde result
           },
-        )
-        uploadStream.end(file.buffer) // this line send the file to cloudinary it means entire file is already in memory and will be send whole thing at once not in chunk
-      })
-      file.filename = uploadResult.public_id // Use Cloudinary's public_id as the file's unique name
-      file.mimeType = `${uploadResult.format}` // Set MIME type based on Cloudinary's format (e.g., image/png)
-      file.filesize = uploadResult.bytes // Set the actual file size in bytes, for admin display and validations
+        );
+        uploadStream.end(file.buffer); // this line send the file to cloudinary it means entire file is already in memory and will be send whole thing at once not in chunk
+      });
+      file.filename = uploadResult.public_id; // Use Cloudinary's public_id as the file's unique name
+      file.mimeType = `${uploadResult.format}`; // Set MIME type based on Cloudinary's format (e.g., image/png)
+      file.filesize = uploadResult.bytes; // Set the actual file size in bytes, for admin display and validations
     } catch (err) {
-      console.error('Upload Error', err)
+      console.error('Upload Error', err);
     }
   },
 
@@ -66,8 +67,20 @@ const cloudinaryAdapter = () => ({
    * Not used here because Cloudinary serves public URLs by default.
    */
   staticHandler() {
-    return new Response('Not implemented', { status: 501 })
+    return new Response('Not implemented', { status: 501 });
   },
-})
+});
 
-export { cloudinary, cloudinaryAdapter }
+export default function cloudStorageConfig(): Parameters<typeof cloudStoragePlugin>[0] {
+  return {
+    collections: {
+      media: {
+        adapter: cloudinaryAdapter,
+        disableLocalStorage: true,
+        generateFileURL: ({ filename }) => {
+          return cloudinary.url(`media/${filename}`, { secure: true });
+        },
+      },
+    },
+  };
+}
