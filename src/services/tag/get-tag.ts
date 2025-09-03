@@ -1,14 +1,14 @@
-import { BasePayload } from 'payload'
+import { BasePayload } from 'payload';
 
 export type GetTagProps = {
-  id?: string
-  payload: BasePayload
-  slug?: string
-}
+  id?: string;
+  payload: BasePayload;
+  slug?: string;
+};
 
-export async function getTag({ id, payload, slug }: GetTagProps) {
+export default async function getTag({ id, payload, slug }: GetTagProps) {
   if (!slug && !id) {
-    throw new Error('Either slug or id must be provided')
+    throw new Error('Either slug or id must be provided');
   }
   const result = await payload.find({
     collection: 'post-tags',
@@ -28,29 +28,6 @@ export async function getTag({ id, payload, slug }: GetTagProps) {
     },
     showHiddenFields: true,
     where: slug ? { slug: { equals: slug } } : { id: { equals: id } },
-  })
-  return result.docs[0] || null
-}
-
-export type GetTagsForSitemapProps = {
-  limit?: number
-  page?: number
-  payload: BasePayload
-}
-
-export async function getTagsForSitemap(props: GetTagsForSitemapProps) {
-  const { limit, page, payload } = props
-
-  return payload.find({
-    collection: 'post-tags',
-    limit,
-    overrideAccess: false,
-    page,
-    pagination: true,
-    select: {
-      createdAt: true,
-      slug: true,
-    },
-    showHiddenFields: true,
-  })
+  });
+  return result.docs[0] || null;
 }

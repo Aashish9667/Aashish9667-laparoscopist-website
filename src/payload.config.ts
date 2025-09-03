@@ -6,19 +6,27 @@ import { buildConfig } from 'payload';
 import { fileURLToPath } from 'url';
 import sharp from 'sharp';
 import { seoPlugin } from '@payloadcms/plugin-seo';
-
 import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage';
 import { payloadAiPlugin } from '@ai-stack/payloadcms';
-import { getServerSideURL } from '@/lib/get-url';
-import Users from '@/payload/collections/Users';
+import { getClientSideURL } from '@/lib/get-url';
+import Coupons from '@/payload/collections/Coupons';
+import Customers from '@/payload/collections/Customers';
 import Media from '@/payload/collections/Media';
-import Posts from '@/payload/collections/Posts';
+import Orders from '@/payload/collections/Orders';
+import Pages from '@/payload/collections/Pages';
 import PostCategories from '@/payload/collections/PostCategories';
+import Posts from '@/payload/collections/Posts';
 import PostTags from '@/payload/collections/PostTags';
+import ProductCategories from '@/payload/collections/ProductCategories';
+import Products from '@/payload/collections/Products';
+import ProductTags from '@/payload/collections/ProductTags';
+import ShippingClasses from '@/payload/collections/ShippingClasses';
+import Users from '@/payload/collections/Users';
 import cloudStorageConfig from '@/payload/config/cloudinary.config';
 import seoPluginConfig from '@/payload/config/seo.config';
 import { siteName } from '@/constants/site-info';
 import aiPluginConfig from '@/payload/config/ai.config';
+import { ECOMMERCE_ENABLED } from '@/payload.constants';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -64,8 +72,23 @@ export default buildConfig({
     },
     user: Users.slug,
   },
-  collections: [Posts, PostCategories, PostTags, Media, Users],
-  cors: [getServerSideURL()].filter(Boolean),
+  collections: [
+    // Blog
+    Posts,
+    PostCategories,
+    PostTags,
+    ...(ECOMMERCE_ENABLED
+      ? // E-commerce
+        [Products, ProductCategories, ProductTags, Customers, Orders, Coupons, ShippingClasses]
+      : []),
+    // Other
+    Pages,
+    // Media
+    Media,
+    // Settings
+    Users,
+  ],
+  cors: [getClientSideURL()].filter(Boolean),
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',
   }),

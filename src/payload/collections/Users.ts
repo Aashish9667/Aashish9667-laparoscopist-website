@@ -1,13 +1,15 @@
-import type { CollectionConfig } from 'payload'
-import { admin, anyone, editor } from './helpers/access'
+import type { CollectionConfig } from 'payload';
+import { admin, anyone, editor, or } from './helpers/access';
 
 const Users: CollectionConfig = {
   access: {
-    admin: editor,
+    admin: or(editor, admin),
     create: admin,
     delete: admin,
     read: anyone,
-    update: editor,
+    readVersions: admin,
+    unlock: admin,
+    update: or(editor, admin),
   },
   admin: {
     group: 'Settings',
@@ -43,8 +45,8 @@ const Users: CollectionConfig = {
           ({ data }) => {
             const names = [data?.firstName, data?.middleName, data?.lastName]
               .filter(Boolean)
-              .join(' ')
-            return (names && names.trim()) || data?.email || ''
+              .join(' ');
+            return (names && names.trim()) || data?.email || '';
           },
         ],
       },
@@ -54,8 +56,13 @@ const Users: CollectionConfig = {
     },
     {
       access: {
-        read: ({ req }) => !!req.user,
-        update: ({ req }) => req.user?.role === 'admin',
+        read: ({ req }) => !!req.user && req.user?.collection === 'users',
+        update: ({ req }) => {
+          if (req.user?.collection === 'users') {
+            return req.user?.role === 'admin';
+          }
+          return false;
+        },
       },
       defaultValue: 'editor',
       label: 'Role',
@@ -69,13 +76,16 @@ const Users: CollectionConfig = {
           label: 'Editor',
           value: 'editor',
         },
+        {
+          label: 'Staff',
+          value: 'staff',
+        },
       ],
       required: true,
       type: 'select',
     },
-    // Add more fields as needed
   ],
   slug: 'users',
-}
+};
 
-export default Users
+export default Users;

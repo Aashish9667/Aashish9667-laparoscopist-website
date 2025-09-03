@@ -3,7 +3,7 @@ import readingTime from 'reading-time';
 import { convertLexicalToPlaintext } from '@payloadcms/richtext-lexical/plaintext';
 import type { CollectionConfig } from 'payload';
 import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
-import { admin, anyone, editor } from './helpers/access';
+import { admin, editor, or, published } from './helpers/access';
 
 type GetPlainTextProps = {
   data: SerializedEditorState;
@@ -15,10 +15,12 @@ function getPlanText(props: GetPlainTextProps): string {
 
 const Posts: CollectionConfig = {
   access: {
-    create: editor,
+    admin: or(editor, admin),
+    create: or(editor, admin),
     delete: admin,
-    read: anyone,
-    update: editor,
+    read: published,
+    readVersions: admin,
+    update: or(editor, admin),
   },
   admin: {
     defaultColumns: ['title', 'author', 'publishedAt', 'category', 'tags'],

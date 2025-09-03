@@ -1,13 +1,14 @@
 import type { CollectionConfig } from 'payload';
-import { admin, anyone, editor } from './helpers/access';
+import { admin, anyone, editor, or } from './helpers/access';
 
 const Media: CollectionConfig = {
   access: {
-    admin: editor,
-    create: editor,
+    admin: or(editor, admin),
+    create: or(editor, admin),
     delete: admin,
     read: anyone,
-    update: editor,
+    readVersions: admin,
+    update: or(editor, admin),
   },
   admin: {
     group: 'Media',

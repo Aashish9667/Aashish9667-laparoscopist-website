@@ -2,31 +2,31 @@ import { getPayload } from 'payload';
 import configPromise from '@payload-config';
 import { unstable_cache as cache } from 'next/cache';
 import { getClientSideURL } from '@/lib/get-url';
-import { Media } from '@/payload-types';
 import { type MetadataRoute } from 'next';
-import getPostsForSitemap, {
-  type GetPostsForSitemapProps,
-} from '@/services/posts/get-posts-for-sitemap';
+import getProductsForSitemap, {
+  GetProductsForSitemapProps,
+} from '@/services/products/get-products-for-sitemap';
+import { ECOMMERCE_ENABLED } from '@/payload.constants';
 
-const getPosts = ({ limit, page }: Omit<GetPostsForSitemapProps, 'payload'>) =>
+const getProducts = ({ limit, page }: Omit<GetProductsForSitemapProps, 'payload'>) =>
   cache(
     async () => {
       const payload = await getPayload({ config: configPromise });
-      const posts = await getPostsForSitemap({
+      const records = await getProductsForSitemap({
         limit,
         page,
         payload,
       });
-      return posts;
+      return records;
     },
     [
-      'posts-sitemap',
+      'products-sitemap',
       typeof limit === 'string' || typeof limit === 'number' ? limit.toString() : '',
       typeof page === 'string' || typeof page === 'number' ? page.toString() : '',
     ],
     {
       revalidate: 3600,
-      tags: ['posts-sitemap'],
+      tags: ['products-sitemap'],
     },
   );
 
@@ -37,36 +37,34 @@ type SitemapProps = {
 const sitemapSize = 5_000;
 
 export async function generateSitemaps(): Promise<SitemapProps[]> {
-  const posts = await getPosts({
+  if (!ECOMMERCE_ENABLED) {
+    return [];
+  }
+
+  const records = await getProducts({
     limit: sitemapSize,
     page: 1,
   })();
 
-  return Array.from({ length: posts.totalPages }, (_, i) => ({ id: i + 1 }));
+  return Array.from({ length: records.totalPages }, (_, i) => ({ id: i + 1 }));
 }
 
 export default async function sitemap({ id: page }: SitemapProps): Promise<MetadataRoute.Sitemap> {
+  if (!ECOMMERCE_ENABLED) {
+    return [];
+  }
+
   const baseURL = getClientSideURL();
 
-  const posts = await getPosts({
+  const records = await getProducts({
     limit: sitemapSize,
     page,
   })();
-  return posts.docs.map((post) => {
-    const images: Media[] = [];
-    if (post.featuredImage && typeof post.featuredImage === 'object') {
-      images.push(post.featuredImage);
-    }
-
+  return records.docs.map((post) => {
     return {
-      images: images
-        .map((image) =>
-          typeof image === 'object' && typeof image.url === 'string' ? image.url : '',
-        )
-        .filter((url): url is string => !!url),
-      lastModified: new Date(post.publishedAt || post.updatedAt || post.createdAt),
+      lastModified: new Date(post.updatedAt || post.createdAt),
       priority: 0.3,
-      url: [baseURL, '/blogs', post.slug]
+      url: [baseURL, '/product', post.slug]
         .filter(Boolean)
         .map((segment) => segment?.replace(/(^\/|\/$)/g, ''))
         .join('/'),

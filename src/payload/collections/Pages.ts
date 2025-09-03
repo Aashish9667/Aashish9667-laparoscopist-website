@@ -1,8 +1,8 @@
-import { slug } from '@/payload/fields/slug/config';
 import type { CollectionConfig } from 'payload';
+import { slug } from '@/payload/fields/slug/config';
 import { admin, editor, or, published } from './helpers/access';
 
-const PostCategories: CollectionConfig = {
+const Pages: CollectionConfig = {
   access: {
     admin: or(editor, admin),
     create: or(editor, admin),
@@ -12,39 +12,40 @@ const PostCategories: CollectionConfig = {
     update: or(editor, admin),
   },
   admin: {
-    defaultColumns: ['name', 'slug'],
-    group: 'Blog',
-    useAsTitle: 'name',
+    defaultColumns: ['title', 'layout', 'slug'],
+    group: 'Other',
   },
   fields: [
     {
-      label: 'Name',
-      name: 'name',
+      label: 'Title',
+      name: 'title',
       required: true,
       type: 'text',
     },
+    {
+      defaultValue: '',
+      label: 'Prefix',
+      name: 'prefix',
+      required: false,
+      type: 'text',
+    },
     slug(
-      { trackingField: 'name' },
+      { trackingField: 'title' },
       {
         required: true,
       },
     ),
-    {
-      label: 'Description',
-      name: 'description',
-      type: 'textarea',
-    },
   ],
-  labels: {
-    plural: 'Categories',
-    singular: 'Category',
-  },
-  slug: 'post-categories',
+  slug: 'pages',
   timestamps: true,
   versions: {
-    drafts: false,
+    drafts: {
+      autosave: false,
+      schedulePublish: true,
+      validate: true,
+    },
     maxPerDoc: 5,
   },
 };
 
-export default PostCategories;
+export default Pages;

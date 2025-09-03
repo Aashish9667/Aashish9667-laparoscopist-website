@@ -1,8 +1,8 @@
-import { getServerSideURL } from '@/lib/get-url'
-import type { MetadataRoute } from 'next'
+import { getClientSideURL } from '@/lib/get-url';
+import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseURL = getServerSideURL()
+  const baseURL = getClientSideURL();
   return {
     rules: [
       {
@@ -12,5 +12,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${baseURL}/sitemap.xml`,
-  }
+  };
 }

@@ -9,10 +9,10 @@ export type GetPostProps = {
   tags?: string[];
 };
 
-export async function getPosts(props: GetPostProps) {
+export default async function getPosts(props: GetPostProps) {
   const { categories, limit, page, payload, req, tags } = props;
-  // Build where clause
-  const where: Where = { status: { equals: 'published' } };
+
+  const where: Where = {};
   if (categories && categories.length > 0) {
     where.category = { in: categories };
   }
@@ -56,34 +56,5 @@ export async function getPosts(props: GetPostProps) {
     showHiddenFields: true,
     sort: '-publishedAt',
     where,
-  });
-}
-
-export type GetPostsForSitemapProps = {
-  limit?: number;
-  page?: number;
-  payload: BasePayload;
-};
-
-export async function getPostsForSitemap(props: GetPostsForSitemapProps) {
-  const { limit, page, payload } = props;
-
-  return payload.find({
-    collection: 'posts',
-    limit,
-    overrideAccess: false,
-    page,
-    pagination: true,
-    populate: {
-      posts: {
-        featuredImage: true,
-      },
-    },
-    select: {
-      featuredImage: true,
-      publishedAt: true,
-      slug: true,
-    },
-    showHiddenFields: true,
   });
 }

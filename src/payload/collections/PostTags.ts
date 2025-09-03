@@ -1,13 +1,15 @@
-import { slug } from '@/payload/fields/slug/config'
-import type { CollectionConfig } from 'payload'
-import { admin, anyone, editor } from './helpers/access'
+import { slug } from '@/payload/fields/slug/config';
+import type { CollectionConfig } from 'payload';
+import { admin, editor, or, published } from './helpers/access';
 
 const PostTags: CollectionConfig = {
   access: {
-    create: editor,
+    admin: or(editor, admin),
+    create: or(editor, admin),
     delete: admin,
-    read: anyone,
-    update: editor,
+    read: published,
+    readVersions: admin,
+    update: or(editor, admin),
   },
   admin: {
     defaultColumns: ['name', 'slug'],
@@ -38,6 +40,11 @@ const PostTags: CollectionConfig = {
     singular: 'Tag',
   },
   slug: 'post-tags',
-}
+  timestamps: true,
+  versions: {
+    drafts: false,
+    maxPerDoc: 5,
+  },
+};
 
-export default PostTags
+export default PostTags;
