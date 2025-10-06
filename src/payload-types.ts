@@ -63,7 +63,6 @@ export type SupportedTimezones =
 
 export interface Config {
   auth: {
-    customers: CustomerAuthOperations;
     users: UserAuthOperations;
   };
   blocks: {};
@@ -71,13 +70,6 @@ export interface Config {
     posts: Post;
     'post-categories': PostCategory;
     'post-tags': PostTag;
-    products: Product;
-    'product-categories': ProductCategory;
-    'product-tags': ProductTag;
-    customers: Customer;
-    orders: Order;
-    coupons: Coupon;
-    'shipping-classes': ShippingClass;
     pages: Page;
     media: Media;
     users: User;
@@ -91,13 +83,6 @@ export interface Config {
     posts: PostsSelect<false> | PostsSelect<true>;
     'post-categories': PostCategoriesSelect<false> | PostCategoriesSelect<true>;
     'post-tags': PostTagsSelect<false> | PostTagsSelect<true>;
-    products: ProductsSelect<false> | ProductsSelect<true>;
-    'product-categories': ProductCategoriesSelect<false> | ProductCategoriesSelect<true>;
-    'product-tags': ProductTagsSelect<false> | ProductTagsSelect<true>;
-    customers: CustomersSelect<false> | CustomersSelect<true>;
-    orders: OrdersSelect<false> | OrdersSelect<true>;
-    coupons: CouponsSelect<false> | CouponsSelect<true>;
-    'shipping-classes': ShippingClassesSelect<false> | ShippingClassesSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
@@ -112,13 +97,9 @@ export interface Config {
   globals: {};
   globalsSelect: {};
   locale: null;
-  user:
-    | (Customer & {
-        collection: 'customers';
-      })
-    | (User & {
-        collection: 'users';
-      });
+  user: User & {
+    collection: 'users';
+  };
   jobs: {
     tasks: {
       schedulePublish: TaskSchedulePublish;
@@ -128,24 +109,6 @@ export interface Config {
       };
     };
     workflows: unknown;
-  };
-}
-export interface CustomerAuthOperations {
-  forgotPassword: {
-    email: string;
-    password: string;
-  };
-  login: {
-    email: string;
-    password: string;
-  };
-  registerFirstUser: {
-    email: string;
-    password: string;
-  };
-  unlock: {
-    email: string;
-    password: string;
   };
 }
 export interface UserAuthOperations {
@@ -298,318 +261,6 @@ export interface User {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "products".
- */
-export interface Product {
-  id: string;
-  title: string;
-  slug: string;
-  description: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
-  shortDescription?: string | null;
-  featuredImage?: (string | null) | Media;
-  gallery?:
-    | {
-        image: string | Media;
-        id?: string | null;
-      }[]
-    | null;
-  pricing: {
-    price: number;
-    salePrice?: number | null;
-    currency: 'INR';
-  };
-  inventory: {
-    sku: string;
-    stock?: number | null;
-    manageStock?: boolean | null;
-    stockStatus: 'instock' | 'outofstock' | 'backorder';
-    lowStockThreshold?: number | null;
-  };
-  shipping?: {
-    weight?: number | null;
-    dimensions?: {
-      length?: number | null;
-      width?: number | null;
-      height?: number | null;
-    };
-    shippingClass?: (string | null) | ShippingClass;
-  };
-  categories: (string | ProductCategory)[];
-  tags?: (string | ProductTag)[] | null;
-  attributes?:
-    | {
-        name: string;
-        value: string;
-        visible?: boolean | null;
-        id?: string | null;
-      }[]
-    | null;
-  variations?:
-    | {
-        attribute: string;
-        options?:
-          | {
-              name: string;
-              price?: number | null;
-              stock?: number | null;
-              sku?: string | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-      }[]
-    | null;
-  featured?: boolean | null;
-  relatedProducts?: (string | Product)[] | null;
-  crossSells?: (string | Product)[] | null;
-  upSells?: (string | Product)[] | null;
-  meta?: {
-    title?: string | null;
-    description?: string | null;
-    /**
-     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
-     */
-    image?: (string | null) | Media;
-  };
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "shipping-classes".
- */
-export interface ShippingClass {
-  id: string;
-  name: string;
-  slug: string;
-  description?: string | null;
-  cost?: number | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "product-categories".
- */
-export interface ProductCategory {
-  id: string;
-  name: string;
-  slug: string;
-  description?: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
-  image?: (string | null) | Media;
-  parent?: (string | null) | ProductCategory;
-  display?: ('default' | 'products' | 'subcategories' | 'both') | null;
-  menuOrder?: number | null;
-  count?: number | null;
-  meta?: {
-    title?: string | null;
-    description?: string | null;
-    /**
-     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
-     */
-    image?: (string | null) | Media;
-  };
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "product-tags".
- */
-export interface ProductTag {
-  id: string;
-  name: string;
-  slug: string;
-  description?: string | null;
-  count?: number | null;
-  meta?: {
-    title?: string | null;
-    description?: string | null;
-    /**
-     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
-     */
-    image?: (string | null) | Media;
-  };
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "customers".
- */
-export interface Customer {
-  id: string;
-  firstName: string;
-  lastName: string;
-  phone?: string | null;
-  dateOfBirth?: string | null;
-  addresses?:
-    | {
-        type: 'billing' | 'shipping';
-        firstName: string;
-        lastName: string;
-        company?: string | null;
-        address1: string;
-        address2?: string | null;
-        city: string;
-        state: string;
-        postcode: string;
-        country: string;
-        isDefault?: boolean | null;
-        id?: string | null;
-      }[]
-    | null;
-  orders?: (string | Order)[] | null;
-  orderCount?: number | null;
-  totalSpent?: number | null;
-  averageOrderValue?: number | null;
-  lastOrderDate?: string | null;
-  notes?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  email: string;
-  resetPasswordToken?: string | null;
-  resetPasswordExpiration?: string | null;
-  salt?: string | null;
-  hash?: string | null;
-  loginAttempts?: number | null;
-  lockUntil?: string | null;
-  sessions?:
-    | {
-        id: string;
-        createdAt?: string | null;
-        expiresAt: string;
-      }[]
-    | null;
-  password?: string | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "orders".
- */
-export interface Order {
-  id: string;
-  orderNumber: string;
-  customer: {
-    email: string;
-    firstName: string;
-    lastName: string;
-    phone?: string | null;
-  };
-  billing: {
-    firstName: string;
-    lastName: string;
-    company?: string | null;
-    address1: string;
-    address2?: string | null;
-    city: string;
-    state: string;
-    postcode: string;
-    country: string;
-  };
-  shipping: {
-    firstName: string;
-    lastName: string;
-    company?: string | null;
-    address1: string;
-    address2?: string | null;
-    city: string;
-    state: string;
-    postcode: string;
-    country: string;
-  };
-  items?:
-    | {
-        product: string | Product;
-        quantity: number;
-        price: number;
-        total: number;
-        variation?:
-          | {
-              [k: string]: unknown;
-            }
-          | unknown[]
-          | string
-          | number
-          | boolean
-          | null;
-        id?: string | null;
-      }[]
-    | null;
-  pricing: {
-    subtotal: number;
-    shippingTotal?: number | null;
-    taxTotal?: number | null;
-    discountTotal?: number | null;
-    total: number;
-    currency: 'USD' | 'EUR' | 'GBP';
-  };
-  status: 'pending' | 'processing' | 'on-hold' | 'completed' | 'cancelled' | 'refunded' | 'failed';
-  paymentMethod?: ('credit_card' | 'paypal' | 'bank_transfer' | 'cod') | null;
-  paymentStatus?: ('pending' | 'paid' | 'failed' | 'refunded') | null;
-  notes?: string | null;
-  trackingNumber?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "coupons".
- */
-export interface Coupon {
-  id: string;
-  code: string;
-  description?: string | null;
-  type: 'fixed_cart' | 'percentage' | 'fixed_product';
-  amount: number;
-  freeShipping?: boolean | null;
-  expiryDate?: string | null;
-  minimumAmount?: number | null;
-  maximumAmount?: number | null;
-  individualUse?: boolean | null;
-  excludeSaleItems?: boolean | null;
-  products?: (string | Product)[] | null;
-  excludedProducts?: (string | Product)[] | null;
-  productCategories?: (string | ProductCategory)[] | null;
-  excludedCategories?: (string | ProductCategory)[] | null;
-  usageLimit?: number | null;
-  usageLimitPerUser?: number | null;
-  usageCount?: number | null;
-  enabled?: boolean | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
  */
 export interface Page {
@@ -733,34 +384,6 @@ export interface PayloadLockedDocument {
         value: string | PostTag;
       } | null)
     | ({
-        relationTo: 'products';
-        value: string | Product;
-      } | null)
-    | ({
-        relationTo: 'product-categories';
-        value: string | ProductCategory;
-      } | null)
-    | ({
-        relationTo: 'product-tags';
-        value: string | ProductTag;
-      } | null)
-    | ({
-        relationTo: 'customers';
-        value: string | Customer;
-      } | null)
-    | ({
-        relationTo: 'orders';
-        value: string | Order;
-      } | null)
-    | ({
-        relationTo: 'coupons';
-        value: string | Coupon;
-      } | null)
-    | ({
-        relationTo: 'shipping-classes';
-        value: string | ShippingClass;
-      } | null)
-    | ({
         relationTo: 'pages';
         value: string | Page;
       } | null)
@@ -777,15 +400,10 @@ export interface PayloadLockedDocument {
         value: string | PayloadJob;
       } | null);
   globalSlug?: string | null;
-  user:
-    | {
-        relationTo: 'customers';
-        value: string | Customer;
-      }
-    | {
-        relationTo: 'users';
-        value: string | User;
-      };
+  user: {
+    relationTo: 'users';
+    value: string | User;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -795,15 +413,10 @@ export interface PayloadLockedDocument {
  */
 export interface PayloadPreference {
   id: string;
-  user:
-    | {
-        relationTo: 'customers';
-        value: string | Customer;
-      }
-    | {
-        relationTo: 'users';
-        value: string | User;
-      };
+  user: {
+    relationTo: 'users';
+    value: string | User;
+  };
   key?: string | null;
   value?:
     | {
@@ -887,287 +500,6 @@ export interface PostTagsSelect<T extends boolean = true> {
         description?: T;
         image?: T;
       };
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "products_select".
- */
-export interface ProductsSelect<T extends boolean = true> {
-  title?: T;
-  slug?: T;
-  description?: T;
-  shortDescription?: T;
-  featuredImage?: T;
-  gallery?:
-    | T
-    | {
-        image?: T;
-        id?: T;
-      };
-  pricing?:
-    | T
-    | {
-        price?: T;
-        salePrice?: T;
-        currency?: T;
-      };
-  inventory?:
-    | T
-    | {
-        sku?: T;
-        stock?: T;
-        manageStock?: T;
-        stockStatus?: T;
-        lowStockThreshold?: T;
-      };
-  shipping?:
-    | T
-    | {
-        weight?: T;
-        dimensions?:
-          | T
-          | {
-              length?: T;
-              width?: T;
-              height?: T;
-            };
-        shippingClass?: T;
-      };
-  categories?: T;
-  tags?: T;
-  attributes?:
-    | T
-    | {
-        name?: T;
-        value?: T;
-        visible?: T;
-        id?: T;
-      };
-  variations?:
-    | T
-    | {
-        attribute?: T;
-        options?:
-          | T
-          | {
-              name?: T;
-              price?: T;
-              stock?: T;
-              sku?: T;
-              id?: T;
-            };
-        id?: T;
-      };
-  featured?: T;
-  relatedProducts?: T;
-  crossSells?: T;
-  upSells?: T;
-  meta?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        image?: T;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-  _status?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "product-categories_select".
- */
-export interface ProductCategoriesSelect<T extends boolean = true> {
-  name?: T;
-  slug?: T;
-  description?: T;
-  image?: T;
-  parent?: T;
-  display?: T;
-  menuOrder?: T;
-  count?: T;
-  meta?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        image?: T;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "product-tags_select".
- */
-export interface ProductTagsSelect<T extends boolean = true> {
-  name?: T;
-  slug?: T;
-  description?: T;
-  count?: T;
-  meta?:
-    | T
-    | {
-        title?: T;
-        description?: T;
-        image?: T;
-      };
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "customers_select".
- */
-export interface CustomersSelect<T extends boolean = true> {
-  firstName?: T;
-  lastName?: T;
-  phone?: T;
-  dateOfBirth?: T;
-  addresses?:
-    | T
-    | {
-        type?: T;
-        firstName?: T;
-        lastName?: T;
-        company?: T;
-        address1?: T;
-        address2?: T;
-        city?: T;
-        state?: T;
-        postcode?: T;
-        country?: T;
-        isDefault?: T;
-        id?: T;
-      };
-  orders?: T;
-  orderCount?: T;
-  totalSpent?: T;
-  averageOrderValue?: T;
-  lastOrderDate?: T;
-  notes?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  email?: T;
-  resetPasswordToken?: T;
-  resetPasswordExpiration?: T;
-  salt?: T;
-  hash?: T;
-  loginAttempts?: T;
-  lockUntil?: T;
-  sessions?:
-    | T
-    | {
-        id?: T;
-        createdAt?: T;
-        expiresAt?: T;
-      };
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "orders_select".
- */
-export interface OrdersSelect<T extends boolean = true> {
-  orderNumber?: T;
-  customer?:
-    | T
-    | {
-        email?: T;
-        firstName?: T;
-        lastName?: T;
-        phone?: T;
-      };
-  billing?:
-    | T
-    | {
-        firstName?: T;
-        lastName?: T;
-        company?: T;
-        address1?: T;
-        address2?: T;
-        city?: T;
-        state?: T;
-        postcode?: T;
-        country?: T;
-      };
-  shipping?:
-    | T
-    | {
-        firstName?: T;
-        lastName?: T;
-        company?: T;
-        address1?: T;
-        address2?: T;
-        city?: T;
-        state?: T;
-        postcode?: T;
-        country?: T;
-      };
-  items?:
-    | T
-    | {
-        product?: T;
-        quantity?: T;
-        price?: T;
-        total?: T;
-        variation?: T;
-        id?: T;
-      };
-  pricing?:
-    | T
-    | {
-        subtotal?: T;
-        shippingTotal?: T;
-        taxTotal?: T;
-        discountTotal?: T;
-        total?: T;
-        currency?: T;
-      };
-  status?: T;
-  paymentMethod?: T;
-  paymentStatus?: T;
-  notes?: T;
-  trackingNumber?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "coupons_select".
- */
-export interface CouponsSelect<T extends boolean = true> {
-  code?: T;
-  description?: T;
-  type?: T;
-  amount?: T;
-  freeShipping?: T;
-  expiryDate?: T;
-  minimumAmount?: T;
-  maximumAmount?: T;
-  individualUse?: T;
-  excludeSaleItems?: T;
-  products?: T;
-  excludedProducts?: T;
-  productCategories?: T;
-  excludedCategories?: T;
-  usageLimit?: T;
-  usageLimitPerUser?: T;
-  usageCount?: T;
-  enabled?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "shipping-classes_select".
- */
-export interface ShippingClassesSelect<T extends boolean = true> {
-  name?: T;
-  slug?: T;
-  description?: T;
-  cost?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1303,10 +635,6 @@ export interface TaskSchedulePublish {
       | ({
           relationTo: 'posts';
           value: string | Post;
-        } | null)
-      | ({
-          relationTo: 'products';
-          value: string | Product;
         } | null)
       | ({
           relationTo: 'pages';
