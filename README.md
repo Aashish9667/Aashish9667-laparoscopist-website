@@ -1,14 +1,12 @@
-# Payload Blank Template
-
-This template comes configured with the bare minimum to get started on anything you need.
+# Laparoscopist Website
 
 ## Quick start
 
-This template can be deployed directly from our Cloud hosting and it will setup MongoDB and cloud S3 object storage for media.
+This project can be deployed directly using vercel cloud hosting and it configured to work with Cloudinary for object storage.
 
 ## Quick Start - local setup
 
-To spin up this template locally, follow these steps:
+To spin up this project locally, follow these steps:
 
 ### Clone
 
