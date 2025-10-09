@@ -1,9 +1,14 @@
 'use client';
 import * as React from 'react';
+import { Poppins } from 'next/font/google';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 export default function Voicesofhealing() {
   const testimonials = [
     {
@@ -29,18 +34,24 @@ export default function Voicesofhealing() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-col items-start justify-start gap-10 px-4 py-16 bg-gray-100">
+    <div
+      className={`flex flex-col md:flex-col items-start justify-start gap-10 md:px-15 py-20 px-5 bg-gray-100 ${poppins.className}`}
+    >
       {/* Left Side */}
       <div className="md:w-1/3 flex flex-col justify-center text-left md:text-left">
-        <h1 className="text-[#24426e] text-[16px] font-bold mb-2">Testimonials</h1>
-        <p className="font-bold text-[#00000099] text-[32px] mb-4">Voices of Healing</p>
-        <p className="text-[16px] text-[#00000099]  md:whitespace-nowrap sm:whitespace-normal">
+        <h1 className="text-[#24426e] text-[14px] font-semibold leading-[24px] mb-2 ">
+          Testimonials
+        </h1>
+        <p className="font-medium text-[#000000ee] text-[32px] mb-2 leading-[38px] whitespace-nowrap ">
+          Voices of Healing
+        </p>
+        <p className="text-[14px] text-[#00000099]  md:whitespace-nowrap sm:whitespace-normal leading-[24px] font-normal">
           Read inspiring stories from our patients who have experienced transformative kidney care.
         </p>
       </div>
 
       {/* Right Side */}
-      <div className="w-full flex items-center">
+      <div className="w-full flex items-center md:p-5 p-5">
         <Swiper
           autoplay={{
             delay: 2500,
@@ -51,13 +62,15 @@ export default function Voicesofhealing() {
             1024: { slidesPerView: 2 },
           }}
           modules={[Autoplay]}
-          spaceBetween={30}
+          spaceBetween={45}
           loop
         >
           {testimonials.map((t, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-xl shadow-md p-8 h-full w-full md:min-h-[200px] flex flex-col justify-between">
-                <p className="text-[#00000099] text-[16px] mb-4">{t.text}</p>
+              <div className="bg-white rounded-xl p-6 h-[340px] w-[280px] md:w-full md:h-[210px] flex flex-col justify-between">
+                <p className="text-[#00000099] text-[16px] mb-4 tracking-wide md:leading-normal leading-[-90px]">
+                  {t.text}
+                </p>
                 <h1 className="font-bold text-[#00000099] text-[18px]">{t.author}</h1>
               </div>
             </SwiperSlide>
