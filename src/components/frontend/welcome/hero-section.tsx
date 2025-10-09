@@ -31,21 +31,24 @@ export default function Homehero() {
           </div>
 
           <div>
-            <p className="text-gray-800 font-semibold text-lg md:text-[23px] md:mt-0 mt-5 ">
-              <span
-                className="bg-gray-900 text-[rgb(255,255,255)] md:p-3 md:pr-5 px-3 py-1 rounded-r-3xl"
+            <div className="text-gray-800 font-semibold text-lg md:text-[23px] md:mt-0 mt-5 ">
+              <p
+                className="bg-gray-900 text-[rgb(255,255,255)] md:p-3 md:pr-5 px-2 py-1 rounded-r-3xl  w-fit"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 Dr. Medhavi and Dr. Monika Tomar
-              </span>
-              <br />
-              <span
-                className="text-[rgba(0, 0, 0, 0.87)] bg-white font-normal text-base md:text-[16px] rounded-br-2xl px-3.5 py-1"
+              </p>
+            </div>
+
+            <div>
+              {' '}
+              <p
+                className="text-[rgba(0, 0, 0, 0.87)] bg-white font-normal text-base md:text-[16px] rounded-br-2xl px-3 w-fit leading-[26px]"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 Laparoscopic Surgeons
-              </span>
-            </p>
+              </p>
+            </div>
           </div>
         </div>
 

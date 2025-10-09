@@ -9,24 +9,19 @@ import { seoPlugin } from '@payloadcms/plugin-seo';
 import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage';
 import { payloadAiPlugin } from '@ai-stack/payloadcms';
 import { getClientSideURL } from '@/lib/get-url';
-import Coupons from '@/payload/collections/Coupons';
-import Customers from '@/payload/collections/Customers';
+
 import Media from '@/payload/collections/Media';
-import Orders from '@/payload/collections/Orders';
+
 import Pages from '@/payload/collections/Pages';
 import PostCategories from '@/payload/collections/PostCategories';
 import Posts from '@/payload/collections/Posts';
 import PostTags from '@/payload/collections/PostTags';
-import ProductCategories from '@/payload/collections/ProductCategories';
-import Products from '@/payload/collections/Products';
-import ProductTags from '@/payload/collections/ProductTags';
-import ShippingClasses from '@/payload/collections/ShippingClasses';
+
 import Users from '@/payload/collections/Users';
 import cloudStorageConfig from '@/payload/config/cloudinary.config';
 import seoPluginConfig from '@/payload/config/seo.config';
 import { siteName } from '@/constants/site-info';
 import aiPluginConfig from '@/payload/config/ai.config';
-import { ECOMMERCE_ENABLED } from '@/payload.constants';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -77,10 +72,6 @@ export default buildConfig({
     Posts,
     PostCategories,
     PostTags,
-    ...(ECOMMERCE_ENABLED
-      ? // E-commerce
-        [Products, ProductCategories, ProductTags, Customers, Orders, Coupons, ShippingClasses]
-      : []),
     // Other
     Pages,
     // Media
