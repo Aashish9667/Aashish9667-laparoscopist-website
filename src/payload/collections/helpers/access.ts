@@ -30,15 +30,6 @@ export const authenticated: PayloadAccessCallback = ({ req }) => {
 };
 
 /**
- * Checks if the authenticated user is a customer (belongs to the 'customers' collection).
- * @param req - The Payload request object containing user information.
- * @returns True if the user is a customer, false otherwise.
- */
-export const customer: PayloadAccessCallback = ({ req }) => {
-  return Boolean(req.user && req.user.collection === 'customers');
-};
-
-/**
  * Checks if the authenticated user belongs to the 'users' collection.
  * @param req - The Payload request object containing user information.
  * @returns True if the user is from the 'users' collection, false otherwise.
