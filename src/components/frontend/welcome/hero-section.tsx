@@ -25,9 +25,9 @@ export default function Homehero() {
       {/* Overlay content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full max-w-[1200px] mx-auto px-4 md:px-8 sm:px-8 gap-10 sm:justify-start sm:items-start">
         {/* Left Text */}
-        <div className="md:text-left md:w-1/2 sm:text-left">
+        <div className="md:text-left md:w-1/2 sm:text-left md:mt-30">
           <div className={poppins.className}>
-            <h1 className="text-[27px] md:text-[40px] md:leading-[48px] leading-tight font-bold text-[rgb(19,34,36)] md:mb-20 mt-20 pl-3 sm:pl-0">
+            <h1 className="text-[27px] md:text-[40px] md:leading-[48px] leading-tight font-bold text-[rgb(19,34,36)] md:mb-20 md:mt-20 mt-20 pl-3 sm:pl-0">
               Redefining Surgical Excellence with <br className="hidden md:hidden sm:block" />{' '}
               Advanced Laparoscopic Solutions
             </h1>
@@ -54,7 +54,7 @@ export default function Homehero() {
         <div className=" relative w-full h-[350px] md:w-[590px] md:h-[720px] sm:w-[590px] sm:h-[550px]  md:-mt-10  -mt-20 flex justify-end items-end sm:justify-start sm:items-start">
           <Image
             alt="Doctors"
-            className="object-contain object-bottom sm:object-left-top"
+            className="object-contain md:object-bottom sm:object-left-top"
             src="/Medhavi-and-monika-Tomar-photo-for-website.png (1).avif"
             fill
           />
