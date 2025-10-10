@@ -68,7 +68,7 @@ export default function Voicesofhealing() {
           >
             {testimonials.map((t, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-xl p-6 h-[340px] w-[280px] md:w-full md:h-[210px] flex flex-col justify-between">
+                <div className="bg-white rounded-xl p-6 h-[340px] w-[280px] md:w-full md:h-[210px] sm:w-full sm:h-[210px]  flex flex-col justify-between">
                   <p className="text-[#00000099] text-[16px] mb-4 tracking-wide md:leading-normal leading-[-90px]">
                     {t.text}
                   </p>
