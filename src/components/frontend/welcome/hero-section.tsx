@@ -32,7 +32,7 @@ export default function Homehero() {
             </h1>
           </div>
 
-          <div>
+          <div className={`hidden md:block ${poppins.className}`}>
             <div className="text-gray-800 font-semibold text-lg md:text-[23px] md:mt-0 mt-5 ">
               <p className="bg-gray-900 text-[rgb(255,255,255)] md:p-3 md:pr-5 px-2 py-1 rounded-r-3xl  w-fit">
                 Dr. Medhavi and Dr. Monika Tomar
@@ -49,13 +49,35 @@ export default function Homehero() {
         </div>
 
         {/* Right Image */}
-        <div className=" relative w-full h-[350px] md:w-[590px] md:h-[720px] md:-mt-10 flex justify-end items-end">
+        <div className=" relative w-full h-[350px] md:w-[590px] md:h-[720px] md:-mt-10  -mt-20 flex justify-end items-end">
           <Image
             alt="Doctors"
             className="object-contain object-bottom"
             src="/Medhavi-and-monika-Tomar-photo-for-website.png (1).avif"
             fill
           />
+        </div>
+        {/* mobile bottom text with sticky image bottom  */}
+        <div className="md:hidden -mt-10 ml-4 mb-15">
+          {/* Main Title */}
+          <div
+            className={`inline-block bg-[#0f2646] rounded-r-3xl px-4 py-4 w-80 ${poppins.className}`}
+          >
+            <p className="text-white font-semibold text-[23px]">
+              Dr. Medhavi and Dr.
+              <br />
+              Monika Tomar
+            </p>
+          </div>
+
+          {/* Sub Title */}
+          <div
+            className={`inline-block bg-white rounded-br-3xl px-4 py-[6px] ${poppins.className}`}
+          >
+            <p className="text-[16px] text-[#000000de] font-normal leading-5">
+              Laparoscopic Surgeons
+            </p>
+          </div>
         </div>
       </div>
     </div>
