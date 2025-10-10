@@ -49,7 +49,7 @@ export default function Whychooseus() {
           <div className="relative z-10">
             <Image
               alt={item.title}
-              className=" w-[310px] h-[228px] md:w-[600px] md:h-[400px] rounded-sm"
+              className=" w-[310px] h-[228px] md:w-[600px] md:h-[400px] sm:w-[630px] sm:h-[400px] rounded-sm"
               height={400} // desktop
               src={item.img}
               width={600} // desktop
@@ -59,7 +59,7 @@ export default function Whychooseus() {
           {/* Text Section */}
           <div
             className={`bg-white shadow-lg z-20 
-    w-[270px] h-[370px] md:w-[51%] md:h-[240px] flex flex-col justify-center 
+    w-[270px] h-[370px] md:w-[51%] md:h-[240px] sm:w-[86%] sm:h-[240px] flex flex-col justify-center 
     ${idx === 0 ? 'py-8 px-5 md:py-1 md:px-8 ' : 'py-6 px-5 md:px-8 md:py-1 '}
     ${idx === 1 ? 'md:-mr-28 -mt-15 md:-mt-0' : 'md:-ml-28 -mt-15 md:-mt-0'}`}
           >
