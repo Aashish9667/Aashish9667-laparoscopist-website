@@ -34,7 +34,7 @@ export default function Voicesofhealing() {
   ];
 
   return (
-    <div className={`bg-gray-100 md:px-15 px-5 py-20 ${poppins.className}`}>
+    <div className={`bg-gray-100 md:px-20 px-5 py-20 ${poppins.className}`}>
       {/* 🔹 Outer Container to Keep Everything Centered */}
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-col items-start justify-start gap-10">
         {/* Left Side */}
