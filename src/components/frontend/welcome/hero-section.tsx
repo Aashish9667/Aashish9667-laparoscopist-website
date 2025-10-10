@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 export default function Homehero() {
   return (
-    <div className="relative w-full h-[677px] mt-20">
+    <div className="relative w-full md:h-[677px] h-full mt-20">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -23,11 +23,11 @@ export default function Homehero() {
       </div>
 
       {/* Overlay content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full px-6 md:px-10">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full max-w-[1200px] mx-auto px-4 md:px-8 gap-10">
         {/* Left Text */}
-        <div className=" md:text-left md:w-500">
+        <div className="md:text-left md:w-1/2">
           <div className={poppins.className}>
-            <h1 className="text-[27px] md:text-[40px] md:leading-[48px] leading-tight font-bold text-[rgb(19,34,36)] md:mb-20 mt-20 md:w-150">
+            <h1 className="text-[27px] md:text-[40px] md:leading-[48px] leading-tight font-bold text-[rgb(19,34,36)] md:mb-20 mt-20">
               Redefining Surgical Excellence with Advanced Laparoscopic Solutions
             </h1>
           </div>
@@ -49,10 +49,10 @@ export default function Homehero() {
         </div>
 
         {/* Right Image */}
-        <div className=" w-full  h-[350px] md:w-590 md:h-190 relative">
+        <div className=" relative w-full h-[350px] md:w-[590px] md:h-[720px] md:-mt-10 flex justify-end items-end">
           <Image
             alt="Doctors"
-            className="object-contain"
+            className="object-contain object-bottom"
             src="/Medhavi-and-monika-Tomar-photo-for-website.png (1).avif"
             fill
           />

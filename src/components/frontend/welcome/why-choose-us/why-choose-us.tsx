@@ -49,7 +49,7 @@ export default function Whychooseus() {
           <div className="relative z-10">
             <Image
               alt={item.title}
-              className=" w-[330px] h-[228px] md:w-[600px] md:h-[400px] rounded-sm"
+              className=" w-[310px] h-[228px] md:w-[600px] md:h-[400px] rounded-sm"
               height={400} // desktop
               src={item.img}
               width={600} // desktop
