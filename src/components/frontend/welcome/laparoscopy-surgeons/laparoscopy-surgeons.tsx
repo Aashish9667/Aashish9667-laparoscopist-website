@@ -32,7 +32,7 @@ export default function LaparoscopySurgeons() {
           {/* Right Section */}
           <div className="lg:w-1/2 flex flex-col gap-6 justify-center lg:justify-end lg:items-end pt-5 lg:pt-0 ">
             {/* Doctor 1 */}
-            <div className="relative xl:w-[490px] xl:h-[170px] lg:w-[390px] lg:h-[170px] md:w-max-[710px] md:h-max-[225px]  sm:w-max-[608px] sm:h-max-[225px] w-min-75 h-min-55 bg-white rounded-3xl shadow-lg overflow-visible flex flex-col items-center lg:block mt-12 lg:mt-0">
+            <div className="relative xl:w-[490px] xl:h-[170px] lg:w-[390px] lg:h-[170px] md:w-max-[710px] md:h-max-[225px]  sm:w-max-[608px] sm:h-max-[225px] w-max-75 h-max-70 bg-white rounded-3xl shadow-lg overflow-visible flex flex-col items-center lg:block mt-12 lg:mt-0">
               {/* Image Overlapping Top (mobile) */}
               <div className="absolute lg:hidden -top-10 flex justify-center w-full z-10">
                 <Image
@@ -54,12 +54,12 @@ export default function LaparoscopySurgeons() {
               />
 
               <div
-                className={`${poppins.className} px-6 py-6 lg:px-6 lg:pl-23 pl-5 h-full flex flex-col justify-center text-center lg:text-left`}
+                className={`${poppins.className} px-6 py-8 lg:px-6 lg:pl-23 pl-5 h-full flex flex-col justify-center text-center lg:text-left`}
               >
-                <h1 className="font-semibold text-[20px] text-[#00000099] lg:pb-2 mt-8 sm:mt-10 lg:mt-0 pb-2">
+                <h1 className="font-semibold text-[20px] text-[#00000099] lg:pb-2  sm:mt-10 lg:mt-0 pb-2 mt-10">
                   Dr. Medhavi Tomar
                 </h1>
-                <p className="text-[16px] text-[#00000099] lg:pb-2 font-normal">
+                <p className="text-[16px] text-[#00000099] lg:pb-2 font-normal ">
                   M.B.B.S., M.S (Gen. Surgery)
                 </p>
                 <a
