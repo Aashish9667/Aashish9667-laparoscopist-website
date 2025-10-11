@@ -15,7 +15,7 @@ export default function LaparoscopySurgeons() {
         {/* Parent Flex Container */}
         <div className="flex flex-col lg:flex-row items-start justify-between">
           {/* Left Section */}
-          <div className={`${poppins.className} lg:w-1/2 flex flex-col justify-start`}>
+          <div className={`${poppins.className} lg:w-1/2 flex flex-col justify-start mt-0`}>
             <h1 className="text-[14px] lg:text-[16px] font-semibold mb-4 text-[#24426e] leading-[24px]">
               Laparoscopy Surgeons
             </h1>
