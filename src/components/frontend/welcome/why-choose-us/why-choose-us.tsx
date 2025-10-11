@@ -34,7 +34,7 @@ export default function Whychooseus() {
   ];
 
   return (
-    <div className={`${poppins.className} bg-[#1d3d6d] py-10 space-y-16 px-10`}>
+    <div className={`${poppins.className} bg-[#1d3d6d] space-y-16 p-5`}>
       <div className="flex justify-center items-start mt-10 text-white">
         <h1 className="text-[32px] font-semibold leading-[38px]">Why Choose Us?</h1>
       </div>
@@ -49,7 +49,7 @@ export default function Whychooseus() {
           <div className="relative z-10">
             <Image
               alt={item.title}
-              className=" w-auto h-auto sm:w-[630px] sm:h-[400px] md:w-[700px] md:h-[400px] lg:w-[600px] lh:h-[400px] rounded-sm"
+              className=" w-[340px] h-[200px] sm:w-[630px] sm:h-[400px] md:w-[700px] md:h-[400px] lg:w-[600px] lh:h-[400px] rounded-sm"
               height={400} // desktop
               src={item.img}
               width={600} // desktop

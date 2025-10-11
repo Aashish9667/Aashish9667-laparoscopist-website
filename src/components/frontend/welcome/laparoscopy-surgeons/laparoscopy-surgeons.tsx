@@ -10,12 +10,12 @@ const poppins = Poppins({
 
 export default function LaparoscopySurgeons() {
   return (
-    <div className="bg-gray-300 lg:px-20 lg:py-20 p-5 sm:px-8 sm:py-20 px-8 py-20">
-      <div className="max-w-[1200px] mx-auto">
+    <div className="bg-gray-300 ">
+      <div className="max-w-[1200px] mx-auto lg:px-20 lg:py-20 p-5 sm:px-8 sm:py-20 px-8 py-20">
         {/* Parent Flex Container */}
         <div className="flex flex-col lg:flex-row items-start justify-between">
           {/* Left Section */}
-          <div className={`${poppins.className} lg:w-1/2 flex flex-col justify-start`}>
+          <div className={`${poppins.className} lg:w-1/2 flex flex-col justify-start pt-5`}>
             <h1 className="text-[14px] lg:text-[16px] font-semibold mb-4 text-[#24426e] leading-[24px]">
               Laparoscopy Surgeons
             </h1>
