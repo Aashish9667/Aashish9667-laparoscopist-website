@@ -34,7 +34,7 @@ export default function Whychooseus() {
   ];
 
   return (
-    <div className={`${poppins.className} bg-[#1d3d6d] space-y-16 p-5`}>
+    <div className={`${poppins.className} bg-[#1d3d6d] space-y-16 py-5 px-8 pb-15`}>
       <div className="flex justify-center items-start mt-10 text-white">
         <h1 className="text-[32px] font-semibold leading-[38px]">Why Choose Us?</h1>
       </div>
@@ -49,7 +49,7 @@ export default function Whychooseus() {
           <div className="relative z-10">
             <Image
               alt={item.title}
-              className=" w-[340px] h-[200px] sm:w-[630px] sm:h-[400px] md:w-[700px] md:h-[400px] lg:w-[600px] lh:h-[400px] rounded-sm"
+              className=" w-[700px] h-auto sm:w-[700px] sm:h-auto md:w-[950px] md:h-auto lg:w-[600px] lg:h-auto rounded-sm"
               height={400} // desktop
               src={item.img}
               width={600} // desktop
@@ -57,16 +57,19 @@ export default function Whychooseus() {
           </div>
 
           {/* Text Section */}
+          {/* Text Section */}
           <div
             className={`bg-white shadow-lg z-20 
-    w-[270px] h-[370px] md:w-max-[80%] md:h-[240px] sm:w-[80%] sm:h-[240px] lg:w-[51%] lg:h-[240px] flex flex-col justify-center 
-    ${idx === 0 ? 'py-8 px-5 lg:py-1 lg:px-8 ' : 'py-6 px-5 lg:px-8 lg:py-1 '}
-    ${idx === 1 ? 'lg:-mr-28 -mt-15 lg:-mt-0' : 'lg:-ml-28 -mt-15 lg:-mt-0'}`}
+  w-[85%] sm:w-[85%] md:w-[90%] lg:w-[50%] 
+  h-auto
+  flex flex-col justify-center 
+  ${idx === 0 ? 'py-6 px-5 lg:py-8 lg:px-8' : 'py-6 px-5 lg:py-8 lg:px-8'}
+  ${idx === 1 ? 'lg:-mr-28 -mt-10 lg:mt-0' : 'lg:-ml-28 -mt-10 lg:mt-0'}`}
           >
-            <h2 className="text-[28px] lg:text-[28px] font-medium text-[#24426E] mb-2 lg:mb-4 lg:leading[34px] leading-tight ">
+            <h2 className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] font-medium text-[#24426E] mb-2 lg:mb-4 leading-snug">
               {item.title}
             </h2>
-            <p className="text-[16px] text-[#000000de] leading-normal lg:leading[26px] font-normal">
+            <p className="text-[14px] sm:text-[15px] md:text-[16px] text-[#000000de] leading-normal font-normal">
               {item.desc}
             </p>
           </div>

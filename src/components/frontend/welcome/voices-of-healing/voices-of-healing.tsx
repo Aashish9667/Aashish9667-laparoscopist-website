@@ -34,9 +34,9 @@ export default function Voicesofhealing() {
   ];
 
   return (
-    <div className={`bg-gray-100 md:px-20 px-8 py-20 sm:px-8 ${poppins.className}`}>
+    <div className={`bg-gray-100 ${poppins.className}`}>
       {/* 🔹 Outer Container to Keep Everything Centered */}
-      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-col items-start justify-start gap-10">
+      <div className="max-w-[1400px] mx-auto flex flex-col items-start justify-start gap-10 px-8 py-20 sm:px-8">
         {/* Left Side */}
         <div className="md:w-1/3 flex flex-col justify-center text-left md:text-left">
           <h1 className="text-[#24426e] text-[14px] font-semibold leading-[24px] mb-2 ">
@@ -52,7 +52,7 @@ export default function Voicesofhealing() {
         </div>
 
         {/* Right Side */}
-        <div className="w-full flex items-center md:p-5 p-3 sm:5">
+        <div className="w-full flex  items-center md:p-5 p-5 sm:5">
           <Swiper
             autoplay={{
               delay: 2500,
@@ -61,6 +61,7 @@ export default function Voicesofhealing() {
             breakpoints={{
               0: { slidesPerView: 1 },
               1024: { slidesPerView: 2 },
+              770: { slidesPerView: 2 },
             }}
             modules={[Autoplay]}
             spaceBetween={45}
@@ -68,7 +69,7 @@ export default function Voicesofhealing() {
           >
             {testimonials.map((t, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-xl p-6 h-[340px] w-[270px] md:w-full md:h-[210px] sm:w-full sm:h-[210px]  flex flex-col justify-between">
+                <div className="bg-white rounded-xl p-6 sm:p-6 md:p-10  h-full w-auto md:w-full md:h-auto sm:w-auto sm:h-auto lg:w-full lg:h-auto flex flex-col justify-between">
                   <p className="text-[#00000099] text-[16px] mb-4 tracking-wide md:leading-normal leading-[-90px]">
                     {t.text}
                   </p>
