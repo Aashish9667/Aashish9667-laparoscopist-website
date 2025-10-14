@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 export default function Homehero() {
   return (
-    <div className="relative w-full md:h-[677px] lg:h-[677px] h-full mt-20">
+    <div className="relative w-full md:h-[677px] lg:h-[677px] h-full mt-20 px-4 md:px-8 sm:px-8 gap-10 lg:px-8 ">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -23,7 +23,7 @@ export default function Homehero() {
       </div>
 
       {/* Overlay content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full max-w-[1200px] mx-auto px-4 md:px-8 sm:px-8 gap-10 sm:justify-start sm:items-start">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full max-w-[1200px] mx-auto sm:justify-start sm:items-start">
         {/* Left Text */}
         <div className="lg:text-lft lg:w-1/2 md:text-left md:w-4/2 sm:text-left md:mt-30">
           <div className={poppins.className}>
@@ -51,7 +51,7 @@ export default function Homehero() {
 
         {/* Right Image */}
 
-        <div className=" relative w-full h-[350px] lg:w-[590px] lg:h-[720px] md:w-[990px] md:h-[720px] sm:w-[590px] sm:h-[550px]  md:-mt-10  -mt-20 flex justify-end items-end sm:justify-start sm:items-start">
+        <div className=" relative w-full h-[350px] lg:w-[590px] lg:h-[720px] md:w-[990px] md:h-[720px] sm:w-[750px] sm:h-[550px]  md:-mt-10  -mt-20 flex justify-start items-start sm:justify-start sm:items-start">
           <Image
             alt="Doctors"
             className="object-contain md:object-bottom sm:object-left-top"
@@ -60,10 +60,10 @@ export default function Homehero() {
           />
         </div>
         {/* mobile bottom text with sticky image bottom  */}
-        <div className="md:hidden -mt-10 ml-3 mb-15 sm:-mt-10 sm:-ml-4 sm:mb-15 flex flex-col ">
+        <div className="md:hidden flex flex-col justify-start items-start mb-15 mt-0 ml-0 sm:ml-0 sm:mt-0">
           {/* Main Title */}
           <div
-            className={`inline-block bg-[#132238] rounded-r-3xl sm:px-4 sm:py-4 sm:w-150 px-4 py-4 w-80 ${poppins.className}`}
+            className={`inline-block bg-[#132238] rounded-r-3xl sm:px-4 sm:py-4 sm:w-150 px-4 py-4 w-110 ${poppins.className}`}
           >
             <p className="text-white font-semibold text-[23px]">
               Dr. Medhavi and Dr.

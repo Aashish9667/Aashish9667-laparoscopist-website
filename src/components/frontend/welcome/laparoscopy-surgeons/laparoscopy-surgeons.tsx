@@ -11,18 +11,18 @@ const poppins = Poppins({
 export default function LaparoscopySurgeons() {
   return (
     <div className="bg-gray-300 ">
-      <div className="max-w-[1400px] mx-auto lg:px-20 lg:py-20 p-5 sm:px-8 sm:py-20 px-8 py-20 ">
+      <div className="max-w-[1200px] mx-auto lg:px-8 lg:py-20 p-5 sm:px-8 sm:py-20 px-8 py-20 ">
         {/* Parent Flex Container */}
-        <div className="flex flex-col md:flex-row  items-start justify-between lg:gap-10 md:gap-16 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-0 md:gap-16">
           {/* Left Section */}
-          <div className={`${poppins.className} lg:w-1/2 flex flex-col justify-start mt-0`}>
-            <h1 className="text-[14px] lg:text-[16px] font-semibold mb-4 text-[#24426e] leading-[24px]">
+          <div className={`${poppins.className} flex flex-col justify-start mt-0`}>
+            <h1 className="text-[14px] font-semibold mb-4 text-[#24426e] leading-[24px]">
               Laparoscopy Surgeons
             </h1>
-            <p className="text-[32px] lg:text-[32px] mb-3 text-[#000000de] font-medium leading-[38px]">
+            <p className="text-[32px] mb-3 text-[#000000de] font-medium leading-[38px]">
               Your Expert in Minimally Invasive Surgery
             </p>
-            <p className="text-[16px] lg:text-[16px] text-[#00000099] leading-[26px]">
+            <p className="text-[16px] text-[#00000099] leading-[26px]">
               A team of dedicated laparoscopic surgeons with extensive experience, offering
               advanced, minimally invasive procedures to ensure faster recovery and improved patient
               outcomes.
@@ -30,9 +30,9 @@ export default function LaparoscopySurgeons() {
           </div>
 
           {/* Right Section */}
-          <div className="md:w-1/2 flex flex-col gap-6 md:gap-6  justify-center md:justify-end md:items-end pt-5 md:pt-0 ">
+          <div className=" flex flex-col gap-6 md:gap-6  justify-center md:justify-end md:items-end pt-5 md:pt-0 ">
             {/* Doctor 1 */}
-            <div className="relative xl:w-[490px] xl:h-[170px] lg:w-[390px] lg:h-[170px] md:w-[330px] md:h-auto  sm:w-[608px] sm:h-[225px] w-full h-full bg-white rounded-3xl shadow-lg overflow-visible flex flex-col items-center md:block md:mr-0 md:mt-0 lg:-mr-0">
+            <div className="relative  lg:w-[435px] lg:h-auto    w-full h-full bg-white rounded-3xl shadow-lg overflow-visible flex flex-col items-center md:block md:mr-0 md:mt-0 lg:-mr-0">
               {/* Image Overlapping Top (mobile) */}
               <div className="absolute md:hidden -top-10 flex justify-center w-full z-10">
                 <Image
@@ -54,7 +54,7 @@ export default function LaparoscopySurgeons() {
               />
 
               <div
-                className={`${poppins.className} px-6 py-8 pl-5 md:px-6 lg:pl-23 md:pl-10    h-full flex flex-col justify-center text-center  md:text-left`}
+                className={`${poppins.className} px-6 py-8 pl-5 md:px-6 lg:pl-23 md:pl-20  h-full flex flex-col justify-center text-center  md:text-left`}
               >
                 <h1 className="font-semibold text-[20px] text-[#00000099] md:pb-2  sm:mt-10 md:mt-0 pb-2 mt-10">
                   Dr. Medhavi Tomar
@@ -75,7 +75,7 @@ export default function LaparoscopySurgeons() {
             </div>
 
             {/* Doctor 2 */}
-            <div className="relative md:w-[330px] md:h-auto lg:w-[390px] lg:h-[170px] xl:w-[490px] xl:h-[190px]  sm:w-[608px] sm:h-[235px] w-full h-full bg-white rounded-3xl shadow-lg overflow-visible flex flex-col items-center md:block mt-12 md:mt-0">
+            <div className="relative  lg:w-[435px] lg:h-auto   w-full h-full bg-white rounded-3xl shadow-lg overflow-visible flex flex-col items-center md:block mt-12 md:mt-0">
               {/* Image Overlapping Top (mobile) */}
               <div className="absolute md:hidden -top-10 flex justify-center w-full z-10">
                 <Image
@@ -97,9 +97,9 @@ export default function LaparoscopySurgeons() {
               />
 
               <div
-                className={`${poppins.className} px-6 py-6 lg:pl-23 md:pl-10 pl-5 h-full flex flex-col justify-center text-center lg:text-left`}
+                className={`${poppins.className} px-6 py-6 lg:pl-23 md:pl-20 pl-5 h-full flex flex-col justify-center text-center md:text-left`}
               >
-                <h1 className="font-semibold text-[20px] text-[#00000099] lg:pb-2 pt-8 lg:pt-0 lg:mt-0 pb-3 ">
+                <h1 className="font-semibold text-[20px] text-[#00000099] lg:pb-2 pt-8 md:pt-2 md:pb-2 lg:pt-0 lg:mt-0 pb-3 ">
                   Dr. Monika Tomar
                 </h1>
                 <p className="text-[16px] text-[#00000099] lg:pb-2 font-normal">
@@ -109,10 +109,10 @@ export default function LaparoscopySurgeons() {
                   Chief Consultant – Obstetrics & Gynaecology
                 </p>
                 <a
-                  className="flex items-center justify-center lg:justify-start gap-1 mt-2 text-[#24426d]"
+                  className="flex items-center justify-center md:justify-start gap-1 mt-2 text-[#24426d]"
                   href="/components/frontend/dr-boi-monika/dr-boi-medhavi"
                 >
-                  <span className="hover:underline text-[16px] font-medium lg:ml-5 ml-0">
+                  <span className="hover:underline text-[16px] font-medium lg:ml-5 md:ml-5 md:pb-2 ml-0">
                     View full bio
                   </span>
                   <span>›</span>

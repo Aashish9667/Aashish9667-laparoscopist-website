@@ -34,13 +34,13 @@ export default function Whychooseus() {
   ];
 
   return (
-    <div className={`${poppins.className} bg-[#1d3d6d] space-y-16 py-5 px-8 pb-15`}>
-      <div className="flex justify-center items-start mt-10 text-white">
+    <div className={`${poppins.className} bg-[#1d3d6d] space-y-16 py-5 px-8 pb-15 lg:px-8 xl:px-8`}>
+      <div className="flex justify-center items-center mt-10 text-white">
         <h1 className="text-[32px] font-semibold leading-[38px]">Why Choose Us?</h1>
       </div>
       {procedures.map((item, idx) => (
         <div
-          className={`max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center ${
+          className={`max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-start ${
             idx === 1 ? 'lg:flex-row-reverse' : ''
           }`}
           key={idx}
@@ -49,7 +49,7 @@ export default function Whychooseus() {
           <div className="relative z-10">
             <Image
               alt={item.title}
-              className=" w-[700px] h-auto sm:w-[700px] sm:h-auto md:w-[950px] md:h-auto lg:w-[600px] lg:h-auto rounded-sm"
+              className=" w-[700px] h-auto sm:w-[700px] sm:h-auto md:w-[950px] md:h-auto lg:w-[600px] lg:h-auto xl:w-[650px] xl:h-auto rounded-sm"
               height={400} // desktop
               src={item.img}
               width={600} // desktop
@@ -60,7 +60,7 @@ export default function Whychooseus() {
           {/* Text Section */}
           <div
             className={`bg-white shadow-lg z-20 
-  w-[85%] sm:w-[85%] md:w-[90%] lg:w-[50%] 
+  w-[85%] sm:w-[85%] md:w-[90%] lg:w-[50%] xl:w-[55%] 
   h-auto
   flex flex-col justify-center 
   ${idx === 0 ? 'py-6 px-5 lg:py-8 lg:px-8' : 'py-6 px-5 lg:py-8 lg:px-8'}
