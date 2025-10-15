@@ -10,22 +10,29 @@ const poppins = Poppins({
 });
 export default function Homehero() {
   return (
-    <div className="relative w-full md:h-[677px] lg:h-[677px] h-full mt-20 px-4 md:px-8 sm:px-8 gap-10 lg:px-8 ">
+    <div className="relative w-full h-full mt-20 px-4 md:px-8 sm:px-8 gap-10 lg:px-8 mx-auto">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           alt="Background"
           className="object-cover"
-          src="/Gemini_Generated_Image_rctj8xrctj8xrctj.png"
+          src="/background-desktop.jpg"
+          fill
+          priority
+        />
+        <Image
+          alt="Background"
+          className="object-cover sm:hidden block"
+          src="/background-mobile.jpg"
           fill
           priority
         />
       </div>
 
       {/* Overlay content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full max-w-[1200px] mx-auto sm:justify-start sm:items-start">
+      <div className="relative z-10 flex flex-col md:flex-row items-start justify-start h-full  sm:justify-start sm:items-start max-w-[1200px] mx-auto">
         {/* Left Text */}
-        <div className="lg:text-lft lg:w-1/2 md:text-left md:w-4/2 sm:text-left md:mt-30">
+        <div className="lg:text-lft lg:w-1/2 md:text-left md:w-4/2 sm:text-left md:mt-30 ">
           <div className={poppins.className}>
             <h1 className="text-[#132238] text-[27px] leading-tight font-bold mt-20 pl-3 md:text-[40px] md:leading-[48px] md:mb-20 md:mt-20 lg:leading-[48px] lg:text-[40px] lg:mb-20 lg:mt-20 sm:pl-0">
               Redefining Surgical Excellence with <br className="hidden md:hidden sm:block" />{' '}
@@ -51,25 +58,21 @@ export default function Homehero() {
 
         {/* Right Image */}
 
-        <div className=" relative w-full h-[350px] lg:w-[590px] lg:h-[720px] md:w-[990px] md:h-[720px] sm:w-[750px] sm:h-[550px]  md:-mt-10  -mt-20 flex justify-start items-start sm:justify-start sm:items-start">
+        <div className=" relative w-[350px] h-[350px] lg:w-[590px] lg:h-[720px] md:w-[990px] md:h-[720px] sm:w-[90%] sm:h-[550px]  md:-mt-10  sm:-mt-20 -mt-10 flex justify-start items-start sm:justify-start sm:items-start">
           <Image
             alt="Doctors"
-            className="object-contain md:object-bottom object-left-top"
+            className="object-contain md:object-bottom object-left"
             src="/Medhavi-and-monika-Tomar-photo-for-website.png (1).avif"
             fill
           />
         </div>
         {/* mobile bottom text with sticky image bottom  */}
-        <div className="md:hidden flex flex-col justify-start items-start mb-15 mt-0 ml-0 sm:ml-0 sm:mt-0">
+        <div className="md:hidden grid grid-rows-2 justify-start items-start -mb-auto sm:-mb-0 mt-0 ml-0 sm:ml-0 sm:mt-0">
           {/* Main Title */}
           <div
-            className={` inline-block bg-[#132238] rounded-r-3xl sm:px-4 sm:py-4 sm:w-150 px-4 py-4 w-90 h-auto ${poppins.className}`}
+            className={` inline-block bg-[#132238] rounded-r-3xl sm:px-4 sm:py-4 sm:w-150 px-4 py-4 w-full max-w-[150]: h-auto ${poppins.className}`}
           >
-            <p className="text-white font-semibold text-[23px]">
-              Dr. Medhavi and Dr.
-              <br className="sm:hidden" />
-              Monika Tomar
-            </p>
+            <p className="text-white font-semibold text-[23px]">Dr. Medhavi and Dr. Monika Tomar</p>
           </div>
 
           {/* Sub Title */}
