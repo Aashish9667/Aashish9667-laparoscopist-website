@@ -99,7 +99,7 @@ export default function LaparoscopySurgeons() {
               <div
                 className={`${poppins.className} px-6 py-6 lg:pl-23 md:pl-20 pl-5 h-full flex flex-col justify-center text-center md:text-left`}
               >
-                <h1 className="font-semibold text-[20px] text-[#00000099] lg:pb-2 pt-8 md:pt-2 md:pb-2 lg:pt-0 lg:mt-0 pb-3 ">
+                <h1 className="font-semibold text-[20px] text-[#00000099] lg:pb-2 pt-12 md:pt-2 md:pb-2 lg:pt-0 lg:mt-0 pb-3 ">
                   Dr. Monika Tomar
                 </h1>
                 <p className="text-[16px] text-[#00000099] lg:pb-2 font-normal">

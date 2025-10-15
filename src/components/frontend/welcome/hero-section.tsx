@@ -54,7 +54,7 @@ export default function Homehero() {
         <div className=" relative w-full h-[350px] lg:w-[590px] lg:h-[720px] md:w-[990px] md:h-[720px] sm:w-[750px] sm:h-[550px]  md:-mt-10  -mt-20 flex justify-start items-start sm:justify-start sm:items-start">
           <Image
             alt="Doctors"
-            className="object-contain md:object-bottom sm:object-left-top"
+            className="object-contain md:object-bottom object-left-top"
             src="/Medhavi-and-monika-Tomar-photo-for-website.png (1).avif"
             fill
           />
@@ -63,7 +63,7 @@ export default function Homehero() {
         <div className="md:hidden flex flex-col justify-start items-start mb-15 mt-0 ml-0 sm:ml-0 sm:mt-0">
           {/* Main Title */}
           <div
-            className={`inline-block bg-[#132238] rounded-r-3xl sm:px-4 sm:py-4 sm:w-150 px-4 py-4 w-110 ${poppins.className}`}
+            className={` inline-block bg-[#132238] rounded-r-3xl sm:px-4 sm:py-4 sm:w-150 px-4 py-4 w-90 h-auto ${poppins.className}`}
           >
             <p className="text-white font-semibold text-[23px]">
               Dr. Medhavi and Dr.

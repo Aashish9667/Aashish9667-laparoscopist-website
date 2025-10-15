@@ -38,7 +38,7 @@ export default function Voicesofhealing() {
       {/* 🔹 Outer Container to Keep Everything Centered */}
       <div className="max-w-[1200px] mx-auto flex flex-col items-start justify-start gap-10 px-8 lg:px-8 py-20 sm:px-8">
         {/* Left Side */}
-        <div className="md:w-1/3 flex flex-col justify-center text-left md:text-left">
+        <div className="flex flex-col justify-center text-left md:text-left">
           <h1 className="text-[#24426e] text-[14px] font-semibold leading-[24px] mb-2 ">
             Testimonials
           </h1>
