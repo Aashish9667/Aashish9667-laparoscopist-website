@@ -13,8 +13,8 @@ export default function Footer() {
   return (
     <footer className={`bg-white border-t border-gray-300  mt-20 ${poppins.className}`}>
       {/*  Responsive Layout */}
-      <div className={` py-8 px-8 md:px-8 ${poppins.className} max-w-[1200px] mx-auto`}>
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8 lg:gap-50 text-left">
+      <div className={` py-8 px-8  ${poppins.className} max-w-[1200px] mx-auto`}>
+        <div className="flex flex-col md:flex-row justify-between items-start gap-6 lg:gap-20 text-left">
           {/*  Left Section: Logo + Social Icons */}
           <div className="flex flex-col space-y-4 justify-start items-start">
             <div className="md:relative">
@@ -49,9 +49,9 @@ export default function Footer() {
           </div>
 
           {/*  Right Section: 3 Columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-0 gap-y-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-6 w-full">
             {/* Column 1 */}
-            <div className="flex flex-col space-y-1 items-start">
+            <div className="flex flex-col space-y-1 space-x-1 items-start break-words">
               <h3 className="font-semibold text-[#000000de] text-[16px] mb-2">Our Services</h3>
 
               {['Laparoscopy Surgery', 'Laparoscopic Gynae', 'Proctology', 'Endourology'].map(
@@ -61,22 +61,14 @@ export default function Footer() {
                     href="(#)"
                     key={service}
                   >
-                    {service === 'Laparoscopy Surgery' ? (
-                      <React.Fragment>
-                        Laparoscopy <span className="md:hidden lg:block block">Surgery</span>
-                        <br className="hidden md:block lg:hidden" />
-                        <span className="hidden md:block lg:hidden"> Surgery</span>
-                      </React.Fragment>
-                    ) : (
-                      service
-                    )}
+                    {service}
                   </a>
                 ),
               )}
             </div>
 
             {/* Column 2 */}
-            <div className="flex flex-col space-y-1 items-start">
+            <div className="flex flex-col space-y-1 space-x-1 items-start break-words">
               <h3 className="font-semibold text-[#000000de] text-[16px] mb-2">Quick Links</h3>
 
               {['About Us', 'News & Media', 'Gallery', 'Dr. Medhavi Tomar', 'Dr. Monika Tomar'].map(
@@ -86,22 +78,14 @@ export default function Footer() {
                     href="(#)"
                     key={link}
                   >
-                    {link === 'Dr. Medhavi Tomar' ? (
-                      <React.Fragment>
-                        Dr. Medhavi
-                        <br className="hidden md:block lg:hidden" />
-                        Tomar
-                      </React.Fragment>
-                    ) : (
-                      link
-                    )}
+                    {link}
                   </a>
                 ),
               )}
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col space-y-1 items-start">
+            <div className="flex flex-col space-y-1 space-x-1 items-start">
               <h3 className="font-semibold text-[#000000de] text-[16px] mb-2">Address</h3>
               <p className="text-[#00000099] text-[14px] leading-5">
                 M-2, Jawahar Quarters,
@@ -110,7 +94,7 @@ export default function Footer() {
               </p>
 
               <h4 className="font-semibold text-[#000000de] mt-3">Inquiries</h4>
-              <div className="text-[#00000099] text-[14px] leading-6">
+              <div className="text-[#00000099] text-[14px] leading-6 break-words">
                 {[
                   '+91-121-2665083',
                   '+91-121-4055009',

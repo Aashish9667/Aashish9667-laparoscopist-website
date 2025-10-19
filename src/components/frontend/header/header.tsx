@@ -1,5 +1,6 @@
+'use client';
 import * as React from 'react';
 
 export default function Header() {
-  return null;
+  return <div>null</div>;
 }

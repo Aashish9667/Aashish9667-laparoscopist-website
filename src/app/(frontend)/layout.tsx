@@ -3,9 +3,14 @@ import cssVariables from '@/lib/css-variables';
 import oklchToHex from '@/lib/color-manipulation/oklch-to-hext';
 import Header from '@/components/frontend/header';
 import Footer from '@/components/frontend/footer';
+import { Poppins } from 'next/font/google';
 import Providers from './providers';
 import './global.css';
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props;
 
@@ -25,7 +30,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
         />
         <meta content={oklchToHex(cssVariables.colors.primary)} name="theme-color" />
       </head>
-      <body>
+      <body className={poppins.className}>
         <Providers>
           <div className="min-h-screen flex flex-col">
             <Header />
