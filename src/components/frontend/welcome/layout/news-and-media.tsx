@@ -1,0 +1,80 @@
+'use client';
+import * as React from 'react';
+import Image from 'next/image';
+
+const pressImages = [
+  '/press-release-7.png',
+  '/press-release-7.png',
+  '/press-release-7.png',
+  '/press-release-7.png',
+  '/press-release-7.png',
+  '/press-release-7.png',
+  '/press-release-7.png',
+  '/press-release-7.png',
+  '/press-release-7.png',
+  '/press-release-7.png',
+];
+
+export default function News() {
+  return (
+    <div className="max-w-[1200px] mx-auto py-8 px-4 md:px-8 flex flex-col md:flex-row justify-between gap-10 md:gap-10">
+      {/* Left side */}
+      <div className="flex-1">
+        {/* Title */}
+        <div className="mb-6">
+          <h1 className="text-2xl font-semibold text-[#0f2239] mb-2">Press Release</h1>
+          <p className="text-[#00000099]">
+            News, Updates, and Breakthroughs from Our Medical Experts
+          </p>
+        </div>
+
+        {/* Image Grid */}
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
+          {pressImages.map((src, i) => (
+            <div className="w-full aspect-[4/3] relative rounded-lg overflow-hidden" key={i}>
+              <Image alt={`Press Release ${i + 1}`} className="object-cover" src={src} fill />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right side (visible only on md and above) */}
+      <div className="hidden md:block w-[35%]">
+        <div className="flex flex-col gap-5 text-[14px] leading-[25px]">
+          <h1 className="text-xl font-semibold text-[#0f2239]">Latest News</h1>
+
+          {[
+            'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
+            'Presented a video on SILS at SILSCON Mumbai on 29th April 2011.',
+            'Delivered a talk on Single Incision Laparoscopic Surgery at IMA Amroha Branch CME on 4-4-2009.',
+            'Participated in Technical discussion on ‘Best practice guidelines and State of the art in Single Incision Laparoscopic Surgery ‘at the SAGES meeting 2009 at Phoenix Arizona U.S.A.',
+            'Conducted a live surgical workshop on Single Incision Laparoscopic Surgery at Barelli on 30 August 2009',
+          ].map((text, i) => (
+            <div className="rounded-md bg-[#22446b] p-3" key={i}>
+              <p className="text-white">{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right side (mobile) */}
+      <div className="block md:hidden w-full mt-10">
+        <div className="flex flex-col gap-5 text-[14px] leading-[25px]">
+          <h1 className="text-xl font-semibold text-[#0f2239]">Latest News</h1>
+
+          {[
+            'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
+            'Presented a video on SILS at SILSCON Mumbai on 29th April 2011.',
+            'Delivered a talk on Single Incision Laparoscopic Surgery at IMA Amroha Branch CME on 4-4-2009.',
+            'Participated in Technical discussion on ‘Best practice guidelines and State of the art in Single Incision Laparoscopic Surgery ‘at the SAGES meeting 2009 at Phoenix Arizona U.S.A.',
+            'Conducted a live surgical workshop on Single Incision Laparoscopic Surgery at Barelli on 30 August 2009',
+          ].map((text, i) => (
+            <div className="rounded-md bg-[#22446b] p-3" key={i}>
+              <p className="text-white">{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Poppins } from 'next/font/google';
 import { FiMenu, FiX } from 'react-icons/fi';
-
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -28,7 +27,7 @@ export default function Navbar() {
     <nav className={`bg-white shadow-sm ${poppins.className}`}>
       <div className="max-w-[1280px] mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
-        <div className="flex items-end">
+        <div className="relative z-20 -mb-12">
           <Image
             alt="Logo"
             className="object-contain"
@@ -44,50 +43,52 @@ export default function Navbar() {
             <NavigationMenuList className="flex gap-6">
               {/* Services Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-[#22426e] text-[14px] font-medium hover:opacity-80">
+                <NavigationMenuTrigger className="text-[#22426e] text-[14px] font-medium !bg-transparent !hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4 hover:text-[#22426e]">
                   Services
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white shadow-2xl rounded-md py-2 w-[195px] mt-2">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="block px-5 py-2 hover:bg-gray-100 text-[#22426e] text-[14px] font-medium"
-                      href="/laparoscopy-surgery"
-                    >
-                      Laparoscopy Surgery
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="block px-5 py-2 hover:bg-gray-100 text-[#22426e] text-[14px] font-medium"
-                      href="/laparoscopic-gynae"
-                    >
-                      Laparoscopic Gynae
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="block px-5 py-2 hover:bg-gray-100 text-[#22426e] text-[14px] font-medium"
-                      href="/proctology"
-                    >
-                      Proctology
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="block px-5 py-2 hover:bg-gray-100 text-[#22426e] text-[14px] font-medium"
-                      href="/endourology"
-                    >
-                      Endourology
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuContent>
+                <div className="rounded-none">
+                  <NavigationMenuContent className="!bg-white data-[state=open]:!rounded-none data-[state=open]:!shadow-2xl !border-0 !p-0 min-w-[220px]">
+                    <NavigationMenuLink asChild>
+                      <Link
+                        className="block px-5 py-4 hover:bg-gray-50 text-[#22426e] text-[14px] font-medium "
+                        href="/laparoscopy-surgery"
+                      >
+                        Laparoscopy Surgery
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        className="block px-5 py-4 hover:bg-gray-50 text-[#22426e] text-[14px] font-medium "
+                        href="/laparoscopic-gynae"
+                      >
+                        Laparoscopic Gynae
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        className="block px-5 py-4 hover:bg-gray-50 text-[#22426e] text-[14px] font-medium "
+                        href="/proctology"
+                      >
+                        Proctology
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        className="block px-5 py-4 hover:bg-gray-50 text-[#22426e] text-[14px] font-medium"
+                        href="/endourology"
+                      >
+                        Endourology
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuContent>
+                </div>
               </NavigationMenuItem>
 
               {/* Other Links */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    className="text-[#22426e] text-[14px] font-medium hover:opacity-80"
+                    className=" text-[14px] font-medium  hover:text-[#22426e] !text-[#22426e]  hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4"
                     href="/about-us"
                   >
                     About Us
@@ -98,7 +99,7 @@ export default function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    className="text-[#22426e] text-[14px] font-medium hover:opacity-80"
+                    className="text-[14px] font-medium bg-transparent hover:text-[#22426e] !text-[#22426e]  hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4"
                     href="/news-media"
                   >
                     News & Media
@@ -109,7 +110,7 @@ export default function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    className="text-[#22426e] text-[14px] font-medium hover:opacity-80"
+                    className=" text-[14px] font-medium bg-transparent hover:text-[#22426e] !text-[#22426e]  hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4"
                     href="/gallery"
                   >
                     Gallery
@@ -120,7 +121,7 @@ export default function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    className="text-[#22426e] text-[14px] font-medium hover:opacity-80"
+                    className="text-[14px] font-medium bg-transparent hover:text-[#22426e] !text-[#22426e]  hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4"
                     href="/blogs"
                   >
                     Blogs
@@ -154,7 +155,7 @@ export default function Navbar() {
               {/* Services Dropdown */}
               <NavigationMenuItem className="w-full">
                 <NavigationMenuTrigger
-                  className="w-full flex items-center justify-between text-[#22426e] text-[14px] px-2 gap-30 bg-transparent hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-2 hover:underline-offset-4"
+                  className="w-full flex items-center justify-between text-[#22426e] text-[14px] px-2 gap-30"
                   onClick={() => setShowServices(!showServices)}
                 >
                   <span className="text-left">Services</span>
@@ -207,7 +208,7 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              <NavigationMenuItem className="w-full">
+              <NavigationMenuItem className="w-full bg-transparent hover:underline">
                 <NavigationMenuLink asChild>
                   <Link className="text-[#22426e] text-[14px] block w-full text-left" href="/blogs">
                     Blogs

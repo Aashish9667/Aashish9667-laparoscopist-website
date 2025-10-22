@@ -5,9 +5,9 @@ export default function AboutUs() {
   return (
     <React.Fragment>
       {/* for video */}
-      <div className="relative overflow-hidden mt-20 mx-auto max-h-[700px] h-full w-full object-cover object-[0%_80%]">
+      <div className="relative overflow-hidden mt-20 mx-auto max-h-[700px] h-full w-full object-cover ">
         <video
-          className="w-full h-full object-cover mx-auto"
+          className="w-full object-cover mx-auto object-[0%_80%] max-h-[700px]"
           src="/start-hospital.mp4"
           autoPlay
           loop
