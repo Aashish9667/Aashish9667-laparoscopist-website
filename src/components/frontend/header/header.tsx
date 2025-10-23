@@ -43,14 +43,14 @@ export default function Navbar() {
             <NavigationMenuList className="flex gap-6">
               {/* Services Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-[#22426e] text-[14px] font-medium !bg-transparent !hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4 hover:text-[#22426e]">
+                <NavigationMenuTrigger className="!text-[#22426e] text-[14px] font-medium !bg-transparent !hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4 hover:text-[#22426e]">
                   Services
                 </NavigationMenuTrigger>
                 <div className="rounded-none">
                   <NavigationMenuContent className="!bg-white data-[state=open]:!rounded-none data-[state=open]:!shadow-2xl !border-0 !p-0 min-w-[220px]">
                     <NavigationMenuLink asChild>
                       <Link
-                        className="block px-5 py-4 hover:bg-gray-50 text-[#22426e] text-[14px] font-medium "
+                        className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
                         href="/laparoscopy-surgery"
                       >
                         Laparoscopy Surgery
@@ -58,7 +58,7 @@ export default function Navbar() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link
-                        className="block px-5 py-4 hover:bg-gray-50 text-[#22426e] text-[14px] font-medium "
+                        className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
                         href="/laparoscopic-gynae"
                       >
                         Laparoscopic Gynae
@@ -66,7 +66,7 @@ export default function Navbar() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link
-                        className="block px-5 py-4 hover:bg-gray-50 text-[#22426e] text-[14px] font-medium "
+                        className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
                         href="/proctology"
                       >
                         Proctology
@@ -74,7 +74,7 @@ export default function Navbar() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link
-                        className="block px-5 py-4 hover:bg-gray-50 text-[#22426e] text-[14px] font-medium"
+                        className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium"
                         href="/endourology"
                       >
                         Endourology
@@ -135,7 +135,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <div className="flex md:hidden">
           <Button
-            className=" bg-white text-[#000000dd] text-[40px]"
+            className=" bg-white text-[#000000dd] !size-[70px]"
             onClick={() => setIsDrawerOpen(!isDrawerOpen)}
           >
             {isDrawerOpen ? (
@@ -149,13 +149,13 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isDrawerOpen && (
-        <div className="absolute right-10 w-[250px] bg-white rounded-sm py-4 px-5 flex flex-col gap-3 z-50 md:hidden text-left">
+        <div className="absolute top-20 shadow-2xl right-10 w-[250px] bg-white rounded-sm py-4 px-5 flex flex-col gap-3 z-50 md:hidden text-left">
           <NavigationMenu>
             <NavigationMenuList className="flex flex-col gap-2 items-start">
               {/* Services Dropdown */}
               <NavigationMenuItem className="w-full">
                 <NavigationMenuTrigger
-                  className="w-full flex items-center justify-between text-[#22426e] text-[14px] px-2 gap-30"
+                  className="w-full flex items-center justify-between !text-[#22426e] text-[14px] px-2 gap-30"
                   onClick={() => setShowServices(!showServices)}
                 >
                   <span className="text-left">Services</span>
@@ -166,10 +166,10 @@ export default function Navbar() {
                   <div className="py-2 mt-2 flex flex-col gap-1 px-4 text-[14px] relative">
                     {/* vertical line */}
                     <div className="absolute left-2 top-1 bottom-0  w-[1px]  bg-gray-100" />
-                    <span className="py-1 text-[#22426e] ml-1 text-left">Laparoscopy Surgery</span>
-                    <span className="py-1 text-[#22426e] ml-1 text-left">Laparoscopic Gynae</span>
-                    <span className="py-1 text-[#22426e] ml-1 text-left">Proctology</span>
-                    <span className="py-1 text-[#22426e] ml-1 text-left">Endourology</span>
+                    <span className="py-1 !text-[#22426e] ml-1 text-left">Laparoscopy Surgery</span>
+                    <span className="py-1 !text-[#22426e] ml-1 text-left">Laparoscopic Gynae</span>
+                    <span className="py-1 !text-[#22426e] ml-1 text-left">Proctology</span>
+                    <span className="py-1 !text-[#22426e] ml-1 text-left">Endourology</span>
                   </div>
                 )}
               </NavigationMenuItem>
