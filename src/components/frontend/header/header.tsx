@@ -100,7 +100,7 @@ export default function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     className="text-[14px] font-medium bg-transparent hover:text-[#22426e] !text-[#22426e]  hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4"
-                    href="/news-media"
+                    href="/news-and-media"
                   >
                     News & Media
                   </Link>

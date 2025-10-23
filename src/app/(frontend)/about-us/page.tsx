@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <React.Fragment>
       {/* for video */}
-      <div className="relative overflow-hidden mt-20 mx-auto max-h-[700px] h-full w-full object-cover ">
+      <div className="relative overflow-hidden mx-auto max-h-[700px] h-full w-full object-cover ">
         <video
           className="w-full object-cover mx-auto object-[0%_80%] max-h-[700px]"
           src="/start-hospital.mp4"
@@ -100,7 +100,7 @@ export default function AboutUs() {
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {/* Box 1 */}
-                <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center min-h-[220px]">
+                <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center hover:scale-102">
                   <h2 className="text-[20px] font-semibold text-[#0f2239] mb-3">Chemist Shop</h2>
                   <p className="text-[#555] text-[15px] leading-[26px]">
                     Provide convenience for patients and staff by offering easy access to essential
@@ -109,7 +109,7 @@ export default function AboutUs() {
                 </div>
 
                 {/* Box 2 */}
-                <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center min-h-[220px]">
+                <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center hover:scale-102">
                   <h2 className="text-[20px] font-semibold text-[#0f2239] mb-3">Auditorium</h2>
                   <p className="text-[#555] text-[15px] leading-[26px]">
                     Serves as a venue for training, conferences, and educational events, enhancing
@@ -119,7 +119,7 @@ export default function AboutUs() {
 
                 {/* Box 3 - Centered only on md screens */}
                 <div className="md:col-span-2 lg:col-span-1 md:mx-auto lg:mx-0 md:w-1/2 lg:w-full">
-                  <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center min-h-[220px]">
+                  <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center hover:scale-102">
                     <h2 className="text-[20px] font-semibold text-[#0f2239] mb-3">
                       Staff Accommodations
                     </h2>
