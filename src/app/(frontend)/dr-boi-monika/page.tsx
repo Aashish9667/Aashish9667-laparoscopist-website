@@ -11,7 +11,9 @@ export default function Page555() {
           <Image
             alt="doctor"
             className="w-[300px] h-[320px] md:w-[390px] md:h-[450px] rounded-2xl object-cover"
+            height={320}
             src="/Monika-Tomar.png.avif"
+            width={300}
           />
         </div>
 

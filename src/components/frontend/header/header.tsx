@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav className={`bg-white shadow-sm ${poppins.className}`}>
-      <div className="max-w-[1280px] mx-auto flex justify-between items-center px-4 py-3">
+      <div className="max-w-[1280px] mx-auto flex justify-between items-center px-4 py-0">
         {/* Logo */}
         <div className="relative z-20 -mb-12">
           <Image
@@ -51,7 +51,7 @@ export default function Navbar() {
                     <NavigationMenuLink asChild>
                       <Link
                         className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
-                        href="/laparoscopy-surgery"
+                        href="/genral"
                       >
                         Laparoscopy Surgery
                       </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
                     <NavigationMenuLink asChild>
                       <Link
                         className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
-                        href="/laparoscopic-gynae"
+                        href="/laparo-scopic-gynae-colposcopy"
                       >
                         Laparoscopic Gynae
                       </Link>

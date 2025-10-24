@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from 'react';
 
 export default function Laparoscopic() {
   return (
@@ -7,44 +7,41 @@ export default function Laparoscopic() {
       <div className="bg-gray-300 p-20 ">
         <h1 className="font-semibold text-[40px] mb-2 md:4">Laparoscopic Gynae Colposcopy</h1>
         <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
-          Colposcopy is a specialized diagnostic procedure that allows detailed
-          examination of the uterine cervix using a colposcope. This instrument
-          is critical in diagnosing abnormalities in the lower genital tract by
-          analyzing the surface epithelium, connective tissue (stroma), and
-          vascular patterns.
+          Colposcopy is a specialized diagnostic procedure that allows detailed examination of the
+          uterine cervix using a colposcope. This instrument is critical in diagnosing abnormalities
+          in the lower genital tract by analyzing the surface epithelium, connective tissue
+          (stroma), and vascular patterns.
         </p>
 
         <h1 className="font-bold text-[32px] mb-2 md:mb-4">Evaluation Of Lower Genital Tract</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099]">
           <li className="font-semibold md:ml-4">Lugol Iodine</li>
           <p className="md:ml-4 md:leading-tight">
-            Lugol’s iodine is commonly used in medical examinations to help
-            differentiate between normal and abnormal epithelial cells. When
-            applied, healthy epithelial cells containing glycogen absorb the
-            iodine and turn a dark brown color. In contrast, areas that do not
-            take up the dark brown stain indicate abnormal or potentially
-            unhealthy tissue. These suspicious regions can be identified
-            instantly during the procedure and are typically investigated
-            further through cytology or biopsy for accurate diagnosis.
+            Lugol’s iodine is commonly used in medical examinations to help differentiate between
+            normal and abnormal epithelial cells. When applied, healthy epithelial cells containing
+            glycogen absorb the iodine and turn a dark brown color. In contrast, areas that do not
+            take up the dark brown stain indicate abnormal or potentially unhealthy tissue. These
+            suspicious regions can be identified instantly during the procedure and are typically
+            investigated further through cytology or biopsy for accurate diagnosis.
           </p>
 
           <li className="font-semibold md:ml-4">Acetic Acid</li>
           <p className="md:ml-4  md:leading-tight">
-            Applying 3–5% acetic acid highlights metaplastic and dysplastic
-            areas, turning them into distinct aceto-white regions.
+            Applying 3–5% acetic acid highlights metaplastic and dysplastic areas, turning them into
+            distinct aceto-white regions.
           </p>
 
           <li className="font-semibold md:ml-4">Green filter</li>
           <p className="md:ml-4 md:leading-tight">
-            Improves visualization by absorbing red tones, making blood vessels
-            appear as black streaks for better assessment.
+            Improves visualization by absorbing red tones, making blood vessels appear as black
+            streaks for better assessment.
           </p>
 
           <li className="font-semibold md:ml-4">Directed Biopsy</li>
           <p className="md:ml-4 md:leading-tight">
-            Tissue samples are collected from the most abnormal areas under
-            colposcopic guidance for accurate diagnosis. This is the gold
-            standard for identifying cervical pre-cancerous conditions.
+            Tissue samples are collected from the most abnormal areas under colposcopic guidance for
+            accurate diagnosis. This is the gold standard for identifying cervical pre-cancerous
+            conditions.
           </p>
         </ul>
 
@@ -52,16 +49,16 @@ export default function Laparoscopic() {
         <ul className="list-disc pl-6 text-[16px] space-y-2 md:ml-4 md:leading-tight text-[#00000099]">
           <li className="font-semibold">Cryocautery</li>
           <p>
-            This procedure involves freezing abnormal tissue to -20°C or lower
-            using a cryoprobe, resulting in tissue destruction (cryo-necrosis).
-            The dead tissue is naturally replaced with healthy tissue.
+            This procedure involves freezing abnormal tissue to -20°C or lower using a cryoprobe,
+            resulting in tissue destruction (cryo-necrosis). The dead tissue is naturally replaced
+            with healthy tissue.
           </p>
 
           <li className="font-semibold">LEEP (Loop Electrosurgical Excision Procedure)</li>
           <p>
-            A minimally invasive procedure to remove deeper cervical lesions.
-            The excised tissue can be sent for histopathological examination,
-            serving as both a diagnostic and therapeutic method.
+            A minimally invasive procedure to remove deeper cervical lesions. The excised tissue can
+            be sent for histopathological examination, serving as both a diagnostic and therapeutic
+            method.
           </p>
         </ul>
       </div>
@@ -70,18 +67,16 @@ export default function Laparoscopic() {
       <div className="bg-white p-20">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Laparoscopic Gynae Hysteroscopy</h1>
         <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
-          Hysteroscopy is a procedure used to directly visualize the uterus
-          using an endoscope, enabling both diagnostic and therapeutic
-          interventions.
+          Hysteroscopy is a procedure used to directly visualize the uterus using an endoscope,
+          enabling both diagnostic and therapeutic interventions.
         </p>
 
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4 ">Diagnostic Applications</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099] md:ml-4 md:leading-tight">
           <li className="font-semibold">Abnormal Uterine Bleeding (AUB/DUB)</li>
           <p>
-            Hysteroscopy helps detect conditions like normal endometrium,
-            submucous myoma, endometrial polyps, hyperplasia, or cancer, which
-            may cause abnormal bleeding.
+            Hysteroscopy helps detect conditions like normal endometrium, submucous myoma,
+            endometrial polyps, hyperplasia, or cancer, which may cause abnormal bleeding.
           </p>
 
           <li className="font-semibold">Lost or Misplaced IUCD</li>
@@ -89,10 +84,9 @@ export default function Laparoscopic() {
 
           <li className="font-semibold">Infertility Evaluation</li>
           <p>
-            Provides a detailed view of the cervical canal, uterine cavity,
-            tubal ostia, and intramural segments of the fallopian tubes. Common
-            issues like adhesions, fibroids, polyps, or septae can be
-            identified.
+            Provides a detailed view of the cervical canal, uterine cavity, tubal ostia, and
+            intramural segments of the fallopian tubes. Common issues like adhesions, fibroids,
+            polyps, or septae can be identified.
           </p>
         </ul>
 
@@ -119,8 +113,8 @@ export default function Laparoscopic() {
       <div className="bg-gray-300 p-20">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Diagnostic Laparoscopy</h1>
         <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
-          Diagnostic laparoscopy is a minimally invasive procedure used to
-          visualize and evaluate abdominal and pelvic organs.
+          Diagnostic laparoscopy is a minimally invasive procedure used to visualize and evaluate
+          abdominal and pelvic organs.
         </p>
 
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Applications in Infertility</h1>
@@ -130,8 +124,7 @@ export default function Laparoscopic() {
 
           <li className="font-semibold">Ovarian Drilling (for PCOS)</li>
           <p>
-            Treats polycystic ovarian syndrome by reducing ovarian cysts and
-            improving fertility.
+            Treats polycystic ovarian syndrome by reducing ovarian cysts and improving fertility.
           </p>
 
           <li className="font-semibold">Adhesion Assessment and Treatment</li>
@@ -143,7 +136,9 @@ export default function Laparoscopic() {
 
         <h1 className="font-semibold text-[32px] mt-4 md:mb-4">Other Diagnostic Uses</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 leading-tight">
-          <li>Investigating unexplained pelvic pain, suspected ectopic pregnancy, or ovarian cancer.</li>
+          <li>
+            Investigating unexplained pelvic pain, suspected ectopic pregnancy, or ovarian cancer.
+          </li>
           <li>Follow-up evaluations for cancer treatment.</li>
         </ul>
       </div>
@@ -152,17 +147,14 @@ export default function Laparoscopic() {
       <div className="bg-white p-20">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Operative Laparoscopy</h1>
         <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
-          Laparoscopy offers solutions for various gynecological conditions
-          with precision and minimal recovery time.
+          Laparoscopy offers solutions for various gynecological conditions with precision and
+          minimal recovery time.
         </p>
 
         <h1 className="font-semibold text-[32px] mb-2  md:mb-4">A) Tubal Surgeries</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-tight">
           <li className="font-semibold">Family Planning (Sterilization)</li>
-          <p>
-            Permanent birth control through tubal ligation to prevent ovum
-            passage.
-          </p>
+          <p>Permanent birth control through tubal ligation to prevent ovum passage.</p>
 
           <li className="font-semibold">Tubal Reconstruction/Recanalization</li>
           <p>Repairs damaged fallopian tubes, addressing blockages or injuries.</p>
@@ -178,9 +170,8 @@ export default function Laparoscopic() {
 
           <li className="font-semibold">Hysterectomy</li>
           <p>
-            Total laparoscopic hysterectomy (TLH) and laparoscopic-assisted
-            vaginal hysterectomy (LAVH) are safe and effective methods for
-            uterus removal.
+            Total laparoscopic hysterectomy (TLH) and laparoscopic-assisted vaginal hysterectomy
+            (LAVH) are safe and effective methods for uterus removal.
           </p>
 
           <li className="font-semibold">Cancer Surgery</li>
@@ -203,8 +194,8 @@ export default function Laparoscopic() {
 
           <li className="font-semibold">Advanced Cases</li>
           <p>
-            Adhesiolysis, cyst removal, and other interventions address
-            extensive damage caused by endometriosis.
+            Adhesiolysis, cyst removal, and other interventions address extensive damage caused by
+            endometriosis.
           </p>
         </ul>
 

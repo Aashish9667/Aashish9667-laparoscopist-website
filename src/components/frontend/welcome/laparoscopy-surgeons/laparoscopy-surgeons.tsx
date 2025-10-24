@@ -64,7 +64,7 @@ export default function LaparoscopySurgeons() {
                 </p>
                 <a
                   className="flex items-center justify-center md:justify-start gap-1 md:pt-2 pt-4 text-[#24426d]"
-                  href="/components/frontend/dr-boi-monika/dr-boi-medhavi"
+                  href="/dr-boi-medhavi"
                 >
                   <span className="hover:underline text-[16px] font-medium md:ml-5 ml-0">
                     View full bio
@@ -110,7 +110,7 @@ export default function LaparoscopySurgeons() {
                 </p>
                 <a
                   className="flex items-center justify-center md:justify-start gap-1 mt-2 text-[#24426d]"
-                  href="/components/frontend/dr-boi-monika/dr-boi-medhavi"
+                  href="/dr-boi-monika"
                 >
                   <span className="hover:underline text-[16px] font-medium lg:ml-5 md:ml-5 md:pb-2 ml-0">
                     View full bio
