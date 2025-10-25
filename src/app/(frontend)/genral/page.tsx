@@ -236,24 +236,24 @@ export default function LaparoscopicSurgery() {
           >
             {generalSurgeries.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className=" m-2 overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-5 mt-10 mb-10">
-                  <div className="relative w-full h-60 overflow-hidden rounded-lg mb-10">
-                    <Image
-                      alt={surgery.title}
-                      className="object-fill rounded-lg"
-                      src={surgery.img}
-                      fill
-                    />
+                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg transition-all duration-300 p-5 mt-10 mb-10">
+                  <div>
+                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                      <Image
+                        alt={surgery.title}
+                        className="object-fill rounded-lg"
+                        src={surgery.img}
+                        fill
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
+                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed flex-grow">
-                    {surgery.desc}
-                  </p>
                 </div>
               </SwiperSlide>
             ))}
 
-            <div className="flex justify-center mt-5 mb-10 gap-2">
+            <div className="flex justify-center mb-10 gap-2">
               {generalSurgeries.map((_, i) => (
                 <div
                   className={`h-2 w-2 rounded-full cursor-pointer transition-all ${
@@ -322,24 +322,24 @@ export default function LaparoscopicSurgery() {
           >
             {herniaSurgeries.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className=" m-2 overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-5 mt-10 mb-10 bg-white">
-                  <div className="relative w-full h-60 overflow-hidden rounded-lg mb-10">
-                    <Image
-                      alt={surgery.title}
-                      className="object-fill rounded-lg"
-                      src={surgery.img}
-                      fill
-                    />
+                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                  <div>
+                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                      <Image
+                        alt={surgery.title}
+                        className="object-fill rounded-lg"
+                        src={surgery.img}
+                        fill
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
+                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed flex-grow">
-                    {surgery.desc}
-                  </p>
                 </div>
               </SwiperSlide>
             ))}
 
-            <div className="flex justify-center mt-5 mb-10 gap-2">
+            <div className="flex justify-center mb-10 gap-2">
               {herniaSurgeries.map((_, i) => (
                 <div
                   className={`h-2 w-2 rounded-full cursor-pointer transition-all ${
@@ -458,24 +458,24 @@ export default function LaparoscopicSurgery() {
           >
             {urologySurgeries.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className=" m-2 overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-5 mt-10 mb-10 bg-white">
-                  <div className="relative w-full h-60 overflow-hidden rounded-lg mb-10">
-                    <Image
-                      alt={surgery.title}
-                      className="object-fill rounded-lg"
-                      src={surgery.img}
-                      fill
-                    />
+                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_2px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                  <div>
+                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                      <Image
+                        alt={surgery.title}
+                        className="object-fill rounded-lg"
+                        src={surgery.img}
+                        fill
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
+                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed flex-grow">
-                    {surgery.desc}
-                  </p>
                 </div>
               </SwiperSlide>
             ))}
 
-            <div className="flex justify-center mt-5 mb-10 gap-2">
+            <div className="flex justify-center  mb-10 gap-2">
               {urologySurgeries.map((_, i) => (
                 <div
                   className={`h-2 w-2 rounded-full cursor-pointer transition-all ${
@@ -546,23 +546,25 @@ export default function LaparoscopicSurgery() {
           >
             {paediatric.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className=" m-2 overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-5 mt-10 mb-10">
-                  <div className="relative w-full h-60 overflow-hidden rounded-lg mb-10">
-                    <Image
-                      alt={surgery.title}
-                      className="object-fill rounded-lg"
-                      src={surgery.img}
-                      fill
-                    />
+                <div
+                  className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg 
+                 transition-all duration-300 p-5 mt-10 mb-10"
+                >
+                  <div>
+                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                      <Image
+                        alt={surgery.title}
+                        className="object-fill rounded-lg"
+                        src={surgery.img}
+                        fill
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
+                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed flex-grow">
-                    {surgery.desc}
-                  </p>
                 </div>
               </SwiperSlide>
             ))}
-
             <div className="flex justify-center mt-5 mb-10 gap-2">
               {paediatric.map((_, i) => (
                 <div
@@ -682,22 +684,32 @@ export default function LaparoscopicSurgery() {
           >
             {solidOrganSurgeries.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className=" m-2 overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-5 mt-10 mb-10">
-                  <div className="relative w-full h-60 overflow-hidden rounded-lg mb-10">
-                    <Image
-                      alt={surgery.title}
-                      className="object-fill rounded-lg"
-                      src={surgery.img}
-                      fill
-                    />
+                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg transition-all duration-300 p-5 mt-10 mb-10">
+                  <div>
+                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                      <Image
+                        alt={surgery.title}
+                        className="object-fill rounded-lg"
+                        src={surgery.img}
+                        fill
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
+                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed flex-grow">
-                    {surgery.desc}
-                  </p>
                 </div>
               </SwiperSlide>
             ))}
+            <div className="flex justify-center mt-5 mb-10 gap-2  md:hidden">
+              {solidOrganSurgeries.map((_, i) => (
+                <div
+                  className={`h-2 w-2 rounded-full cursor-pointer transition-all ${
+                    activeIndex === i ? 'bg-[black]' : 'bg-gray-400'
+                  }`}
+                  key={i}
+                />
+              ))}
+            </div>
           </Swiper>
         </div>
       </div>
@@ -816,22 +828,32 @@ export default function LaparoscopicSurgery() {
           >
             {vats.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className=" m-2 overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-all duration-300 p-5 mt-10 mb-10">
-                  <div className="relative w-full h-60 overflow-hidden rounded-lg mb-10">
-                    <Image
-                      alt={surgery.title}
-                      className="object-fill rounded-lg"
-                      src={surgery.img}
-                      fill
-                    />
+                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10">
+                  <div>
+                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                      <Image
+                        alt={surgery.title}
+                        className="object-fill rounded-lg"
+                        src={surgery.img}
+                        fill
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
+                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed flex-grow">
-                    {surgery.desc}
-                  </p>
                 </div>
               </SwiperSlide>
             ))}
+            <div className="flex justify-center mt-5 mb-10 gap-2 md:hidden">
+              {solidOrganSurgeries.map((_, i) => (
+                <div
+                  className={`h-2 w-2 rounded-full cursor-pointer transition-all ${
+                    activeIndex === i ? 'bg-[black]' : 'bg-gray-400'
+                  }`}
+                  key={i}
+                />
+              ))}
+            </div>
           </Swiper>
         </div>
       </div>
