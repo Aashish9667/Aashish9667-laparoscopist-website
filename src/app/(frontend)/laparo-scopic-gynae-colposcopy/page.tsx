@@ -2,10 +2,10 @@ import * as React from 'react';
 
 export default function Laparoscopic() {
   return (
-    <div className=" space-y-10">
+    <div className=" space-y-10 mt-22">
       {/* Section 1 */}
       <div className="bg-gray-300 p-20 ">
-        <h1 className="font-semibold text-[40px] mb-2 md:4">Laparoscopic Gynae Colposcopy</h1>
+        <h1 className="font-semibold text-[32px] mb-2 md:4">Laparoscopic Gynae Colposcopy</h1>
         <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
           Colposcopy is a specialized diagnostic procedure that allows detailed examination of the
           uterine cervix using a colposcope. This instrument is critical in diagnosing abnormalities
@@ -13,10 +13,12 @@ export default function Laparoscopic() {
           (stroma), and vascular patterns.
         </p>
 
-        <h1 className="font-bold text-[32px] mb-2 md:mb-4">Evaluation Of Lower Genital Tract</h1>
+        <h1 className="font-semibold text-[25px] mb-2 md:mb-4">
+          Evaluation Of Lower Genital Tract
+        </h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099]">
           <li className="font-semibold md:ml-4">Lugol Iodine</li>
-          <p className="md:ml-4 md:leading-tight">
+          <p className="md:ml-4 md:leading-normal">
             Lugol’s iodine is commonly used in medical examinations to help differentiate between
             normal and abnormal epithelial cells. When applied, healthy epithelial cells containing
             glycogen absorb the iodine and turn a dark brown color. In contrast, areas that do not
@@ -45,8 +47,8 @@ export default function Laparoscopic() {
           </p>
         </ul>
 
-        <h1 className="font-semibold text-[32px] mt-4 md:mb-4">Treatment Modalities</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2 md:ml-4 md:leading-tight text-[#00000099]">
+        <h1 className="font-semibold text-[25px] mt-4 md:mb-4">Treatment Modalities</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2 md:ml-4 md:leading-normal text-[#00000099]">
           <li className="font-semibold">Cryocautery</li>
           <p>
             This procedure involves freezing abnormal tissue to -20°C or lower using a cryoprobe,
@@ -71,8 +73,8 @@ export default function Laparoscopic() {
           enabling both diagnostic and therapeutic interventions.
         </p>
 
-        <h1 className="font-semibold text-[32px] mb-2 md:mb-4 ">Diagnostic Applications</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099] md:ml-4 md:leading-tight">
+        <h1 className="font-semibold text-[25px] mb-2 md:mb-4 ">Diagnostic Applications</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099] md:ml-4 md:leading-normal">
           <li className="font-semibold">Abnormal Uterine Bleeding (AUB/DUB)</li>
           <p>
             Hysteroscopy helps detect conditions like normal endometrium, submucous myoma,
@@ -90,7 +92,7 @@ export default function Laparoscopic() {
           </p>
         </ul>
 
-        <h1 className="font-semibold text-[32px] mt-4 md:mb-4">Therapeutic Applications</h1>
+        <h1 className="font-semibold text-[25px] mt-4 md:mb-4">Therapeutic Applications</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 md:ml-4 md:leading-tight text-[#00000099]">
           <li className="font-semibold">Endometrial Ablation</li>
           <p>A proven treatment for abnormal uterine bleeding.</p>
@@ -112,13 +114,13 @@ export default function Laparoscopic() {
       {/* Section 3 */}
       <div className="bg-gray-300 p-20">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Diagnostic Laparoscopy</h1>
-        <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
+        <p className="text-[16px] mb-4 md:mb-5 text-[#00000099]">
           Diagnostic laparoscopy is a minimally invasive procedure used to visualize and evaluate
           abdominal and pelvic organs.
         </p>
 
-        <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Applications in Infertility</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-tight">
+        <h1 className="font-semibold text-[25px]  mb-2 md:mb-4">Applications in Infertility</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-normal">
           <li className="font-semibold">Tubal Patency Evaluation</li>
           <p>Assesses whether fallopian tubes are open and functional.</p>
 
@@ -134,8 +136,8 @@ export default function Laparoscopic() {
           <p>Confirms and treats endometrial tissue growth outside the uterus.</p>
         </ul>
 
-        <h1 className="font-semibold text-[32px] mt-4 md:mb-4">Other Diagnostic Uses</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 leading-tight">
+        <h1 className="font-semibold text-[25px] mt-4 md:mb-4">Other Diagnostic Uses</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 leading-normal">
           <li>
             Investigating unexplained pelvic pain, suspected ectopic pregnancy, or ovarian cancer.
           </li>
@@ -146,13 +148,13 @@ export default function Laparoscopic() {
       {/* Section 4 */}
       <div className="bg-white p-20">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Operative Laparoscopy</h1>
-        <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
+        <p className="text-[16px] mb-4 md:mb-6 text-[#00000099]">
           Laparoscopy offers solutions for various gynecological conditions with precision and
           minimal recovery time.
         </p>
 
-        <h1 className="font-semibold text-[32px] mb-2  md:mb-4">A) Tubal Surgeries</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-tight">
+        <h1 className="font-semibold text-[25px] mb-2  md:mb-4">A) Tubal Surgeries</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-normal">
           <li className="font-semibold">Family Planning (Sterilization)</li>
           <p>Permanent birth control through tubal ligation to prevent ovum passage.</p>
 
@@ -163,8 +165,8 @@ export default function Laparoscopic() {
           <p>Removes ectopic pregnancies via tubal conservation or excision.</p>
         </ul>
 
-        <h1 className="font-semibold text-[32px] mt-4  md:mb-4">B) Uterine Surgeries</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-tight">
+        <h1 className="font-semibold text-[25px] mt-4  md:mb-4">B) Uterine Surgeries</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-normal">
           <li className="font-semibold">Myomectomy for Fibroids</li>
           <p>Removes fibroids laparoscopically while preserving fertility.</p>
 
@@ -178,8 +180,8 @@ export default function Laparoscopic() {
           <p>Advanced laparoscopic procedures like Wertheim’s hysterectomy.</p>
         </ul>
 
-        <h1 className="font-bold text-[32px] mt-4  md:mb-4">Ovarian Surgeries</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-tight ">
+        <h1 className="font-semibold text-[25px] mt-4  md:mb-4">C) Ovarian Surgeries</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-normal ">
           <li className="font-semibold">Ovarian Cystectomy</li>
           <p>Safely removes ovarian cysts while conserving the ovary.</p>
 
@@ -187,8 +189,8 @@ export default function Laparoscopic() {
           <p>Treats masses resulting from pelvic infections or other conditions.</p>
         </ul>
 
-        <h1 className="font-bold text-[32px] mt-4  md:mb-4">Endometriosis Treatment</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-tight">
+        <h1 className="font-semibold text-[25px] mt-4  md:mb-4">D) Endometriosis Treatment</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-normal">
           <li className="font-semibold">Early Stages</li>
           <p>Small lesions are identified and destroyed under magnification.</p>
 
@@ -199,8 +201,8 @@ export default function Laparoscopic() {
           </p>
         </ul>
 
-        <h1 className="font-bold text-[32px] mt-4  md:mb-4">Other Procedures</h1>
-        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-tight">
+        <h1 className="font-semibold text-[25px] mt-4  md:mb-4">E) Other Procedures</h1>
+        <ul className="list-disc pl-6 text-[16px] space-y-2  text-[#00000099] md:ml-4 md:leading-normal">
           <li>Removal of misplaced IUCDs</li>
           <li>Sacro-colpopexy for vaginal vault prolapse</li>
         </ul>

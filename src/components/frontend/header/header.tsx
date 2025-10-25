@@ -24,16 +24,18 @@ export default function Navbar() {
   const [showServices, setShowServices] = React.useState(false);
 
   return (
-    <nav className={`bg-white shadow-sm ${poppins.className}`}>
-      <div className="max-w-[1280px] mx-auto flex justify-between items-center px-4 py-0">
+    <nav
+      className={`bg-white shadow-sm ${poppins.className} fixed top-0 left-0 w-full z-50 bg-white `}
+    >
+      <div className="max-w-[1280px] mx-auto flex justify-between items-center px-8 py-2">
         {/* Logo */}
         <div className="relative z-20 -mb-12">
           <Image
             alt="Logo"
             className="object-contain"
-            height={60}
+            height={50}
             src="/Laparoscopic-Surgeons-Logo.webp.avif"
-            width={180}
+            width={150}
           />
         </div>
 

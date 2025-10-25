@@ -4,8 +4,8 @@ export default function Endourology() {
   return (
     <div className="text-gray-900">
       {/* Section 1 */}
-      <div className="bg-gray-300 p-20">
-        <h1 className="text-[40px] font-semibold mb-4">Endourology</h1>
+      <div className="bg-gray-300 p-20 mt-23">
+        <h1 className="text-[32px] font-semibold mb-4">Endourology</h1>
         <p className="text-[16px] text-[#00000099] leading-relaxed">
           Endourology is a specialized branch of urology that focuses on diagnosing and treating
           urinary tract disorders using minimally invasive techniques. These advanced procedures
@@ -15,7 +15,7 @@ export default function Endourology() {
 
       {/* PCNL Section */}
       <div className="bg-white p-20">
-        <h1 className="text-[40px] font-semibold mb-4">PCNL (Percutaneous Nephrolithotomy)</h1>
+        <h1 className="text-[32px] font-semibold mb-4">PCNL (Percutaneous Nephrolithotomy)</h1>
         <p className="text-[16px] leading-relaxed mb-2 text-[#00000099] md:mb-4">
           PCNL is a surgical procedure used to remove large kidney stones (greater than 2 cm)
           located near the pelvic region.
@@ -48,7 +48,7 @@ export default function Endourology() {
 
       {/* URS Section */}
       <div className="bg-gray-300 p-20">
-        <h1 className="text-[40px] font-semibold mb-4">URS (Ureteroscopy)</h1>
+        <h1 className="text-[32px] font-semibold mb-4">URS (Ureteroscopy)</h1>
         <p className="text-[16px] leading-relaxed mb-2 text-[#00000099] md:mb-4">
           Ureteroscopy is a minimally invasive procedure used to diagnose and treat stones in the
           ureter and kidney.
@@ -77,7 +77,7 @@ export default function Endourology() {
 
       {/* TURBT Section */}
       <div className="bg-white p-20">
-        <h1 className="text-[40px] font-semibold mb-4">
+        <h1 className="text-[32px] font-semibold mb-4">
           TURBT (Transurethral Resection of Bladder Tumor)
         </h1>
         <p className="text-[16px] leading-relaxed mb-2 md:mb-4 text-[#00000099]">

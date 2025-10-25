@@ -183,7 +183,7 @@ export default function LaparoscopicSurgery() {
   return (
     <React.Fragment>
       {/* Laparoscopic General Surgery  */}
-      <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
+      <div className="mt-30 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-normal md:tracking-wide">

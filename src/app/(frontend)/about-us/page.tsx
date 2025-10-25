@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <React.Fragment>
       {/* for video */}
-      <div className="relative overflow-hidden mx-auto max-h-[700px] h-full w-full object-cover ">
+      <div className="relative overflow-hidden mx-auto max-h-[700px] h-full w-full object-cover mt-23">
         <video
           className="w-full object-cover mx-auto object-[0%_80%] max-h-[700px]"
           src="/start-hospital.mp4"
@@ -19,7 +19,7 @@ export default function AboutUs() {
         <div className="max-w-[1200px] mx-auto py-8 px-8">
           <div>
             <div className="grid justify-center">
-              <h1 className="text-[32px] leading-[39px] text-[#22426e] font-bold align-center">
+              <h1 className="text-[32px] leading-[39px] text-[#22426e] font-semibold align-center">
                 About Us
               </h1>
             </div>
@@ -88,7 +88,7 @@ export default function AboutUs() {
           </div>
 
           <div className="py-20">
-            <h1 className="text-[32px] text-[#000000ee] font-bold text-center leading-[36px] py-8">
+            <h1 className="text-[32px] text-[#000000ee] font-semibold text-center leading-[36px] py-8">
               Our Commitment to Excellence
             </h1>
             <p className="text-[16px] text-[#00000099] text-center leading-[26px] pb-12">
@@ -101,7 +101,7 @@ export default function AboutUs() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {/* Box 1 */}
                 <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center hover:scale-102">
-                  <h2 className="text-[20px] font-semibold text-[#0f2239] mb-3">Chemist Shop</h2>
+                  <h2 className="text-[20px] font-[500] text-[#0f2239] mb-3">Chemist Shop</h2>
                   <p className="text-[#555] text-[15px] leading-[26px]">
                     Provide convenience for patients and staff by offering easy access to essential
                     medications on-site.
@@ -110,7 +110,7 @@ export default function AboutUs() {
 
                 {/* Box 2 */}
                 <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center hover:scale-102">
-                  <h2 className="text-[20px] font-semibold text-[#0f2239] mb-3">Auditorium</h2>
+                  <h2 className="text-[20px] font-[500] text-[#0f2239] mb-3">Auditorium</h2>
                   <p className="text-[#555] text-[15px] leading-[26px]">
                     Serves as a venue for training, conferences, and educational events, enhancing
                     professional development.
@@ -120,7 +120,7 @@ export default function AboutUs() {
                 {/* Box 3 - Centered only on md screens */}
                 <div className="md:col-span-2 lg:col-span-1 md:mx-auto lg:mx-0 md:w-1/2 lg:w-full">
                   <div className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-2xl py-8 px-8 text-center flex flex-col justify-center items-center hover:scale-102">
-                    <h2 className="text-[20px] font-semibold text-[#0f2239] mb-3">
+                    <h2 className="text-[20px] font-[500] text-[#0f2239] mb-3">
                       Staff Accommodations
                     </h2>
                     <p className="text-[#555] text-[15px] leading-[26px]">
@@ -137,7 +137,7 @@ export default function AboutUs() {
       <div className="max-w-[1200px] mx-auto py-20 px-8">
         {/* Heading */}
         <div className="text-center mb-8">
-          <p className="text-[16px] leading-[26px] text-[#000000ee] font-bold">
+          <p className="text-[20px] leading-[26px] text-[#000000ee] font-semibold">
             Meet Our Team of Highly Skilled and Compassionate Doctors, Committed to Providing <br />
             Exceptional Care and Ensuring Your Health and Well-being
           </p>
@@ -147,13 +147,13 @@ export default function AboutUs() {
         {/* Table Section using Grid */}
         <div className="border border-gray-300 rounded-lg bg-white overflow-x-auto">
           {/* Header */}
-          <table className="w-full border-collapse text-left text-[15px]">
+          <table className="w-full border-collapse text-left text-[16px]">
             {/* Header */}
             <thead>
-              <tr className="font-semibold border-b border-gray-300 text-[#000]">
-                <th className="py-3 px-4 w-1/3">Doctor Name</th>
-                <th className="py-3 px-4 w-1/3">Qualification</th>
-                <th className="py-3 px-4 w-1/3">Specialization</th>
+              <tr className="border-b border-gray-300 text-[#000000de]">
+                <th className="py-3 px-4 w-1/3 font-semibold">Doctor Name</th>
+                <th className="py-3 px-4 w-1/3 font-semibold">Qualification</th>
+                <th className="py-3 px-4 w-1/3 font-semibold">Specialization</th>
               </tr>
             </thead>
 

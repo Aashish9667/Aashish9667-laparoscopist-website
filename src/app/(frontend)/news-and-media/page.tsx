@@ -18,13 +18,13 @@ const pressImages = [
 
 export default function News() {
   return (
-    <div className="max-w-[1200px] mx-auto md:py-20 py-15 px-4 md:px-4 flex flex-col md:flex-row justify-between gap-10 md:gap-10">
+    <div className="max-w-[1200px] mx-auto md:py-20 py-15 px-4 md:px-4 flex flex-col md:flex-row justify-between gap-10 md:gap-10 mt-20">
       {/* Left side */}
       <div className="flex-1">
         {/* Title */}
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#0f2239] mb-2">Press Release</h1>
-          <p className="text-[#00000099]">
+          <h1 className="text-[32px] font-medium text-[#0f2239] mb-2">Press Release</h1>
+          <p className="text-[#00000099] text-[16px]">
             News, Updates, and Breakthroughs from Our Medical Experts
           </p>
         </div>
@@ -49,8 +49,8 @@ export default function News() {
 
       {/* Right side (visible only on md and above) */}
       <div className="hidden md:block w-[30%] pl-5">
-        <div className="flex flex-col gap-5 text-[14px] leading-[25px]">
-          <h1 className="text-xl font-semibold text-[#0f2239]">Latest News</h1>
+        <div className="flex flex-col gap-5 leading-[25px]">
+          <h1 className="text-xl font-medium text-[#0f2239] text-[32px]">Latest News</h1>
 
           {[
             'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
@@ -64,7 +64,7 @@ export default function News() {
               key={i}
             >
               <AiOutlineFile className="text-white w-6 h-6 flex-shrink-0" />
-              <p className="text-white">{text}</p>
+              <p className="text-white text-[14px]">{text}</p>
             </div>
           ))}
         </div>
@@ -73,7 +73,7 @@ export default function News() {
       {/* Right side (mobile) */}
       <div className="block md:hidden w-full mt-10">
         <div className="flex flex-col gap-5 text-[14px] leading-[25px]">
-          <h1 className="text-xl font-semibold text-[#0f2239]">Latest News</h1>
+          <h1 className="text-xl font-medium text-[#0f2239]">Latest News</h1>
 
           {[
             'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
@@ -87,7 +87,7 @@ export default function News() {
               key={i}
             >
               <AiOutlineFile className="text-white w-6 h-6 flex-shrink-0" />
-              <p className="text-white">{text}</p>
+              <p className="text-white text-[14px]">{text}</p>
             </div>
           ))}
         </div>

@@ -128,7 +128,7 @@ export default function News() {
   const totalPages = Math.ceil(pressImages.length / ITEMS_PER_PAGE);
 
   return (
-    <div className="max-w-[1200px] mx-auto py-5 px-4 flex flex-wrap md:flex-nowrap justify-between gap-10 md:gap-12 mt-15">
+    <div className="max-w-[1200px] mx-auto py-5 px-4 flex flex-wrap md:flex-nowrap justify-between gap-10 md:gap-12 mt-35">
       {/* Left side (news list) */}
       <div className="md:w-[75%] w-full">
         {currentItems.map((item, i) => (

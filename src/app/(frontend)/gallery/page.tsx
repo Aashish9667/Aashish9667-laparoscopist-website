@@ -93,12 +93,12 @@ const Videos = [
 
 export default function News() {
   return (
-    <div className="max-w-[1200px] mx-auto md:py-10 py-5 px-4 md:px-8 flex flex-col  gap-10">
+    <div className="max-w-[1200px] mx-auto md:py-10 py-5 px-4 md:px-8 flex flex-col  gap-10 mt-20">
       {/* Left side */}
       <div className="flex1 py-10">
         {/* Title 1 */}
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#0f2239] mb-2">LIVE OPERATIVE WORKSHOP</h1>
+          <h1 className="text-2xl font-medium text-[#0f2239] mb-2">LIVE OPERATIVE WORKSHOP</h1>
         </div>
 
         {/* Image Grid */}
@@ -121,9 +121,7 @@ export default function News() {
       <div className="flex-1 py-10">
         {/* Title 2 */}
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#0f2239] mb-2">
-            COLPOSCOPY CME CUM WORKSHOP
-          </h1>
+          <h1 className="text-2xl font-medium text-[#0f2239] mb-2">COLPOSCOPY CME CUM WORKSHOP</h1>
         </div>
 
         {/* Image Grid */}
@@ -146,7 +144,7 @@ export default function News() {
       <div className="flex-1 py-10">
         {/* Title 3 */}
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#0f2239] mb-2">MIPH</h1>
+          <h1 className="text-2xl font-medium text-[#0f2239] mb-2">MIPH</h1>
         </div>
 
         {/* Image Grid */}
@@ -169,7 +167,7 @@ export default function News() {
       <div className="flex-1 py-10">
         {/* Title 4 */}
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#0f2239] mb-2">SAGES</h1>
+          <h1 className="text-2xl font-medium text-[#0f2239] mb-2">SAGES</h1>
         </div>
 
         {/* Image Grid */}
@@ -192,7 +190,7 @@ export default function News() {
       <div className="flex-1 py-10">
         {/* Title 5 */}
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#0f2239] mb-2">AIIMS</h1>
+          <h1 className="text-2xl font-medium text-[#0f2239] mb-2">AIIMS</h1>
         </div>
 
         {/* Image Grid */}
@@ -216,7 +214,7 @@ export default function News() {
       <div className="flex-1 py-10">
         {/* Title 6 */}
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-[#0f2239] mb-2">Videos</h1>
+          <h1 className="text-2xl font-medium text-[#0f2239] mb-2">Videos</h1>
         </div>
 
         {/* Image Grid */}

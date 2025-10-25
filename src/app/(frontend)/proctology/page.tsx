@@ -2,10 +2,10 @@ import * as React from 'react';
 
 export default function Proctology() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 mt-22">
       {/* section1 */}
       <div className="bg-gray-300 p-20">
-        <h1 className="text-[40px] font-semibold mb-2 md:mb-4">Proctology</h1>
+        <h1 className="text-[32px] font-semibold mb-2 md:mb-4">Proctology</h1>
         <p className="text-[#00000099] text-[16px] mb-4 md:mb-4">
           Proctology focuses on diagnosing and treating disorders of the rectum, anus, and
           surrounding tissues. Advanced techniques and patient-focused care are used to manage
@@ -19,7 +19,7 @@ export default function Proctology() {
           Hemorrhoids, or swollen veins in the rectal area, can cause discomfort and disrupt daily
           life. Treatment focuses on symptom relief and preventing complications.
         </p>
-        <h1 className="text-[32px] font-semibold mb-2 md:mb-4">Conservative Treatments</h1>
+        <h1 className="text-[25px] font-semibold mb-2 md:mb-4">Conservative Treatments</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099]">
           <li>Dietary Changes:</li>
           <p>
@@ -39,7 +39,7 @@ export default function Proctology() {
           <li>Stool Softeners:</li>
           <p>These medications make bowel movements easier, reducing strain on hemorrhoids.</p>
         </ul>
-        <h1 className="text-[32px] font-semibold mb-2 md:mb-4 md:mt-6   ">
+        <h1 className="text-[25px] font-semibold mb-2 md:mb-4 md:mt-6   ">
           Minimally Invasive Treatments:
         </h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099]  md:ml-4 md:leading-tight">
@@ -65,7 +65,7 @@ export default function Proctology() {
             surgery and promotes quicker recovery.
           </p>
         </ul>
-        <h1 className="text-[32px] font-semibold mb-2 md:mb-4 md:mt-6">Surgical Options:</h1>
+        <h1 className="text-[25px] font-semibold mb-2 md:mb-4 md:mt-6">Surgical Options:</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099]  md:ml-4 md:leading-tight">
           <li>Hemorrhoidectomy:</li>
           <p>
@@ -97,7 +97,7 @@ export default function Proctology() {
           An anal fistula is an abnormal connection between the anal canal and the skin near the
           anus. Effective management options include:
         </p>
-        <h1 className="text-[32px] font-semibold mb-2 md:mb-4">Minimally Invasive Treatment:</h1>
+        <h1 className="text-[25px] font-semibold mb-2 md:mb-4">Minimally Invasive Treatment:</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099]  md:ml-4 md:leading-tight">
           <li>VAAFT (Video-Assisted Anal Fistula Treatment):</li>
           <p>
@@ -107,7 +107,7 @@ export default function Proctology() {
             method is ideal for select patients.
           </p>
         </ul>
-        <h1 className="text-[32px] font-semibold mb-2 md:mb-4 md:mt-6">Surgical Treatment:</h1>
+        <h1 className="text-[25px] font-semibold mb-2 md:mb-4 md:mt-6">Surgical Treatment:</h1>
         <ul className="list-disc pl-6 text-[16px] space-y-2 text-[#00000099]  md:ml-4 md:leading-tight">
           <li>Fistulectomy:</li>
           <p>Surgical removal of the fistula tract to promote healing and prevent recurrence.</p>
