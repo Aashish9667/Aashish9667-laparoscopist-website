@@ -183,7 +183,7 @@ export default function LaparoscopicSurgery() {
   return (
     <React.Fragment>
       {/* Laparoscopic General Surgery  */}
-      <div className="mt-10 p-8 bg-white relative">
+      <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-normal md:tracking-wide">
@@ -193,7 +193,7 @@ export default function LaparoscopicSurgery() {
               Commonly performed laparoscopic general surgery procedures:
             </p>
           </div>
-          <div className="right-4 top-0  flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
       w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -268,7 +268,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopic Hernia Surgery */}
-      <div className="mt-10 p-8 bg-gray-300 relative">
+      <div className="mt-10 p-8 bg-gray-300 relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-normal md:tracking-wide">
@@ -278,7 +278,7 @@ export default function LaparoscopicSurgery() {
               Commonly performed laparoscopic hernia surgery procedures:
             </p>
           </div>
-          <div className="right-4 top-0  flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -354,7 +354,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Single Incision Laparoscopic Surgery */}
-      <div className="md:p-20 p-10">
+      <div className="md:p-20 p-10 mx-auto max-w-[1200px]">
         {/* Main Container */}
         <div className="flex flex-col md:flex-row md:items-center md:gap-12">
           {/* Left Side Text */}
@@ -404,17 +404,17 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopic Urology */}
-      <div className="mt-10 p-8 bg-gray-300 relative">
+      <div className="mt-10 p-8 bg-gray-300 relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div className="">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-normal md:tracking-wide">
-              Laparoscopic Hernia Surgery
+              Laparoscopic Urology
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
-              Commonly performed laparoscopic hernia surgery procedures:
+              Commonly performed Laparoscopic Urology procedures:
             </p>
           </div>
-          <div className="right-4 top-0  flex flex-row gap-3 z-10">
+          <div className=" hidden right-4 top-0  md:flex flex-row gap-3 z-10">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -492,7 +492,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Paediatric Laparoscopic */}
-      <div className="mt-10 p-8 bg-white relative">
+      <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div className="">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-normal md:tracking-wide">
@@ -502,7 +502,7 @@ export default function LaparoscopicSurgery() {
               Commonly performed paediatric laparoscopic procedures:
             </p>
           </div>
-          <div className="right-4 top-0  flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -575,8 +575,6 @@ export default function LaparoscopicSurgery() {
             </div>
           </Swiper>
         </div>
-
-        {/* ✅ Pagination Dots */}
       </div>
 
       {/* Laparoscopy in Trauma */}
@@ -627,7 +625,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopic Solid Organ Surgery */}
-      <div className="mt-10 p-8 bg-white relative">
+      <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div className="">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-normal md:tracking-wide">
@@ -637,7 +635,7 @@ export default function LaparoscopicSurgery() {
               Commonly performed laparoscopic solid organ surgery procedures:
             </p>
           </div>
-          <div className="right-4 top-0 flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
     w-12 h-12 flex items-center justify-center shadow-md transition-all 
@@ -758,7 +756,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/*  Thoracoscopy & VATS */}
-      <div className="mt-10 p-8 bg-white relative">
+      <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div className="">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-normal md:tracking-wide">
@@ -771,7 +769,7 @@ export default function LaparoscopicSurgery() {
               commonly are-
             </p>
           </div>
-          <div className="right-4 top-0 flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
     w-12 h-12 flex items-center justify-center shadow-md transition-all 

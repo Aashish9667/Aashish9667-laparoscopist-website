@@ -166,10 +166,33 @@ export default function Navbar() {
                   <div className="py-2 mt-2 flex flex-col gap-1 px-4 text-[14px] relative">
                     {/* vertical line */}
                     <div className="absolute left-2 top-1 bottom-0  w-[1px]  bg-gray-100" />
-                    <span className="py-1 !text-[#22426e] ml-1 text-left">Laparoscopy Surgery</span>
-                    <span className="py-1 !text-[#22426e] ml-1 text-left">Laparoscopic Gynae</span>
-                    <span className="py-1 !text-[#22426e] ml-1 text-left">Proctology</span>
-                    <span className="py-1 !text-[#22426e] ml-1 text-left">Endourology</span>
+                    <Link
+                      className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
+                      href="/genral"
+                    >
+                      Laparoscopy Surgery
+                    </Link>
+
+                    <Link
+                      className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
+                      href="/laparo-scopic-gynae-colposcopy"
+                    >
+                      Laparoscopic Gynae
+                    </Link>
+
+                    <Link
+                      className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
+                      href="/proctology"
+                    >
+                      Proctology
+                    </Link>
+
+                    <Link
+                      className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
+                      href="/endourology"
+                    >
+                      Endourology
+                    </Link>
                   </div>
                 )}
               </NavigationMenuItem>
@@ -190,7 +213,7 @@ export default function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     className="text-[#22426e] text-[14px] block w-full text-left"
-                    href="/news-media"
+                    href="/news-and-media"
                   >
                     News & Media
                   </Link>
