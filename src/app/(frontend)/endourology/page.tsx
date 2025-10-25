@@ -4,7 +4,7 @@ export default function Endourology() {
   return (
     <div className="text-gray-900">
       {/* Section 1 */}
-      <div className="bg-gray-300 p-20 mt-23">
+      <div className="bg-gray-300 mt-23 md:p-20 p-8 pt-18 md:pt-0.5">
         <h1 className="text-[32px] font-semibold mb-4">Endourology</h1>
         <p className="text-[16px] text-[#00000099] leading-relaxed">
           Endourology is a specialized branch of urology that focuses on diagnosing and treating
@@ -14,7 +14,7 @@ export default function Endourology() {
       </div>
 
       {/* PCNL Section */}
-      <div className="bg-white p-20">
+      <div className="bg-white md:p-20 p-8">
         <h1 className="text-[32px] font-semibold mb-4">PCNL (Percutaneous Nephrolithotomy)</h1>
         <p className="text-[16px] leading-relaxed mb-2 text-[#00000099] md:mb-4">
           PCNL is a surgical procedure used to remove large kidney stones (greater than 2 cm)
@@ -47,7 +47,7 @@ export default function Endourology() {
       </div>
 
       {/* URS Section */}
-      <div className="bg-gray-300 p-20">
+      <div className="bg-gray-300 md:p-20 p-8">
         <h1 className="text-[32px] font-semibold mb-4">URS (Ureteroscopy)</h1>
         <p className="text-[16px] leading-relaxed mb-2 text-[#00000099] md:mb-4">
           Ureteroscopy is a minimally invasive procedure used to diagnose and treat stones in the
@@ -76,7 +76,7 @@ export default function Endourology() {
       </div>
 
       {/* TURBT Section */}
-      <div className="bg-white p-20">
+      <div className="bg-white md:p-20 p-8">
         <h1 className="text-[32px] font-semibold mb-4">
           TURBT (Transurethral Resection of Bladder Tumor)
         </h1>
@@ -100,7 +100,7 @@ export default function Endourology() {
       </div>
 
       {/* RIRS Section */}
-      <div className="bg-gray-300 p-20">
+      <div className="bg-gray-300 md:p-20 p-8">
         <h1 className="text-[32px] font-semibold mb-4">RIRS (Retrograde Intrarenal Surgery)</h1>
         <p className="text-[16px] leading-relaxed mb-2 md:mb-4 text-[#00000099]">
           RIRS is a highly advanced, minimally invasive procedure for treating kidney conditions.

@@ -4,7 +4,7 @@ export default function Proctology() {
   return (
     <div className="space-y-10 mt-22">
       {/* section1 */}
-      <div className="bg-gray-300 p-20">
+      <div className="bg-gray-300 md:p-20 p-8 pt-18 md:pt-0.5">
         <h1 className="text-[32px] font-semibold mb-2 md:mb-4">Proctology</h1>
         <p className="text-[#00000099] text-[16px] mb-4 md:mb-4">
           Proctology focuses on diagnosing and treating disorders of the rectum, anus, and
@@ -13,7 +13,7 @@ export default function Proctology() {
         </p>
       </div>
       {/* section2 */}
-      <div className="bg-white p-20">
+      <div className="bg-white md:p-20 p-8">
         <h1 className="text-[32px] font-semibold mb-2 md:mb-4">Hemorrhoid Management</h1>
         <p className="text-[#00000099] text-[16px] mb-4 md:mb-4">
           Hemorrhoids, or swollen veins in the rectal area, can cause discomfort and disrupt daily
@@ -75,7 +75,7 @@ export default function Proctology() {
         </ul>
       </div>
       {/* section3 */}
-      <div className="bg-gray-300 p-20">
+      <div className="bg-gray-300 md:p-20 p-8">
         <h1 className="text-[32px] font-semibold mb-2 md:mb-4">
           STARR Procedure for ODS (Obstructive Defecation Syndrome)
         </h1>
@@ -91,7 +91,7 @@ export default function Proctology() {
         </p>
       </div>
       {/* section4 */}
-      <div className="bg-white p-20">
+      <div className="bg-white md:p-20 p-8">
         <h1 className="text-[32px] font-semibold mb-2 md:mb-4">Anal Fistula Management</h1>
         <p className="text-[#00000099] text-[16px] mb-4 md:mb-4">
           An anal fistula is an abnormal connection between the anal canal and the skin near the

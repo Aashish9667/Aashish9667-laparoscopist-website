@@ -30,13 +30,15 @@ export default function Navbar() {
       <div className="max-w-[1280px] mx-auto flex justify-between items-center px-8 py-2">
         {/* Logo */}
         <div className="relative z-20 -mb-12">
-          <Image
-            alt="Logo"
-            className="object-contain"
-            height={50}
-            src="/Laparoscopic-Surgeons-Logo.webp.avif"
-            width={150}
-          />
+          <Link aria-label="Go to homepage" href="/">
+            <Image
+              alt="Logo"
+              className="object-contain cursor-pointer"
+              height={50}
+              src="/Laparoscopic-Surgeons-Logo.webp.avif"
+              width={150}
+            />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -171,6 +173,7 @@ export default function Navbar() {
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
                       href="/genral"
+                      onClick={() => setIsDrawerOpen(false)}
                     >
                       Laparoscopy Surgery
                     </Link>
@@ -178,6 +181,7 @@ export default function Navbar() {
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
                       href="/laparo-scopic-gynae-colposcopy"
+                      onClick={() => setIsDrawerOpen(false)}
                     >
                       Laparoscopic Gynae
                     </Link>
@@ -185,6 +189,7 @@ export default function Navbar() {
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
                       href="/proctology"
+                      onClick={() => setIsDrawerOpen(false)}
                     >
                       Proctology
                     </Link>
@@ -192,6 +197,7 @@ export default function Navbar() {
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
                       href="/endourology"
+                      onClick={() => setIsDrawerOpen(false)}
                     >
                       Endourology
                     </Link>
@@ -205,6 +211,7 @@ export default function Navbar() {
                   <Link
                     className="text-[#22426e] text-[14px] block w-full text-left"
                     href="/about-us"
+                    onClick={() => setIsDrawerOpen(false)}
                   >
                     About Us
                   </Link>
@@ -216,6 +223,7 @@ export default function Navbar() {
                   <Link
                     className="text-[#22426e] text-[14px] block w-full text-left"
                     href="/news-and-media"
+                    onClick={() => setIsDrawerOpen(false)}
                   >
                     News & Media
                   </Link>
@@ -227,6 +235,7 @@ export default function Navbar() {
                   <Link
                     className="text-[#22426e] text-[14px] block w-full text-left"
                     href="/gallery"
+                    onClick={() => setIsDrawerOpen(false)}
                   >
                     Gallery
                   </Link>
@@ -235,7 +244,11 @@ export default function Navbar() {
 
               <NavigationMenuItem className="w-full bg-transparent hover:underline">
                 <NavigationMenuLink asChild>
-                  <Link className="text-[#22426e] text-[14px] block w-full text-left" href="/blogs">
+                  <Link
+                    className="text-[#22426e] text-[14px] block w-full text-left"
+                    href="/blogs"
+                    onClick={() => setIsDrawerOpen(false)}
+                  >
                     Blogs
                   </Link>
                 </NavigationMenuLink>

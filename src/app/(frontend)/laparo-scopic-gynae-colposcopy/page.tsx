@@ -4,8 +4,8 @@ export default function Laparoscopic() {
   return (
     <div className=" space-y-10 mt-22">
       {/* Section 1 */}
-      <div className="bg-gray-300 p-20 ">
-        <h1 className="font-semibold text-[32px] mb-2 md:4">Laparoscopic Gynae Colposcopy</h1>
+      <div className="bg-gray-300 md:p-20 p-8 pt-18 md:pt-0.5 ">
+        <h1 className="font-semibold text-[32px] mb-2 md:4 ">Laparoscopic Gynae Colposcopy</h1>
         <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
           Colposcopy is a specialized diagnostic procedure that allows detailed examination of the
           uterine cervix using a colposcope. This instrument is critical in diagnosing abnormalities
@@ -66,7 +66,7 @@ export default function Laparoscopic() {
       </div>
 
       {/* Section 2 */}
-      <div className="bg-white p-20">
+      <div className="bg-white md:p-20 p-8">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Laparoscopic Gynae Hysteroscopy</h1>
         <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
           Hysteroscopy is a procedure used to directly visualize the uterus using an endoscope,
@@ -112,7 +112,7 @@ export default function Laparoscopic() {
       </div>
 
       {/* Section 3 */}
-      <div className="bg-gray-300 p-20">
+      <div className="bg-gray-300 md:p-20 p-8">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Diagnostic Laparoscopy</h1>
         <p className="text-[16px] mb-4 md:mb-5 text-[#00000099]">
           Diagnostic laparoscopy is a minimally invasive procedure used to visualize and evaluate
@@ -146,7 +146,7 @@ export default function Laparoscopic() {
       </div>
 
       {/* Section 4 */}
-      <div className="bg-white p-20">
+      <div className="bg-white md:p-20 p-8">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Operative Laparoscopy</h1>
         <p className="text-[16px] mb-4 md:mb-6 text-[#00000099]">
           Laparoscopy offers solutions for various gynecological conditions with precision and
@@ -209,7 +209,7 @@ export default function Laparoscopic() {
       </div>
 
       {/* Section 5 */}
-      <div className="bg-gray-300 p-20">
+      <div className="bg-gray-300 md:p-20 p-8">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Vaginal Surgery</h1>
         <p className="text-[16px] text-[#00000099] md:mb-4">Common Procedures:</p>
         <ul className="list-disc pl-6 text-[16px] space-y-2">
