@@ -8,6 +8,7 @@ export default function AboutUs() {
       <div className="relative overflow-hidden mx-auto max-h-[700px] h-full w-full object-cover mt-23">
         <video
           className="w-full object-cover mx-auto object-[0%_80%] max-h-[700px]"
+          poster="/video-capture-0.00seg-3815.png"
           src="/start-hospital.mp4"
           autoPlay
           loop
@@ -134,7 +135,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="max-w-[1200px] mx-auto py-20 px-8">
+      <div className="max-w-[1200px] mx-auto pt-20 px-8">
         {/* Heading */}
         <div className="text-center mb-8">
           <p className="text-[20px] leading-[26px] text-[#000000ee] font-semibold">

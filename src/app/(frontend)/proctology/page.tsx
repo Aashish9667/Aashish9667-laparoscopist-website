@@ -91,7 +91,7 @@ export default function Proctology() {
         </p>
       </div>
       {/* section4 */}
-      <div className="bg-white md:p-20 p-8">
+      <div className="bg-white md:pt-20 md:px-20 pt-8 px-8 md:pb-0">
         <h1 className="text-[32px] font-semibold mb-2 md:mb-4">Anal Fistula Management</h1>
         <p className="text-[#00000099] text-[16px] mb-4 md:mb-4">
           An anal fistula is an abnormal connection between the anal canal and the skin near the
