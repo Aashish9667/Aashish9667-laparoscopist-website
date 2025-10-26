@@ -110,7 +110,7 @@ export default function News() {
             >
               <Image
                 alt={`Press Release ${i + 1}`}
-                className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transform transition-transform duration-500 group-hover:scale-110 active:scale-110 focus:scale-110"
                 src={src}
                 fill
               />
@@ -133,7 +133,7 @@ export default function News() {
             >
               <Image
                 alt={`Press Release ${i + 1}`}
-                className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transform transition-transform duration-500 group-hover:scale-110 active:scale-110 focus:scale-110"
                 src={src}
                 fill
               />
@@ -156,7 +156,7 @@ export default function News() {
             >
               <Image
                 alt={`Press Release ${i + 1}`}
-                className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transform transition-transform duration-500 group-hover:scale-110 active:scale-110 focus:scale-110"
                 src={src}
                 fill
               />
@@ -179,7 +179,7 @@ export default function News() {
             >
               <Image
                 alt={`Press Release ${i + 1}`}
-                className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transform transition-transform duration-500 group-hover:scale-110 active:scale-110 focus:scale-110"
                 src={src}
                 fill
               />
@@ -202,7 +202,7 @@ export default function News() {
             >
               <Image
                 alt={`Press Release ${i + 1}`}
-                className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transform transition-transform duration-500 group-hover:scale-110 active:scale-110 focus:scale-110"
                 src={src}
                 fill
               />
