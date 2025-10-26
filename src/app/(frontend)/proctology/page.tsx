@@ -4,7 +4,7 @@ export default function Proctology() {
   return (
     <div className="space-y-10 mt-22">
       {/* section1 */}
-      <div className="bg-gray-300 md:p-20 p-8 pt-18 md:pt-0.5">
+      <div className="bg-gray-300 md:p-20 p-8 pt-18 ">
         <h1 className="text-[32px] font-semibold mb-2 md:mb-4">Proctology</h1>
         <p className="text-[#00000099] text-[16px] mb-4 md:mb-4">
           Proctology focuses on diagnosing and treating disorders of the rectum, anus, and

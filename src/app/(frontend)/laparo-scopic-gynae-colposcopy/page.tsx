@@ -4,7 +4,7 @@ export default function Laparoscopic() {
   return (
     <div className=" space-y-10 mt-22">
       {/* Section 1 */}
-      <div className="bg-gray-300 md:p-20 p-8 pt-18 md:pt-0.5 ">
+      <div className="bg-gray-300 md:p-20 p-8 pt-18 ">
         <h1 className="font-semibold text-[32px] mb-2 md:4 ">Laparoscopic Gynae Colposcopy</h1>
         <p className="text-[16px] mb-4 md:mb-4 text-[#00000099]">
           Colposcopy is a specialized diagnostic procedure that allows detailed examination of the

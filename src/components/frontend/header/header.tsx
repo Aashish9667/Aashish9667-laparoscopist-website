@@ -55,7 +55,7 @@ export default function Navbar() {
                     <NavigationMenuLink asChild>
                       <Link
                         className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
-                        href="/genral"
+                        href="/laparoscopy-surgery"
                       >
                         Laparoscopy Surgery
                       </Link>
