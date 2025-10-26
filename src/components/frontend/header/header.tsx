@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-white shadow-sm ${poppins.className} fixed top-0 left-0 w-full z-50 bg-white `}
+      className={`bg-white shadow-sm ${poppins.className} fixed top-0 left-0 w-full z-50 bg-white`}
     >
       <div className="max-w-[1280px] mx-auto flex justify-between items-center px-8 py-2">
         {/* Logo */}
@@ -172,7 +172,7 @@ export default function Navbar() {
                     <div className="absolute left-2 top-1 bottom-0  w-[1px]  bg-gray-100" />
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
-                      href="/genral"
+                      href="/laparoscopy-surgery"
                       onClick={() => setIsDrawerOpen(false)}
                     >
                       Laparoscopy Surgery
