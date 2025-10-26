@@ -115,7 +115,7 @@ export default function News() {
   );
 
   return (
-    <div className="max-w-[1200px] mx-auto py-10 px-4 md:px-8 flex flex-col gap-10 mt-20 ">
+    <div className="max-w-[1200px] mx-auto pt-10 px-4 md:px-8 flex flex-col gap-10 mt-20 ">
       {/* section 1 */}
       <div className="py-10">
         <h1 className="text-2xl font-medium text-[#0f2239] mb-4">LIVE OPERATIVE WORKSHOP</h1>
@@ -146,8 +146,7 @@ export default function News() {
         {renderImageGrid(AIIMS)}
       </div>
       {/* section 6 */}
-      <div className="flex-1 py-10">
-        {/* Title 6 */}
+      <div className="flex-1 pt-10">
         <div className="mb-6">
           <h1 className="text-2xl font-medium text-[#0f2239] mb-2">Videos</h1>
         </div>

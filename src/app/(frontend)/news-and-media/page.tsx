@@ -17,13 +17,15 @@ const pressImages = [
 ];
 
 export default function News() {
+  const [activeIndex, setActiveIndex] = React.useState<null | number>(null);
+
   return (
-    <div className="max-w-[1200px] mx-auto md:py-20 py-15 px-4 md:px-4 flex flex-col md:flex-row justify-between gap-10 md:gap-10 mt-20">
+    <div className="max-w-[1200px] mx-auto md:pt-20 pt-15 px-4 md:px-4 flex flex-col md:flex-row justify-between gap-10 md:gap-10 mt-20">
       {/* Left side */}
       <div className="flex-1">
         {/* Title */}
         <div className="mb-6">
-          <h1 className="text-[32px] font-medium text-[#0f2239] mb-2">Press Release</h1>
+          <h1 className="text-[32px] font-medium text-[#0f2239] mb-2 ">Press Release</h1>
           <p className="text-[#00000099] text-[16px]">
             News, Updates, and Breakthroughs from Our Medical Experts
           </p>
@@ -35,10 +37,13 @@ export default function News() {
             <div
               className="group w-full aspect-[4/3] relative rounded-lg overflow-hidden shadow-[0px_0px_9px_0px_#2d5289]"
               key={i}
+              onTouchStart={() => setActiveIndex(i)}
             >
               <Image
+                className={`object-fill transition-transform duration-500 transform ${
+                  activeIndex === i ? 'scale-110' : 'scale-100'
+                } group-hover:scale-110`}
                 alt={`Press Release ${i + 1}`}
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
                 src={src}
                 fill
               />
@@ -49,8 +54,8 @@ export default function News() {
 
       {/* Right side (visible only on md and above) */}
       <div className="hidden md:block w-[30%] pl-5">
-        <div className="flex flex-col gap-5 leading-[25px]">
-          <h1 className="text-xl font-medium text-[#0f2239] text-[32px]">Latest News</h1>
+        <div className="flex flex-col gap-5 ">
+          <h1 className="text-[32px] font-medium text-[#0f2239]">Latest News</h1>
 
           {[
             'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
@@ -72,8 +77,8 @@ export default function News() {
 
       {/* Right side (mobile) */}
       <div className="block md:hidden w-full mt-10">
-        <div className="flex flex-col gap-5 text-[14px] leading-[25px]">
-          <h1 className="text-xl font-medium text-[#0f2239]">Latest News</h1>
+        <div className="flex flex-col gap-5 text-[32px]">
+          <h1 className="text-[32px] font-medium text-[#0f2239]">Latest News</h1>
 
           {[
             'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
