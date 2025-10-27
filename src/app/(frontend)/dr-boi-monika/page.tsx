@@ -7,12 +7,12 @@ export default function Page555() {
       {/* Section 1: Image + Text */}
       <div className="bg-gray-300 flex flex-col md:flex-row items-start justify-between p-7 pt-15 mt-24 lg:p-15 lg:pt-20 gap-8">
         {/* Left: Image */}
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-start md:justify-start">
           <Image
             alt="doctor"
             className="w-full h-[320px] md:w-[390px] md:h-[450px] rounded-2xl object-cover"
             height={320}
-            src="/Monika-Tomar.png.avif"
+            src="/Monika-tomar.png"
             width={300}
           />
         </div>
