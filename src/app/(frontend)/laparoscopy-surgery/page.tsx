@@ -226,7 +226,8 @@ export default function LaparoscopicSurgery() {
         <div className="relative">
           <Swiper
             breakpoints={{
-              768: { slidesPerView: 3 },
+              1024: { slidesPerView: 3 },
+              768: { slidesPerView: 2 },
             }}
             onBeforeInit={(swiper) => {
               // safely attach navigation buttons
@@ -246,7 +247,7 @@ export default function LaparoscopicSurgery() {
           >
             {generalSurgeries.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] transition-all duration-300 p-5 mt-10 mb-10">
+                <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] transition-all duration-300 p-5 mt-10 mb-10">
                   <div>
                     <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
                       <Image
@@ -314,7 +315,8 @@ export default function LaparoscopicSurgery() {
                 disableOnInteraction: false,
               }}
               breakpoints={{
-                768: { autoplay: false, slidesPerView: 3 },
+                1024: { slidesPerView: 3 },
+                768: { autoplay: false, slidesPerView: 2 },
               }}
               onBeforeInit={(swiper) => {
                 // cast to any to bypass TypeScript errors
@@ -454,6 +456,7 @@ export default function LaparoscopicSurgery() {
                 disableOnInteraction: false,
               }}
               breakpoints={{
+                1024: { slidesPerView: 3 },
                 768: { autoplay: false, slidesPerView: 3 },
               }}
               onBeforeInit={(swiper) => {
@@ -541,6 +544,7 @@ export default function LaparoscopicSurgery() {
               disableOnInteraction: false,
             }}
             breakpoints={{
+              1024: { slidesPerView: 3 },
               768: { autoplay: false, slidesPerView: 3 },
             }}
             onBeforeInit={(swiper) => {
@@ -672,7 +676,8 @@ export default function LaparoscopicSurgery() {
               disableOnInteraction: false,
             }}
             breakpoints={{
-              768: { autoplay: false, slidesPerView: 3 },
+              1024: { slidesPerView: 3 },
+              768: { autoplay: false, slidesPerView: 2 },
             }}
             className="hidden md:flex"
             modules={[Navigation]} // ✅ no Autoplay module
@@ -769,7 +774,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* vats */}
-      <div className="mt-10 pt-8 px-8 bg-white relative mx-auto max-w-[1200px]">
+      <div className="mt-10 pt-8 pb-20 px-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
@@ -802,6 +807,7 @@ export default function LaparoscopicSurgery() {
               disableOnInteraction: false,
             }}
             breakpoints={{
+              1024: { slidesPerView: 3 },
               768: { autoplay: false, slidesPerView: 3 },
             }}
             className="hidden md:flex"
@@ -810,7 +816,6 @@ export default function LaparoscopicSurgery() {
             slidesPerView={1}
             spaceBetween={20}
             autoHeight
-            loop
           >
             {vats.map((surgery, index) => (
               <SwiperSlide key={index}>

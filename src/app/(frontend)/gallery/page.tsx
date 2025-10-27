@@ -146,7 +146,7 @@ export default function News() {
         {renderImageGrid(AIIMS)}
       </div>
       {/* section 6 */}
-      <div className="flex-1 pt-10">
+      <div className="flex-1 pt-10 pb-20">
         <div className="mb-6">
           <h1 className="text-2xl font-medium text-[#0f2239] mb-2">Videos</h1>
         </div>

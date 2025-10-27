@@ -209,7 +209,7 @@ export default function Laparoscopic() {
       </div>
 
       {/* Section 5 */}
-      <div className="bg-gray-300 md:p-20 pt-8 px-8">
+      <div className="bg-gray-300 md:p-20 py-8 px-8">
         <h1 className="font-semibold text-[32px] mb-2 md:mb-4">Vaginal Surgery</h1>
         <p className="text-[16px] text-[#00000099] md:mb-4">Common Procedures:</p>
         <ul className="list-disc pl-6 text-[16px] space-y-2">

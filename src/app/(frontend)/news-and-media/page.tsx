@@ -76,7 +76,7 @@ export default function News() {
       </div>
 
       {/* Right side (mobile) */}
-      <div className="block md:hidden w-full mt-10">
+      <div className="block md:hidden w-full mt-10 pb-20">
         <div className="flex flex-col gap-5 text-[32px]">
           <h1 className="text-[32px] font-medium text-[#0f2239]">Latest News</h1>
 

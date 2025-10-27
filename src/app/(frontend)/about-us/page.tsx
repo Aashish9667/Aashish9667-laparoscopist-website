@@ -133,7 +133,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="max-w-[1200px] mx-auto pt-20 px-8">
+      <div className="max-w-[1200px] mx-auto py-20 px-8">
         {/* Heading */}
         <div className="text-center mb-8">
           <p className="text-[20px] leading-[26px] text-[#000000ee] font-semibold">

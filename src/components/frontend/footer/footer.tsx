@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export default function Footer() {
   return (
-    <footer className={`bg-white border-t border-gray-300  mt-20 ${poppins.className}`}>
+    <footer className={`bg-white border-t border-gray-300 ${poppins.className}`}>
       {/*  Responsive Layout */}
       <div className={` py-8 px-8  ${poppins.className} max-w-[1200px] mx-auto`}>
         <div className="flex flex-col md:flex-row justify-between items-start gap-6 lg:gap-20 text-left">
