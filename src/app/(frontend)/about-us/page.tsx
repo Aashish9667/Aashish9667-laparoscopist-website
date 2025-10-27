@@ -20,9 +20,7 @@ export default function AboutUs() {
         <div className="max-w-[1200px] mx-auto py-8 px-8">
           <div>
             <div className="grid justify-center">
-              <h1 className="text-[32px] leading-[39px] text-[#22426e] font-semibold align-center">
-                About Us
-              </h1>
+              <h1 className="text-[32px] text-[#22426e] font-semibold align-center">ABOUT US</h1>
             </div>
 
             <div className="py-8">

@@ -256,8 +256,8 @@ export default function LaparoscopicSurgery() {
                         fill
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-[#000000de]">{surgery.title}</h3>
+                    <p className="text-[#6d6d6d] text-base leading-relaxed">{surgery.desc}</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -343,8 +343,10 @@ export default function LaparoscopicSurgery() {
                           fill
                         />
                       </div>
-                      <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                      <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
+                      <h3 className="text-xl font-semibold mb-2 text-[#000000de]">
+                        {surgery.title}
+                      </h3>
+                      <p className="text-[#6d6d6d] text-base leading-relaxed">{surgery.desc}</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -371,7 +373,7 @@ export default function LaparoscopicSurgery() {
         <div className="flex flex-col md:flex-row md:items-center md:gap-12">
           {/* Left Side Text */}
           <div className="md:w-1/2">
-            <h1 className="text-[32px] mb-5 font-semibold text-gray-900 md:tracking-wide md:whitespace-nowrap">
+            <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap">
               Single Incision Laparoscopic Surgery
             </h1>
 
@@ -386,7 +388,7 @@ export default function LaparoscopicSurgery() {
               />
             </div>
 
-            <p className="text-[20px] text-[#00000099] mb-5 leading-relaxed">
+            <p className="text-[16px] text-[#000000de] mb-5 leading-normal">
               Single Incision Laparoscopic surgery (SILS) is a further advancement in laparoscopic
               surgery. It is now possible to do almost all laparoscopic procedures through a single
               incision instead of the multiple incisions used in conventional multi-port
@@ -394,7 +396,7 @@ export default function LaparoscopicSurgery() {
               performed SILS procedures are:
             </p>
 
-            <ul className="text-[#00000099] text-[16px] list-disc ml-6 md:ml-10 space-y-1">
+            <ul className="text-[#000000de] text-[16px] list-disc ml-6 md:ml-10 space-y-1">
               <li>Cholecystectomy</li>
               <li>Hysterectomy</li>
               <li>Ovarian Cystectomy</li>
@@ -597,7 +599,7 @@ export default function LaparoscopicSurgery() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-40">
             {/* Left Side Text */}
             <div className="md:w-1/2">
-              <h1 className="text-[32px] mb-5 font-semibold text-gray-900 md:tracking-wide md:whitespace-nowrap">
+              <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap">
                 Laparoscopy in Trauma
               </h1>
 
@@ -611,10 +613,10 @@ export default function LaparoscopicSurgery() {
                   width={768}
                 />
               </div>
-              <p className="text-[20px] text-[#00000099] mb-5 leading-relaxed">
+              <p className="text-[20px] text-[#000000de] mb-5 leading-normal">
                 Haematoma / Haemoperitonium Drainage
               </p>
-              <p className="text-[20px] text-[#00000099] mb-5 md:w-[600px] text-justify">
+              <p className="text-[16px] text-[#000000de] mb-5 md:w-[600px] text-justify">
                 Laparoscopic surgery is emerging as an alternative in patients with abdominal
                 injuries. It helps to quantify the injury correctly in haemodynamically stable
                 patients with abdominal trauma. Blood in the abdominal cavity can be drained and
@@ -721,7 +723,7 @@ export default function LaparoscopicSurgery() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-20">
             {/* Left Side Text */}
             <div className="md:w-1/2">
-              <h1 className="text-[32px] mb-5 font-semibold text-gray-900 md:tracking-wide md:whitespace-nowrap">
+              <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap">
                 Laparoscopy For Morbid Obesity
               </h1>
               {/* Image between h1 and p only on mobile */}
@@ -734,18 +736,18 @@ export default function LaparoscopicSurgery() {
                   width={800}
                 />
               </div>
-              <p className="text-[20px] text-[#00000099] mb-5 leading-relaxed md:w-[600px] text-justify">
+              <p className="text-[16px] text-[#000000de] mb-5 leading-normal md:w-[600px] text-justify">
                 The patients with morbid obesity or obesity with metabolic disorders like diabetes
                 have a surgical option to help them overcome their problems. The diabetes goes into
                 remission immediately after surgery.
               </p>
-              <p className="text-[20px] text-[#00000099] mb-5">The procedures available are :-</p>
-              <ul className="text-[16px] text-[#00000099] mb-5 list-disc ml-6">
+              <p className="text-[16px] text-[#000000de] mb-5">The procedures available are :-</p>
+              <ul className="text-[16px] text-[#000000de] mb-5 list-disc ml-6">
                 <li>Sleeve Gastrectomy</li>
                 <li>Gastric Bypass</li>
                 <li>Gastric Banding</li>
               </ul>
-              <p className="text-[20px] text-[#00000099] mb-5">
+              <p className="text-[16px] text-[#000000de] mb-5">
                 Surgery is reserved for patients who have exhausted all other options for weight
                 loss. Proper counseling is done by the bariatric team to decide the best procedure
                 for each patient.
@@ -822,8 +824,8 @@ export default function LaparoscopicSurgery() {
                         fill
                       />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-[#000000de]">{surgery.title}</h3>
+                    <p className="text-[#6d6d6d] text-base leading-relaxed">{surgery.desc}</p>
                   </div>
                 </div>
               </SwiperSlide>
