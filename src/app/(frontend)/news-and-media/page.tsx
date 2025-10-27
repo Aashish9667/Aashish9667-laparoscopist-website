@@ -1,7 +1,10 @@
 'use client';
+
 import * as React from 'react';
 import Image from 'next/image';
 import { AiOutlineFile } from 'react-icons/ai';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css'; //
 
 const pressImages = [
   '/press-release-1.png',
@@ -19,11 +22,28 @@ const pressImages = [
 export default function News() {
   const [activeIndex, setActiveIndex] = React.useState<null | number>(null);
 
+  React.useEffect(() => {
+    // ✅ Lightbox setup
+    const lightbox = new PhotoSwipeLightbox({
+      children: 'a',
+      gallery: '#press-gallery',
+      padding: { bottom: 20, left: 20, right: 20, top: 20 },
+      pswpModule: () => import('photoswipe'),
+      showHideAnimationType: 'zoom', // smooth animation
+      wheelToZoom: true, // zoom by wheel
+    });
+
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+    };
+  }, []);
+
   return (
-    <div className="max-w-[1200px] mx-auto md:pt-20 pt-15 px-4 md:px-4 flex flex-col md:flex-row justify-between gap-10 md:gap-10 mt-20">
+    <div className="max-w-[1200px] mx-auto md:pt-20 pt-15 px-4 md:px-4 flex flex-col md:flex-row justify-between gap-10 md:gap-10 my-20">
       {/* Left side */}
       <div className="flex-1">
-        {/* Title */}
         <div className="mb-6">
           <h1 className="text-[32px] font-medium text-[#0f2239] mb-2 ">Press Release</h1>
           <p className="text-[#00000099] text-[16px]">
@@ -31,13 +51,18 @@ export default function News() {
           </p>
         </div>
 
-        {/* Image Grid */}
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
+        {/* ✅ Gallery for PhotoSwipe */}
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-4" id="press-gallery">
           {pressImages.map((src, i) => (
-            <div
+            <a
               className="group w-full aspect-[4/3] relative rounded-lg overflow-hidden shadow-[0px_0px_9px_0px_#2d5289]"
+              data-pswp-height="300"
+              data-pswp-width="400"
+              href={src}
               key={i}
               onTouchStart={() => setActiveIndex(i)}
+              rel="noreferrer"
+              target="_blank"
             >
               <Image
                 className={`object-fill transition-transform duration-500 transform ${
@@ -47,16 +72,15 @@ export default function News() {
                 src={src}
                 fill
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>
 
-      {/* Right side (visible only on md and above) */}
+      {/* Right side (Desktop) */}
       <div className="hidden md:block w-[30%] pl-5">
-        <div className="flex flex-col gap-5 ">
+        <div className="flex flex-col gap-5">
           <h1 className="text-[32px] font-medium text-[#0f2239]">Latest News</h1>
-
           {[
             'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
             'Presented a video on SILS at SILSCON Mumbai on 29th April 2011.',
@@ -75,11 +99,10 @@ export default function News() {
         </div>
       </div>
 
-      {/* Right side (mobile) */}
-      <div className="block md:hidden w-full mt-10 pb-20">
+      {/* Right side (Mobile) */}
+      <div className="block md:hidden w-full mt-10">
         <div className="flex flex-col gap-5 text-[32px]">
           <h1 className="text-[32px] font-medium text-[#0f2239]">Latest News</h1>
-
           {[
             'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
             'Presented a video on SILS at SILSCON Mumbai on 29th April 2011.',

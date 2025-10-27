@@ -238,12 +238,12 @@ export default function LaparoscopicSurgery() {
             }}
             autoplay={false} // ✅ no autoplay anywhere
             className="hidden md:flex"
+            loop={false}
             modules={[Navigation]} // ✅ no Autoplay module
             onSlideChange={(swiper) => setActiveIndexGeneral(swiper.realIndex)}
             slidesPerView={1}
             spaceBetween={20}
             autoHeight
-            loop
           >
             {generalSurgeries.map((surgery, index) => (
               <SwiperSlide key={index}>
@@ -326,12 +326,12 @@ export default function LaparoscopicSurgery() {
                 }
               }}
               className="hidden md:flex"
+              loop={false}
               modules={[Navigation]} // ✅ no Autoplay module
               onSlideChange={(swiper) => setActiveIndexHernia(swiper.realIndex)}
               slidesPerView={1}
               spaceBetween={20}
               autoHeight
-              loop
             >
               {herniaSurgeries.map((surgery, index) => (
                 <SwiperSlide key={index}>
@@ -457,7 +457,7 @@ export default function LaparoscopicSurgery() {
               }}
               breakpoints={{
                 1024: { slidesPerView: 3 },
-                768: { autoplay: false, slidesPerView: 3 },
+                768: { autoplay: false, slidesPerView: 2 },
               }}
               onBeforeInit={(swiper) => {
                 // cast to any to bypass TypeScript errors
@@ -467,12 +467,12 @@ export default function LaparoscopicSurgery() {
                 }
               }}
               className="hidden md:flex"
+              loop={false}
               modules={[Navigation]} // ✅ no Autoplay module
               onSlideChange={(swiper) => setActiveIndexUrology(swiper.realIndex)}
               slidesPerView={1}
               spaceBetween={20}
               autoHeight
-              loop
             >
               {urologySurgeries.map((surgery, index) => (
                 <SwiperSlide key={index}>
@@ -542,10 +542,16 @@ export default function LaparoscopicSurgery() {
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
+              stopOnLastSlide: true,
             }}
             breakpoints={{
+              0: { slidesPerView: 1 },
               1024: { slidesPerView: 3 },
-              768: { autoplay: false, slidesPerView: 3 },
+              768: { autoplay: false, slidesPerView: 2 },
+            }}
+            navigation={{
+              nextEl: nextPaediatricRef.current,
+              prevEl: prevPaediatricRef.current,
             }}
             onBeforeInit={(swiper) => {
               // cast to any to bypass TypeScript errors
@@ -555,12 +561,12 @@ export default function LaparoscopicSurgery() {
               }
             }}
             className="hidden md:flex"
+            loop={false}
             modules={[Navigation]} // ✅ no Autoplay module
             onSlideChange={(swiper) => setActiveIndexaPediatric(swiper.realIndex)}
             slidesPerView={1}
             spaceBetween={20}
             autoHeight
-            loop
           >
             {paediatric.map((surgery, index) => (
               <SwiperSlide key={index}>
@@ -608,10 +614,10 @@ export default function LaparoscopicSurgery() {
               </h1>
 
               {/* Image between h1 and p only on mobile */}
-              <div className="block md:hidden mb-5 bg-white rounded-2xl">
+              <div className=" md:hidden mb-5 bg-white rounded-2xl">
                 <Image
                   alt="Surgery"
-                  className="rounded-lg w-full h-auto object-cover"
+                  className="rounded-lg object-contain"
                   height={768}
                   src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
                   width={768}
@@ -620,7 +626,7 @@ export default function LaparoscopicSurgery() {
               <p className="text-[20px] text-[#000000de] mb-5 leading-normal">
                 Haematoma / Haemoperitonium Drainage
               </p>
-              <p className="text-[16px] text-[#000000de] mb-5 md:w-[600px] text-justify">
+              <p className="text-[16px] text-[#000000de] mb-5 md:w-auto text-justify">
                 Laparoscopic surgery is emerging as an alternative in patients with abdominal
                 injuries. It helps to quantify the injury correctly in haemodynamically stable
                 patients with abdominal trauma. Blood in the abdominal cavity can be drained and
@@ -629,10 +635,10 @@ export default function LaparoscopicSurgery() {
             </div>
 
             {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-            <div className="hidden md:flex md:w-1/2 bg-white rounded-2xl justify-center">
+            <div className="hidden md:block md:w-1/2 bg-white rounded-2xl ">
               <Image
                 alt="Surgery"
-                className="rounded-2xl object-cover"
+                className="rounded-2xl object-cover w-auto h-auto"
                 height={300}
                 src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
                 width={300}
@@ -680,12 +686,12 @@ export default function LaparoscopicSurgery() {
               768: { autoplay: false, slidesPerView: 2 },
             }}
             className="hidden md:flex"
+            loop={false}
             modules={[Navigation]} // ✅ no Autoplay module
             onSlideChange={(swiper) => setActiveIndexSolid(swiper.realIndex)}
             slidesPerView={1}
             spaceBetween={20}
             autoHeight
-            loop
           >
             {solidOrganSurgeries.map((surgery, index) => (
               <SwiperSlide key={index}>
@@ -706,7 +712,7 @@ export default function LaparoscopicSurgery() {
               </SwiperSlide>
             ))}
 
-            <div className="flex justify-center mb-10 gap-3 md:hidden">
+            <div className="flex justify-center mb-10 gap-3 lg:hidden">
               {solidOrganSurgeries.map((_, i) => (
                 <div
                   className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
@@ -741,7 +747,7 @@ export default function LaparoscopicSurgery() {
                   width={800}
                 />
               </div>
-              <p className="text-[16px] text-[#000000de] mb-5 leading-normal md:w-[600px] text-justify">
+              <p className="text-[16px] text-[#000000de] mb-5 leading-normal text-justify">
                 The patients with morbid obesity or obesity with metabolic disorders like diabetes
                 have a surgical option to help them overcome their problems. The diabetes goes into
                 remission immediately after surgery.
@@ -760,10 +766,10 @@ export default function LaparoscopicSurgery() {
             </div>
 
             {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-            <div className="hidden md:flex md:w-1/2 justify-center">
+            <div className="hidden md:block md:w-1/2">
               <Image
                 alt="Surgery"
-                className="rounded-2xl object-cover"
+                className="rounded-2xl object-cover w-full h-auto "
                 height={300}
                 src="/Laparoscopy_for_morbid_Obesity.png"
                 width={300}
@@ -808,9 +814,10 @@ export default function LaparoscopicSurgery() {
             }}
             breakpoints={{
               1024: { slidesPerView: 3 },
-              768: { autoplay: false, slidesPerView: 3 },
+              768: { autoplay: false, slidesPerView: 2 },
             }}
             className="hidden md:flex"
+            loop={false}
             modules={[Navigation]} // ✅ no Autoplay module
             onSlideChange={(swiper) => setActiveIndexVats(swiper.realIndex)}
             slidesPerView={1}
@@ -836,7 +843,7 @@ export default function LaparoscopicSurgery() {
               </SwiperSlide>
             ))}
 
-            <div className="flex justify-center mb-1 gap-3 md:hidden">
+            <div className="flex justify-center mb-1 gap-3 lg:hidden">
               {vats.map((_, i) => (
                 <div
                   className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${

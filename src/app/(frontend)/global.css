@@ -118,3 +118,48 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* 🎯 Custom styling for PhotoSwipe arrows */
+.pswp__button--arrow--prev,
+.pswp__button--arrow--next {
+  background-color: #fff !important; /* Tailwind 'bg-gray-300' */
+  border-radius:  99px !important;   /* Tailwind 'rounded-xl' */
+  width: 40px !important;
+  height: 60px !important;
+  padding: 15px 10px !important;
+   line-height: 16px;
+ 
+  opacity: 0.2!important;
+  transition: opacity .2s;
+   cursor: pointer;
+   position: absolute !important;
+}
+
+.pswp__button--arrow--prev {
+  left: 15px !important;
+}
+
+/* 🔹 Right arrow */
+.pswp__button--arrow--next {
+  right: 15px !important;
+}
+
+.pswp__button--arrow--prev:hover,
+.pswp__button--arrow--next:hover {
+  background-color: #9ca3af !important; /* Tailwind 'bg-gray-400' */
+  opacity: 1;
+}
+
+.pswp__button--arrow--prev svg,
+.pswp__button--arrow--next svg {
+  fill: black !important; /* white arrow inside black button */
+  width: 24px !important; /* smaller arrow icon */
+  height: 24px !important;
+  align-items: center;
+  top: 47px !important;
+  color: black !important; 
+}
+
+   
+    
+  
