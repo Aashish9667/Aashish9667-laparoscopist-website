@@ -139,14 +139,11 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <div className="flex md:hidden">
           <Button
-            className=" bg-white text-[#000000dd] !size-[70px]"
+            className="bg-white text-[#000000ed] !font-bold hover:bg-transparent focus-visible:ring-0 active:bg-transparent"
             onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+            variant="ghost"
           >
-            {isDrawerOpen ? (
-              <FiX fontWeight={400} size={30} />
-            ) : (
-              <FiMenu fontWeight={400} size={30} />
-            )}
+            {isDrawerOpen ? <FiX size={30} /> : <FiMenu size={30} />}
           </Button>
         </div>
       </div>

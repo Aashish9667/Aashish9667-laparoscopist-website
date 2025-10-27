@@ -2,6 +2,8 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 
 const pressImages = [
   '/live-operative-workshop-1.png',
@@ -20,6 +22,7 @@ const COLPOSCOPY = [
   '/colpocopy-cme-cum-workshop-5.png',
   '/colpocopy-cme-cum-workshop-6.png',
 ];
+
 const MIPH = ['/imph-1.png', '/imph-2.png'];
 const SAGES = ['/sages-1.png', '/sages-2.png', '/sages-3.png'];
 const AIIMS = ['/aiims.png'];
@@ -28,76 +31,99 @@ const Videos = [
   {
     caption: 'CA Rectum-Laparoscopic colostomy',
     src: '/CA-Rectum-Laparoscopic-colostomy.png',
-    videoUrl: 'https://www.youtube.com/watch?v=GHcogXI7lro', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=GHcogXI7lro',
   },
   {
     caption: 'Laparoscopic Appendicetomy',
     src: '/Laparoscopic-Appendicetomy.png',
-    videoUrl: 'https://www.youtube.com/watch?v=fD__NLI4N-s', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=fD__NLI4N-s',
   },
   {
     caption: 'Laparoscopic-Myomectomy',
     src: '/Laparoscopic-Myomectomy.png',
-    videoUrl: 'https://www.youtube.com/watch?v=rgfFTy3eOfA', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=rgfFTy3eOfA',
   },
   {
     caption: 'Laparoscopic Ovarian Dermoid',
     src: '/Laparoscopic-Ovarian-Dermoid.png',
-    videoUrl: 'https://www.youtube.com/watch?v=NzRC_U6Mcpc', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=NzRC_U6Mcpc',
   },
   {
     caption: 'Laproscopic Splenectomy',
     src: '/Laproscopic-Splenectomy.png',
-    videoUrl: 'https://www.youtube.com/watch?v=5vdRETyl6ak', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=5vdRETyl6ak',
   },
   {
     caption: 'Laparoscopic Ureterolithotomy',
     src: '/Laparoscopic-Ureterolithotomy.png',
-    videoUrl: 'https://www.youtube.com/watch?v=gw4lced-Tpg', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=gw4lced-Tpg',
   },
   {
     caption: 'Lap Nephrectomy Rt',
     src: '/Lap-Nephrectomy-Rt.png',
-    videoUrl: 'https://www.youtube.com/watch?v=IpwBAyvK2jw', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=IpwBAyvK2jw',
   },
   {
     caption: 'Pyelolithotomy in ectopic Kidney',
     src: '/Pyelolithotomy-in-ectopic-Kidney.png',
-    videoUrl: 'https://www.youtube.com/watch?v=WKH90fwgZQY', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=WKH90fwgZQY',
   },
   {
     caption: 'Liver-Laceration',
     src: '/Liver-Laceration.png',
-    videoUrl: 'https://www.youtube.com/watch?v=yk5_rfx46Yk', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=yk5_rfx46Yk',
   },
   {
     caption: 'Laparoscopic-TEP ',
     src: '/Laparoscopic-TEP (1).png',
-    videoUrl: 'https://www.youtube.com/watch?v=a8UZUwnRFxc', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=a8UZUwnRFxc',
   },
   {
     caption: 'Tubal-Conservation-Right-Ectopic',
     src: '/Tubal-Conservation-Right-Ectopic.png',
-    videoUrl: 'https://www.youtube.com/watch?v=0YDO6X_Ab2k', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=0YDO6X_Ab2k',
   },
   {
     caption: 'Umbilical-Hernia',
     src: '/Umbilical-Hernia.png',
-    videoUrl: 'https://www.youtube.com/watch?v=lUY8nLG2DsE', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=lUY8nLG2DsE',
   },
   {
     caption: 'Interesting-videos',
     src: '/Interesting-videos.png',
-    videoUrl: 'https://www.youtube.com/watch?v=hLLQ28Vb9YU', // internal URL
+    videoUrl: 'https://www.youtube.com/watch?v=hLLQ28Vb9YU',
   },
 ];
+
 export default function News() {
   const [activeIndex, setActiveIndex] = React.useState<null | number>(null);
+
+  React.useEffect(() => {
+    //  Lightbox setup
+    const lightbox = new PhotoSwipeLightbox({
+      children: 'a',
+      gallery: '#photoswipe-gallery',
+      padding: { bottom: 20, left: 20, right: 20, top: 20 },
+      pswpModule: () => import('photoswipe'),
+      showHideAnimationType: 'zoom', // smooth animation
+      wheelToZoom: true, // zoom by wheel
+    });
+
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+    };
+  }, []);
+
   const renderImageGrid = (images: string[]) => (
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4" id="photoswipe-gallery">
       {images.map((src, i) => (
-        <div
+        <a
           className="w-full aspect-[4/3] relative rounded-lg overflow-hidden group shadow-[0px_0px_9px_0px_#2d5289]"
+          data-pswp-height="300"
+          data-pswp-width="400"
+          href={src}
           key={i}
           onTouchStart={() => setActiveIndex(i)}
         >
@@ -109,7 +135,7 @@ export default function News() {
             src={src}
             fill
           />
-        </div>
+        </a>
       ))}
     </div>
   );
@@ -145,32 +171,30 @@ export default function News() {
         <h1 className="text-2xl font-medium text-[#0f2239] mb-4">AIIMS</h1>
         {renderImageGrid(AIIMS)}
       </div>
-      {/* section 6 */}
+
+      {/* section 6 — Videos */}
       <div className="flex-1 pt-10 pb-20">
         <div className="mb-6">
           <h1 className="text-2xl font-medium text-[#0f2239] mb-2">Videos</h1>
         </div>
 
-        {/* Image Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 gap-y-8">
           {Videos.map((video, i) => (
             <div className="flex flex-col items-center [text-shadow:0_0_1.5px_#000]" key={i}>
               <Link
                 className="w-full relative rounded-lg overflow-hidden"
                 href={video.videoUrl}
-                rel="noopener noreferrer" // security ke liye
-                target="_blank" // ye zaruri hai YouTube open karne ke liye
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 <Image
                   alt={video.caption}
                   className="object-cover rounded-lg shadow-2xl "
-                  height={1000} // ya jo height chahiye
+                  height={1000}
                   src={video.src}
-                  width={1000} // ya jo width chahiye
+                  width={1000}
                 />
               </Link>
-
-              {/* Caption below the image */}
               <p className="text-center mt-2 text-sm text-[rgba(0,0,0,0.6)] [text-shadow:0_0_1.5px_#000]">
                 {video.caption}
               </p>

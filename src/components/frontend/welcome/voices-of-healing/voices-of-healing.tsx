@@ -48,7 +48,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="w-full flex justify-center pt-15 px-4  overflow-hidden">
+        <div className="w-full flex justify-center pt-15 px-4  md:pb-20 pb-15  overflow-hidden">
           <div className="w-full max-w-[1200px] mx-auto px-5">
             <Swiper
               autoplay={{

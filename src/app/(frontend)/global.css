@@ -133,6 +133,9 @@
   transition: opacity .2s;
    cursor: pointer;
    position: absolute !important;
+    display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .pswp__button--arrow--prev {
