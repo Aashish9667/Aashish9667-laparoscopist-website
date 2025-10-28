@@ -36,7 +36,7 @@ export default function DrMehdhavi() {
             Laparoscopic Surgeon
           </h6>
           <h1
-            className={`${heebo.className} text-[40px]  text-[#000000de]`}
+            className={`${heebo.className} text-[32px]  text-[#000000de]`}
             style={{ fontFamily: `"Heebo", "Lora", sans-serif` }}
           >
             Dr. Medhavi Tomar

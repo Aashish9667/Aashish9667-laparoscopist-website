@@ -171,6 +171,55 @@ const vats = [
   },
 ];
 export default function LaparoscopicSurgery() {
+  const [dotCountGeneral, setDotCountGeneral] = React.useState<number>(6);
+  const [dotCountHernia, setDotCountHernia] = React.useState<number>(6);
+  const [dotCountUrology, setDotCountUrology] = React.useState<number>(3);
+  const [dotCountPaediatric, setDotCountPaediatric] = React.useState<number>(2);
+  React.useEffect(() => {
+    const update = () => {
+      const width = window.innerWidth;
+
+      // General section
+      if (width < 768) {
+        setDotCountGeneral(8);
+      } else if (width < 1024) {
+        setDotCountGeneral(7);
+      } else {
+        setDotCountGeneral(6);
+      }
+
+      // Hernia section
+      if (width < 768) {
+        setDotCountHernia(6);
+      } else if (width < 1024) {
+        setDotCountHernia(5);
+      } else {
+        setDotCountHernia(4);
+      }
+
+      // Urology section
+      if (width < 768) {
+        setDotCountUrology(4);
+      } else if (width < 1024) {
+        setDotCountUrology(3);
+      } else {
+        setDotCountUrology(2);
+      }
+
+      // Paediatric section
+      if (width < 768) {
+        setDotCountPaediatric(6);
+      } else if (width < 1024) {
+        setDotCountPaediatric(5);
+      } else {
+        setDotCountPaediatric(4);
+      }
+    };
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
   const [activeIndexGeneral, setActiveIndexGeneral] = React.useState(0);
   const [activeIndexHernia, setActiveIndexHernia] = React.useState(0);
   const [activeIndexUrology, setActiveIndexUrology] = React.useState(0);
@@ -205,7 +254,7 @@ export default function LaparoscopicSurgery() {
           </div>
 
           {/* ✅ Arrows only visible on desktop */}
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
               w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -265,7 +314,7 @@ export default function LaparoscopicSurgery() {
             ))}
 
             <div className="flex justify-center mb-10 gap-3">
-              {generalSurgeries.map((_, i) => (
+              {Array.from({ length: dotCountGeneral }).map((_, i) => (
                 <div
                   className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
                     activeIndexGeneral === i ? 'bg-black scale-150' : 'bg-gray-400'
@@ -290,7 +339,7 @@ export default function LaparoscopicSurgery() {
                 Commonly performed laparoscopic hernia surgery procedures:
               </p>
             </div>
-            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none">
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -355,7 +404,7 @@ export default function LaparoscopicSurgery() {
               ))}
 
               <div className="flex justify-center mb-10 gap-3">
-                {herniaSurgeries.map((_, i) => (
+                {Array.from({ length: dotCountHernia }).map((_, i) => (
                   <div
                     className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
                       activeIndexHernia === i ? 'bg-black scale-150' : 'bg-gray-400'
@@ -370,7 +419,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Single Incision Laparoscopic Surgery */}
-      <div className="md:p-20 p-10 mx-auto max-w-[1200px]">
+      <div className=" p-8 mx-auto max-w-[1200px]">
         {/* Main Container */}
         <div className="flex flex-col md:flex-row md:items-center md:gap-12">
           {/* Left Side Text */}
@@ -407,10 +456,10 @@ export default function LaparoscopicSurgery() {
           </div>
 
           {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-          <div className="hidden md:block md:w-1/2">
+          <div className="hidden md:block w-[400px] mt-1">
             <Image
               alt="Surgery"
-              className="rounded-lg w-full h-auto object-cover"
+              className="rounded-lg w-full h-auto object-cover "
               height={600}
               src="/Single-Incision-Laparoscopic-Surgery.png"
               width={800}
@@ -494,7 +543,7 @@ export default function LaparoscopicSurgery() {
               ))}
 
               <div className="flex justify-center mb-10 gap-3">
-                {urologySurgeries.map((_, i) => (
+                {Array.from({ length: dotCountUrology }).map((_, i) => (
                   <div
                     className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
                       activeIndexUrology === i ? 'bg-black scale-150' : 'bg-gray-400'
@@ -588,7 +637,7 @@ export default function LaparoscopicSurgery() {
             ))}
 
             <div className="flex justify-center mb-10 gap-3">
-              {paediatric.map((_, i) => (
+              {Array.from({ length: dotCountPaediatric }).map((_, i) => (
                 <div
                   className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
                     activeIndexPaediatric === i ? 'bg-black scale-150' : 'bg-gray-400'
@@ -602,31 +651,32 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopy in Trauma */}
-      <div className="md:p-20 p-10 bg-gray-300">
-        {/* ✅ Centered container for desktop */}
+      <div className="p-8 bg-gray-300">
+        {/* Centered container */}
         <div className="max-w-[1200px] mx-auto">
-          {/* Main Container */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-40">
+          {/* Main flex layout */}
+          <div className="flex flex-col md:flex-row items-center md:justify-between gap-10 md:gap-20">
             {/* Left Side Text */}
-            <div className="md:w-1/2">
-              <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap">
+            <div className="md:w-1/2 w-full text-left">
+              <h1 className="text-[28px] md:text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide">
                 Laparoscopy in Trauma
               </h1>
 
-              {/* Image between h1 and p only on mobile */}
-              <div className=" md:hidden mb-5 bg-white rounded-2xl">
+              {/* Image only on mobile */}
+              <div className="block md:hidden w-full mb-6">
                 <Image
                   alt="Surgery"
-                  className="rounded-lg object-contain"
+                  className="w-full h-auto rounded-2xl object-cover"
                   height={768}
                   src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
                   width={768}
                 />
               </div>
+
               <p className="text-[20px] text-[#000000de] mb-5 leading-normal">
                 Haematoma / Haemoperitonium Drainage
               </p>
-              <p className="text-[16px] text-[#000000de] mb-5 md:w-auto text-justify">
+              <p className="text-[16px] text-[#000000de] leading-relaxed">
                 Laparoscopic surgery is emerging as an alternative in patients with abdominal
                 injuries. It helps to quantify the injury correctly in haemodynamically stable
                 patients with abdominal trauma. Blood in the abdominal cavity can be drained and
@@ -634,14 +684,14 @@ export default function LaparoscopicSurgery() {
               </p>
             </div>
 
-            {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-            <div className="hidden md:block md:w-1/2 bg-white rounded-2xl ">
+            {/* Right Side Image (visible only on desktop) */}
+            <div className="hidden md:w-1/2 md:flex justify-center">
               <Image
                 alt="Surgery"
-                className="rounded-2xl object-cover w-auto h-auto"
-                height={300}
+                className="h-full max-h-[300px] w-fit rounded-2xl object-cover md:mt-[60px]"
+                height={600}
                 src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
-                width={300}
+                width={600}
               />
             </div>
           </div>
@@ -727,7 +777,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopy For Morbid Obesity */}
-      <div className="md:p-20 p-10 bg-gray-300">
+      <div className="p-8 bg-gray-300">
         {/* ✅ Centered container for desktop */}
         <div className="max-w-[1200px] mx-auto">
           {/* Main Container */}
@@ -747,7 +797,7 @@ export default function LaparoscopicSurgery() {
                   width={800}
                 />
               </div>
-              <p className="text-[16px] text-[#000000de] mb-5 leading-normal text-justify">
+              <p className="text-[16px] text-[#000000de] mb-5 leading-normal">
                 The patients with morbid obesity or obesity with metabolic disorders like diabetes
                 have a surgical option to help them overcome their problems. The diabetes goes into
                 remission immediately after surgery.
