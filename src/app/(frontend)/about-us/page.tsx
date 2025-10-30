@@ -6,7 +6,7 @@ export default function AboutUs() {
   return (
     <React.Fragment>
       {/* for video */}
-      <div className="relative overflow-hidden mx-auto max-h-[700px] h-full w-full object-cover mt-23">
+      <div className="relative overflow-hidden mx-auto max-h-[700px] h-full w-full object-cover mt-20">
         <video
           className="w-full object-cover mx-auto object-[0%_80%] max-h-[700px]"
           poster="/video-capture-0.00seg-3815.png"

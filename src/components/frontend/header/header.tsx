@@ -27,9 +27,9 @@ export default function Navbar() {
     <nav
       className={`bg-white shadow-sm ${poppins.className} fixed top-0 left-0 w-full z-50 bg-white`}
     >
-      <div className="max-w-[1280px] mx-auto flex justify-between items-center px-8 py-2">
+      <div className="max-w-[1280px] mx-auto flex justify-between items-center px-6 py-0 md:py-2">
         {/* Logo */}
-        <div className="relative z-20 -mb-12">
+        <div className="relative z-20 -mb-12 md:mx-10">
           <Link aria-label="Go to homepage" className="aspect-150/127 block" href="/">
             <Image
               alt="Logo"
@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:block">
           <NavigationMenu>
-            <NavigationMenuList className="flex gap-6">
+            <NavigationMenuList className="flex gap-4 mx-10">
               {/* Services Dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="!text-[#22426e] text-[14px] font-medium !bg-transparent !hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4 hover:text-[#22426e]">

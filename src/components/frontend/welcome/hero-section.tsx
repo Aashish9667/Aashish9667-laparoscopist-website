@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export default function Homehero() {
   return (
-    <div className="relative px-4 md:px-8 lg:px-8 mx-auto overflow-hidden md:mt-0 mt-24 md:pt-10 pt-0">
+    <div className="relative px-4 md:px-8 lg:px-8 mx-auto overflow-hidden md:mt-0 mt-20 md:pt-10 pt-0">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image

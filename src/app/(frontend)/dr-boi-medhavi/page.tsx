@@ -16,7 +16,7 @@ export default function DrMehdhavi() {
   return (
     <div>
       {/* Section 1: Image + Text */}
-      <div className="bg-gray-300 flex flex-col md:flex-row items-start justify-between  p-7 pt-15 mt-24 lg:p-15 lg:pt-20  gap-8 xl:gap-15">
+      <div className="bg-[rgb(234,237,243)] flex flex-col md:flex-row items-start justify-between  p-7 pt-15 mt-20 lg:p-15 lg:pt-20  gap-8 xl:gap-15">
         {/* Left: Image */}
         <div className="flex justify-start lg:justify-start">
           <Image
@@ -36,7 +36,7 @@ export default function DrMehdhavi() {
             Laparoscopic Surgeon
           </h6>
           <h1
-            className={`${heebo.className} text-[32px]  text-[#000000de]`}
+            className={`${heebo.className} text-[40px]  text-[#000000de]`}
             style={{ fontFamily: `"Heebo", "Lora", sans-serif` }}
           >
             Dr. Medhavi Tomar
@@ -87,11 +87,11 @@ export default function DrMehdhavi() {
         </p>
 
         <p
-          className={`text-[16px] text-[#000000de] mb-4 ${poppins.className} font-semibold leading-[27px]`}
+          className={`text-[16px] text-[#000000de] mb-5 ${poppins.className} font-semibold leading-[27px]`}
         >
           Star Hospital & Laparoscopic Surgical Centre, Meerut, U.P.
         </p>
-        <p className={`text-[16px] text-[#00000099] mb-6  ${poppins.className}`}>
+        <p className={`text-[16px] text-[#00000099] mb-5  ${poppins.className}`}>
           Dr. Medhavi Tomar is a highly skilled Consultant Surgeon and the Head of the Department of{' '}
           <br className="hidden lg:block" /> General & Minimal Access Surgery at Star Hospital &
           Laparoscopic Surgical Centre, Meerut. With <br className="hidden lg:block" /> a deep

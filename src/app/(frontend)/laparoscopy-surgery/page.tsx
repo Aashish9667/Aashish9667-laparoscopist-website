@@ -259,7 +259,7 @@ export default function LaparoscopicSurgery() {
       <div className="mt-30 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
+            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
               Laparoscopic General Surgery
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
@@ -344,10 +344,10 @@ export default function LaparoscopicSurgery() {
 
       {/* Laparoscopic Hernia Surgery */}
       <div className=" bg-[rgb(234,237,243)] relative w-full">
-        <div className=" mx-auto max-w-[1200px] mt-10 p-8 md:pt-20">
+        <div className=" mx-auto max-w-[1200px] mt-10 p-8 pt-12 md:pt-20">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
+              <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
                 Laparoscopic Hernia Surgery
               </h2>
               <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
@@ -435,12 +435,12 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Single Incision Laparoscopic Surgery */}
-      <div className=" p-8 md:pt-20 md:pb-15 mx-auto max-w-[1200px]">
+      <div className="pt-15 p-8 md:pt-20 md:pb-15 mx-auto max-w-[1200px]">
         {/* Main Container */}
         <div className="flex flex-col md:flex-row md:items-center md:gap-18">
           {/* Left Side Text */}
           <div className="md:w-1/2">
-            <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap">
+            <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
               Single Incision Laparoscopic Surgery
             </h1>
 
@@ -486,10 +486,10 @@ export default function LaparoscopicSurgery() {
 
       {/* Laparoscopic uro Surgery */}
       <div className="bg-[rgb(234,237,243)] relative w-full">
-        <div className="mt-10 p-8  mx-auto max-w-[1200px] md:pt-20">
+        <div className="mt-10 p-8 pt-12  mx-auto max-w-[1200px] md:pt-20">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
+              <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
                 Laparoscopic Urology
               </h2>
               <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
@@ -578,7 +578,7 @@ export default function LaparoscopicSurgery() {
       <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
+            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
               Paediatric Laparoscopic
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
@@ -669,14 +669,14 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopy in Trauma */}
-      <div className="p-8 md:pt-15 md:pb-15 bg-[rgb(234,237,243)]">
+      <div className="p-8 py-15 md:pt-15 md:pb-25 bg-[rgb(234,237,243)]">
         {/* Centered container */}
         <div className="max-w-[1200px] mx-auto">
           {/* Main flex layout */}
           <div className="flex flex-col md:flex-row items-center md:justify-between gap-10 md:gap-15">
             {/* Left Side Text */}
             <div className=" w-full text-left lg:pl-7">
-              <h1 className="text-[28px] md:text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide">
+              <h1 className="text-[32px]  mb-5 font-semibold text-[#000000de] md:tracking-wide leading-tight md:leading-normal">
                 Laparoscopy in Trauma
               </h1>
 
@@ -720,7 +720,7 @@ export default function LaparoscopicSurgery() {
       <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
+            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
               Laparoscopic Solid Organ Surgery
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
@@ -796,14 +796,14 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopy For Morbid Obesity */}
-      <div className="p-8 md:pt-20 md:pb-20 bg-[rgb(234,237,243)]">
+      <div className="p-8 py-15 md:pt-20 md:pb-20 bg-[rgb(234,237,243)]">
         {/* ✅ Centered container for desktop */}
         <div className="max-w-[1200px] mx-auto">
           {/* Main Container */}
           <div className="flex flex-col md:flex-row  md:gap-25">
             {/* Left Side Text */}
             <div className="md:w-1/2 lg:pl-7">
-              <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap">
+              <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
                 Laparoscopy For Morbid Obesity
               </h1>
               {/* Image between h1 and p only on mobile */}
@@ -852,7 +852,7 @@ export default function LaparoscopicSurgery() {
       <div className="mt-10 pt-8 pb-20 px-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
+            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
               Laparoscopic Hernia Surgery
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
