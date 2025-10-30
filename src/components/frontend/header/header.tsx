@@ -30,10 +30,10 @@ export default function Navbar() {
       <div className="max-w-[1280px] mx-auto flex justify-between items-center px-8 py-2">
         {/* Logo */}
         <div className="relative z-20 -mb-12">
-          <Link aria-label="Go to homepage" href="/">
+          <Link aria-label="Go to homepage" className="aspect-150/127 block" href="/">
             <Image
               alt="Logo"
-              className="object-contain cursor-pointer"
+              className="object-fill max-w-[150px] cursor-pointer  w-full"
               height={50}
               src="/Laparoscopic-Surgeons-Logo.webp.avif"
               width={150}

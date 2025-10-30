@@ -238,6 +238,20 @@ export default function LaparoscopicSurgery() {
 
   const prevPaediatricRef = React.useRef(null);
   const nextPaediatricRef = React.useRef(null);
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    // Simulate a delay — replace this with your data fetching if needed
+    const timer = setTimeout(() => {
+      setLoading(false);
+    });
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <div className="fixed inset-0 flex items-center justify-center bg-white z-50" />;
+  }
 
   return (
     <React.Fragment>
@@ -298,12 +312,13 @@ export default function LaparoscopicSurgery() {
               <SwiperSlide key={index}>
                 <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] transition-all duration-300 p-5 mt-10 mb-10">
                   <div>
-                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                    <div className="relative w-full  overflow-hidden rounded-lg mb-6">
                       <Image
                         alt={surgery.title}
-                        className="object-fill rounded-lg"
+                        className="object-fill rounded-lg aspect-[304/240] max-w-[300px] mx-auto w-full"
+                        height={500}
                         src={surgery.img}
-                        fill
+                        width={500}
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-[#000000de]">{surgery.title}</h3>
@@ -328,8 +343,8 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopic Hernia Surgery */}
-      <div className=" bg-gray-300 relative w-full">
-        <div className=" mx-auto max-w-[1200px] mt-10 p-8">
+      <div className=" bg-[rgb(234,237,243)] relative w-full">
+        <div className=" mx-auto max-w-[1200px] mt-10 p-8 md:pt-20">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
@@ -384,14 +399,15 @@ export default function LaparoscopicSurgery() {
             >
               {herniaSurgeries.map((surgery, index) => (
                 <SwiperSlide key={index}>
-                  <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                  <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
                     <div>
-                      <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                      <div className="relative w-full overflow-hidden rounded-lg mb-6">
                         <Image
                           alt={surgery.title}
-                          className="object-fill rounded-lg"
+                          className="object-fill rounded-lg aspect-304/240 w-full max-w-[300px] mx-auto"
+                          height={500}
                           src={surgery.img}
-                          fill
+                          width={500}
                         />
                       </div>
                       <h3 className="text-xl font-semibold mb-2 text-[#000000de]">
@@ -419,9 +435,9 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Single Incision Laparoscopic Surgery */}
-      <div className=" p-8 mx-auto max-w-[1200px]">
+      <div className=" p-8 md:pt-20 md:pb-15 mx-auto max-w-[1200px]">
         {/* Main Container */}
-        <div className="flex flex-col md:flex-row md:items-center md:gap-12">
+        <div className="flex flex-col md:flex-row md:items-center md:gap-18">
           {/* Left Side Text */}
           <div className="md:w-1/2">
             <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap">
@@ -432,7 +448,7 @@ export default function LaparoscopicSurgery() {
             <div className="block md:hidden mb-5">
               <Image
                 alt="Surgery"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-contain w-fit aspect-300/300  sm:max-w-[300] mx-auto"
                 height={600} // required
                 src="/Single-Incision-Laparoscopic-Surgery.png"
                 width={800} // required
@@ -456,7 +472,7 @@ export default function LaparoscopicSurgery() {
           </div>
 
           {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-          <div className="hidden md:block w-[400px] mt-1">
+          <div className="hidden md:block w-[400px] mt-10">
             <Image
               alt="Surgery"
               className="rounded-lg w-full h-auto object-cover "
@@ -469,8 +485,8 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopic uro Surgery */}
-      <div className="bg-gray-300 relative w-full">
-        <div className="mt-10 p-8  mx-auto max-w-[1200px]">
+      <div className="bg-[rgb(234,237,243)] relative w-full">
+        <div className="mt-10 p-8  mx-auto max-w-[1200px] md:pt-20">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-[32px] font-semibold text-gray-900 mb-2 leading-normal md:tracking-wide">
@@ -525,14 +541,15 @@ export default function LaparoscopicSurgery() {
             >
               {urologySurgeries.map((surgery, index) => (
                 <SwiperSlide key={index}>
-                  <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                  <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
                     <div>
-                      <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                      <div className="relative w-full  overflow-hidden rounded-lg mb-6">
                         <Image
                           alt={surgery.title}
-                          className="object-fill rounded-lg"
+                          className="object-fill rounded-lg aspect-304/240 w-full mx-auto max-w-[300px]"
+                          height={500}
                           src={surgery.img}
-                          fill
+                          width={500}
                         />
                       </div>
                       <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
@@ -619,14 +636,15 @@ export default function LaparoscopicSurgery() {
           >
             {paediatric.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
                   <div>
-                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                    <div className="relative w-full  overflow-hidden rounded-lg mb-6">
                       <Image
                         alt={surgery.title}
-                        className="object-fill rounded-lg"
+                        className="object-fill rounded-lg aspect-304/240 w-full max-w-[300px] mx-auto"
+                        height={500}
                         src={surgery.img}
-                        fill
+                        width={500}
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
@@ -651,13 +669,13 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopy in Trauma */}
-      <div className="p-8 bg-gray-300">
+      <div className="p-8 md:pt-15 md:pb-15 bg-[rgb(234,237,243)]">
         {/* Centered container */}
         <div className="max-w-[1200px] mx-auto">
           {/* Main flex layout */}
-          <div className="flex flex-col md:flex-row items-center md:justify-between gap-10 md:gap-20">
+          <div className="flex flex-col md:flex-row items-center md:justify-between gap-10 md:gap-15">
             {/* Left Side Text */}
-            <div className="md:w-1/2 w-full text-left">
+            <div className=" w-full text-left lg:pl-7">
               <h1 className="text-[28px] md:text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide">
                 Laparoscopy in Trauma
               </h1>
@@ -666,7 +684,7 @@ export default function LaparoscopicSurgery() {
               <div className="block md:hidden w-full mb-6">
                 <Image
                   alt="Surgery"
-                  className="w-full h-auto rounded-2xl object-cover"
+                  className="w-fit aspect-300/300  sm:max-w-[300] rounded-2xl object-contain mx-auto"
                   height={768}
                   src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
                   width={768}
@@ -685,13 +703,13 @@ export default function LaparoscopicSurgery() {
             </div>
 
             {/* Right Side Image (visible only on desktop) */}
-            <div className="hidden md:w-1/2 md:flex justify-center">
+            <div className="hidden md:block max-w-[300px] mt-10 mx-auto">
               <Image
                 alt="Surgery"
-                className="h-full max-h-[300px] w-fit rounded-2xl object-cover md:mt-[60px]"
+                className="rounded-lg w-full object-cover "
                 height={600}
                 src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
-                width={600}
+                width={800}
               />
             </div>
           </div>
@@ -745,14 +763,15 @@ export default function LaparoscopicSurgery() {
           >
             {solidOrganSurgeries.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
                   <div>
-                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                    <div className="relative w-full  overflow-hidden rounded-lg mb-6">
                       <Image
                         alt={surgery.title}
-                        className="object-fill rounded-lg"
+                        className="object-fill aspect-304/240 w-full rounded-lg max-w-[300px] mx-auto"
+                        height={500}
                         src={surgery.img}
-                        fill
+                        width={500}
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
@@ -777,21 +796,21 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopy For Morbid Obesity */}
-      <div className="p-8 bg-gray-300">
+      <div className="p-8 md:pt-20 md:pb-20 bg-[rgb(234,237,243)]">
         {/* ✅ Centered container for desktop */}
         <div className="max-w-[1200px] mx-auto">
           {/* Main Container */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-20">
+          <div className="flex flex-col md:flex-row  md:gap-25">
             {/* Left Side Text */}
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 lg:pl-7">
               <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap">
                 Laparoscopy For Morbid Obesity
               </h1>
               {/* Image between h1 and p only on mobile */}
-              <div className="block md:hidden mb-5 bg-white rounded-2xl">
+              <div className="block md:hidden mb-5  rounded-2xl">
                 <Image
                   alt="Surgery"
-                  className="rounded-lg w-full h-auto object-cover"
+                  className="rounded-lg   object-contain w-fit aspect-300/300  max-w-[300] mx-auto"
                   height={600}
                   src="/Laparoscopy_for_morbid_Obesity.png"
                   width={800}
@@ -816,13 +835,13 @@ export default function LaparoscopicSurgery() {
             </div>
 
             {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-            <div className="hidden md:block md:w-1/2">
+            <div className="hidden md:block w-[335px] mt-15">
               <Image
                 alt="Surgery"
-                className="rounded-2xl object-cover w-full h-auto "
-                height={300}
+                className="rounded-lg w-full h-auto object-cover "
+                height={600}
                 src="/Laparoscopy_for_morbid_Obesity.png"
-                width={300}
+                width={800}
               />
             </div>
           </div>
@@ -876,14 +895,15 @@ export default function LaparoscopicSurgery() {
           >
             {vats.map((surgery, index) => (
               <SwiperSlide key={index}>
-                <div className="m-2 flex flex-col justify-between min-h-[550px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
                   <div>
-                    <div className="relative w-full h-60 overflow-hidden rounded-lg mb-6">
+                    <div className="relative w-full overflow-hidden rounded-lg mb-6">
                       <Image
                         alt={surgery.title}
-                        className="object-fill rounded-lg"
+                        className="object-fill rounded-lg w-full aspect-304/240 max-w-[300px] mx-auto"
+                        height={500}
                         src={surgery.img}
-                        fill
+                        width={500}
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-2 text-[#000000de]">{surgery.title}</h3>

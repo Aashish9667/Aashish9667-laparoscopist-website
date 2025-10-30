@@ -2,9 +2,11 @@
 
 import * as React from 'react';
 import Image from 'next/image';
-import { AiOutlineFile } from 'react-icons/ai';
+
+import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css'; //
+import { motion } from 'framer-motion';
 
 const pressImages = [
   '/press-release-1.png',
@@ -17,6 +19,18 @@ const pressImages = [
   '/press-release-8.png',
   '/press-release-9.png',
   '/press-release-10.png',
+];
+const newsItems = [
+  'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience“ in North Zone-Asicon at AIIMS New Delhi on 25-01-200.',
+  'Presented a video on SILS at SILSCON Mumbai on 29th April 2011.',
+  'Delivered a talk on Single Incision Laparoscopic Surgery at IMA Amroha Branch CME on 4-4-2009.',
+  'Participated in Technical discussion on ‘Best practice guidelines and State of the art in Single Incision Laparoscopic Surgery‘ at the SAGES meeting 2009 at Phoenix Arizona U.S.A.',
+  'Conducted a live surgical workshop on Single Incision Laparoscopic Surgery at Barelli on 30 August 2009.',
+  'Delivered a talk on Single Incision Laparoscopic Surgery at ASI Ghaziabad Meeting on 17 09 2009.',
+  'Delivered a talk on ‘Laparoscopy –What beyond Cholecystectomy ‘at IMA Shamli Branch CME on 4-4-2010.',
+  'Arranged & attended a proctorship programme on MIPH on 14-3-2010 & 23-04-2011.',
+  'Delivered a talk on “Laparoscopy –What beyond Cholecystectomy” at IMA Mawana Branch CME on 2-6-2013.',
+  'Delivered a talk on “Laparoscopy –What beyond Cholecystectomy” at IMA Meerut Branch CME on 12-6-2013.',
 ];
 
 export default function News() {
@@ -78,23 +92,21 @@ export default function News() {
       </div>
 
       {/* Right side (Desktop) */}
-      <div className="hidden md:block w-[30%] pl-5">
+      <div className="hidden md:block w-[33%] pl-2">
         <div className="flex flex-col gap-5">
           <h1 className="text-[32px] font-medium text-[#0f2239]">Latest News</h1>
-          {[
-            'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
-            'Presented a video on SILS at SILSCON Mumbai on 29th April 2011.',
-            'Delivered a talk on Single Incision Laparoscopic Surgery at IMA Amroha Branch CME on 4-4-2009.',
-            'Participated in Technical discussion on ‘Best practice guidelines and State of the art in Single Incision Laparoscopic Surgery ‘at the SAGES meeting 2009 at Phoenix Arizona U.S.A.',
-            'Conducted a live surgical workshop on Single Incision Laparoscopic Surgery at Barelli on 30 August 2009',
-          ].map((text, i) => (
-            <div
-              className="rounded-md bg-[#22446b] p-3 flex items-start gap-3 overflow-hidden"
+          {newsItems.map((text, i) => (
+            <motion.div
+              className="rounded-md bg-[#22446b] p-4 flex items-start gap-3 overflow-hidden"
+              initial={{ opacity: 0, y: 60 }}
               key={i}
+              transition={{ delay: i * 0.15, duration: 0.6 }}
+              viewport={{ amount: 0.3, once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
-              <AiOutlineFile className="text-white w-6 h-6 flex-shrink-0" />
+              <HiOutlineMenuAlt2 className="text-white  flex-shrink-0 border rounded-[2px]" />
               <p className="text-white text-[14px]">{text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -103,20 +115,18 @@ export default function News() {
       <div className="block md:hidden w-full mt-10">
         <div className="flex flex-col gap-5 text-[32px]">
           <h1 className="text-[32px] font-medium text-[#0f2239]">Latest News</h1>
-          {[
-            'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience “in North Zone-Asicon at AIIMS New Delhi on 25-01-200',
-            'Presented a video on SILS at SILSCON Mumbai on 29th April 2011.',
-            'Delivered a talk on Single Incision Laparoscopic Surgery at IMA Amroha Branch CME on 4-4-2009.',
-            'Participated in Technical discussion on ‘Best practice guidelines and State of the art in Single Incision Laparoscopic Surgery ‘at the SAGES meeting 2009 at Phoenix Arizona U.S.A.',
-            'Conducted a live surgical workshop on Single Incision Laparoscopic Surgery at Barelli on 30 August 2009',
-          ].map((text, i) => (
-            <div
-              className="rounded-md bg-[#22446b] p-3 flex items-start gap-3 overflow-hidden"
+          {newsItems.map((text, i) => (
+            <motion.div
+              className="rounded-md bg-[#22446b] p-4 flex items-start gap-3 overflow-hidden"
+              initial={{ opacity: 0, y: 60 }}
               key={i}
+              transition={{ delay: i * 0.15, duration: 0.6 }}
+              viewport={{ amount: 0.3, once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
-              <AiOutlineFile className="text-white w-6 h-6 flex-shrink-0" />
+              <HiOutlineMenuAlt2 className="text-white  flex-shrink-0 border rounded-[2px] w-4 h-4" />
               <p className="text-white text-[14px]">{text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

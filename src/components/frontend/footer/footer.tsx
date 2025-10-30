@@ -94,7 +94,7 @@ export default function Footer() {
               </p>
 
               <h4 className="font-semibold text-[#000000de] mt-3">Inquiries</h4>
-              <div className="text-[#00000099] text-[14px] leading-6 break-words">
+              <div className="text-[#00000099] text-[14px] leading-6 break-all">
                 {[
                   '+91-121-2665083',
                   '+91-121-4055009',
