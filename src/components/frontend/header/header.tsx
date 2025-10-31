@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav
       className={`bg-white shadow-sm ${poppins.className} fixed top-0 left-0 w-full z-50 bg-white`}
     >
-      <div className="max-w-[1280px] mx-auto flex justify-between items-center px-6 py-0 md:py-2">
+      <div className="max-w-[1280px] mx-auto flex justify-between items-center px-6 py-0 h-20 md:h-23  md:py-2">
         {/* Logo */}
         <div className="relative z-20 -mb-12 md:mx-10">
           <Link aria-label="Go to homepage" className="aspect-150/127 block" href="/">
@@ -42,9 +42,9 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:block">
+        <div className="hidden [@media(min-width:986px)]:block">
           <NavigationMenu>
-            <NavigationMenuList className="flex gap-4 mx-10">
+            <NavigationMenuList className="flex gap-4 mx-10 md:mx-8">
               {/* Services Dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="!text-[#22426e] text-[14px] font-medium !bg-transparent !hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4 hover:text-[#22426e]">
@@ -137,29 +137,29 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu button */}
-        <div className="flex md:hidden">
+        <div className="flex [@media(min-width:986px)]:hidden">
           <Button
-            className="bg-white text-[#000000ed] !font-bold hover:bg-transparent focus-visible:ring-0 active:bg-transparent"
+            className="bg-white text-[#000000ed] hover:bg-transparent focus-visible:ring-0 active:bg-transparent !text-xl !font-extrabold "
             onClick={() => setIsDrawerOpen(!isDrawerOpen)}
             variant="ghost"
           >
-            {isDrawerOpen ? <FiX size={30} /> : <FiMenu size={30} />}
+            {isDrawerOpen ? <FiX size={34} /> : <FiMenu size={34} />}
           </Button>
         </div>
       </div>
 
       {/* Mobile Drawer */}
       {isDrawerOpen && (
-        <div className="absolute top-20 shadow-2xl right-10 w-[250px] bg-white rounded-sm py-4 px-5 flex flex-col gap-3 z-50 md:hidden text-left">
+        <div className="absolute top-13 shadow-2xl right-6 w-[250px] bg-white rounded-sm py-4 px-5 flex flex-col gap-3 z-50 md:hidden text-left">
           <NavigationMenu>
             <NavigationMenuList className="flex flex-col gap-2 items-start">
               {/* Services Dropdown */}
               <NavigationMenuItem className="w-full">
                 <NavigationMenuTrigger
-                  className="w-full flex items-center justify-between !text-[#22426e] text-[14px] px-2 gap-30"
+                  className="w-full flex items-center justify-between !text-[#22426e] text-[14px] px-2 gap-30 !bg-transparent !hover:bg-transparent !focus:bg-transparent !ring-0 !shadow-none"
                   onClick={() => setShowServices(!showServices)}
                 >
-                  <span className="text-left">Services</span>
+                  <span className="text-left !bg-transparent !hover:bg-transparent ">Services</span>
                 </NavigationMenuTrigger>
 
                 {/* Render services text/content below the trigger */}

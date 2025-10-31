@@ -238,6 +238,13 @@ export default function LaparoscopicSurgery() {
 
   const prevPaediatricRef = React.useRef(null);
   const nextPaediatricRef = React.useRef(null);
+
+  const prevSolidRef = React.useRef(null);
+  const nextSolidRef = React.useRef(null);
+
+  const prevVatsRef = React.useRef(null);
+  const nextVatsRef = React.useRef(null);
+
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
@@ -259,7 +266,7 @@ export default function LaparoscopicSurgery() {
       <div className="mt-30 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
+            <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
               Laparoscopic General Surgery
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
@@ -268,7 +275,7 @@ export default function LaparoscopicSurgery() {
           </div>
 
           {/* ✅ Arrows only visible on desktop */}
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-6 lg:pl-0">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
               w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -347,14 +354,14 @@ export default function LaparoscopicSurgery() {
         <div className=" mx-auto max-w-[1200px] mt-10 p-8 pt-12 md:pt-20">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
+              <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
                 Laparoscopic Hernia Surgery
               </h2>
               <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
                 Commonly performed laparoscopic hernia surgery procedures:
               </p>
             </div>
-            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none">
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-8.5 lg:pl-0">
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -440,22 +447,22 @@ export default function LaparoscopicSurgery() {
         <div className="flex flex-col md:flex-row md:items-center md:gap-18">
           {/* Left Side Text */}
           <div className="md:w-1/2">
-            <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
+            <h1 className="text-[32px]  md:mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
               Single Incision Laparoscopic Surgery
             </h1>
 
             {/*  Image between h1 and p only on mobile */}
-            <div className="block md:hidden mb-5">
+            <div className="block md:hidden">
               <Image
                 alt="Surgery"
-                className="rounded-lg object-contain w-fit aspect-300/300  sm:max-w-[300] mx-auto"
+                className="rounded-lg object-contain w-fit aspect-304/300  sm:max-w-[300] mx-auto"
                 height={600} // required
                 src="/Single-Incision-Laparoscopic-Surgery.png"
                 width={800} // required
               />
             </div>
 
-            <p className="text-[16px] text-[#000000de] mb-5 leading-normal">
+            <p className="text-[16px] text-[#000000de] mb-5 leading-relaxed">
               Single Incision Laparoscopic surgery (SILS) is a further advancement in laparoscopic
               surgery. It is now possible to do almost all laparoscopic procedures through a single
               incision instead of the multiple incisions used in conventional multi-port
@@ -489,14 +496,14 @@ export default function LaparoscopicSurgery() {
         <div className="mt-10 p-8 pt-12  mx-auto max-w-[1200px] md:pt-20">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
+              <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
                 Laparoscopic Urology
               </h2>
               <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
                 Commonly performed Laparoscopic Urology procedures:
               </p>
             </div>
-            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-7 md:pl-0">
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -578,14 +585,14 @@ export default function LaparoscopicSurgery() {
       <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
+            <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
               Paediatric Laparoscopic
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
               Commonly performed paediatric laparoscopic procedures:
             </p>
           </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-5 lg:pl-0">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -669,44 +676,43 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopy in Trauma */}
-      <div className="p-8 py-15 md:pt-15 md:pb-25 bg-[rgb(234,237,243)]">
-        {/* Centered container */}
-        <div className="max-w-[1200px] mx-auto">
-          {/* Main flex layout */}
-          <div className="flex flex-col md:flex-row items-center md:justify-between gap-10 md:gap-15">
+      <div className="bg-[rgb(234,237,243)]">
+        <div className="pt-15 p-8 md:pt-15 md:pb-15 mx-auto max-w-[1200px]">
+          {/* Main Container */}
+          <div className="flex flex-col md:flex-row md:items-center md:gap-18">
             {/* Left Side Text */}
-            <div className=" w-full text-left lg:pl-7">
-              <h1 className="text-[32px]  mb-5 font-semibold text-[#000000de] md:tracking-wide leading-tight md:leading-normal">
+            <div className="md:w-1/2">
+              <h1 className="text-[32px] mb-6 md:mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
                 Laparoscopy in Trauma
               </h1>
 
-              {/* Image only on mobile */}
-              <div className="block md:hidden w-full mb-6">
+              {/*  Image between h1 and p only on mobile */}
+              <div className="block md:hidden mb-6 ">
                 <Image
                   alt="Surgery"
-                  className="w-fit aspect-300/300  sm:max-w-[300] rounded-2xl object-contain mx-auto"
-                  height={768}
+                  className="rounded-lg object-contain w-fit aspect-[300/240]  sm:max-w-[400px] mx-auto"
+                  height={600} // required
                   src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
-                  width={768}
+                  width={800} // required
                 />
               </div>
 
-              <p className="text-[20px] text-[#000000de] mb-5 leading-normal">
+              <p className="text-[20px] mb-5 font-semibold text-[#000000de] ">
                 Haematoma / Haemoperitonium Drainage
               </p>
-              <p className="text-[16px] text-[#000000de] leading-relaxed">
+              <p className="text-[16px] text-[#000000de] mb-5 leading-relaxed">
                 Laparoscopic surgery is emerging as an alternative in patients with abdominal
-                injuries. It helps to quantify the injury correctly in haemodynamically stable
-                patients with abdominal trauma. Blood in the abdominal cavity can be drained and
-                bleeding controlled. In addition to this, damaged spleen can also be removed.
+                injuries .It helps to quantify the injury correctly in haemodynamically stable
+                patients with abdominal trauma .Blood in abdominal cavity can be drained and
+                bleeding controlled .In addition to this damaged spleen can also be removed.
               </p>
             </div>
 
-            {/* Right Side Image (visible only on desktop) */}
-            <div className="hidden md:block max-w-[300px] mt-10 mx-auto">
+            {/* Right Side Image (Hidden on mobile, shown on desktop) */}
+            <div className="hidden md:block  mt-10">
               <Image
                 alt="Surgery"
-                className="rounded-lg w-full object-cover "
+                className="rounded-sm w-full h-auto object-cover max-w-[300px] "
                 height={600}
                 src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
                 width={800}
@@ -720,23 +726,25 @@ export default function LaparoscopicSurgery() {
       <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
+            <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
               Laparoscopic Solid Organ Surgery
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
               Commonly performed Laparoscopic Solid Organ Surgery procedures:
             </p>
           </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-5 lg:pl-0">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-0 transition-all shadow-md opacity-30"
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+              ref={prevSolidRef}
             >
               <FaArrowLeft className="text-lg" />
             </Button>
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-0 transition-all shadow-md opacity-30"
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+              ref={nextSolidRef}
             >
               <FaArrowRight className="text-lg" />
             </Button>
@@ -748,10 +756,23 @@ export default function LaparoscopicSurgery() {
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
+              stopOnLastSlide: true,
             }}
             breakpoints={{
+              0: { slidesPerView: 1 },
               1024: { slidesPerView: 3 },
               768: { autoplay: false, slidesPerView: 2 },
+            }}
+            navigation={{
+              nextEl: nextSolidRef.current,
+              prevEl: prevSolidRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              // cast to any to bypass TypeScript errors
+              if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+                swiper.params.navigation.prevEl = prevSolidRef.current!;
+                swiper.params.navigation.nextEl = nextSolidRef.current!;
+              }
             }}
             className="hidden md:flex"
             loop={false}
@@ -852,23 +873,28 @@ export default function LaparoscopicSurgery() {
       <div className="mt-10 pt-8 pb-20 px-8 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-2 md:leading-normal md:tracking-wide leading-tight">
-              Laparoscopic Hernia Surgery
+            <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
+              Thoracoscopy & VATS
             </h2>
             <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
-              Commonly performed laparoscopic hernia surgery procedures:
+              Video Assisted Thoracic Surgery or thoracoscopic surgery is the method to do surgery
+              inside the chest with the help of instruments inserted through small holes in the
+              chest wall, without opening the chest. Procedures which are done thoracoscopilly
+              commonly are-
             </p>
           </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 md:mt-30 lg:mt-15 pl-10">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-0 transition-all shadow-md opacity-30"
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+              ref={prevVatsRef}
             >
               <FaArrowLeft className="text-lg" />
             </Button>
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-0 transition-all shadow-md opacity-30"
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+              ref={nextVatsRef}
             >
               <FaArrowRight className="text-lg" />
             </Button>
@@ -880,10 +906,23 @@ export default function LaparoscopicSurgery() {
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
+              stopOnLastSlide: true,
             }}
             breakpoints={{
+              0: { slidesPerView: 1 },
               1024: { slidesPerView: 3 },
               768: { autoplay: false, slidesPerView: 2 },
+            }}
+            navigation={{
+              nextEl: nextVatsRef.current,
+              prevEl: prevVatsRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              // cast to any to bypass TypeScript errors
+              if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+                swiper.params.navigation.prevEl = prevVatsRef.current!;
+                swiper.params.navigation.nextEl = nextVatsRef.current!;
+              }
             }}
             className="hidden md:flex"
             loop={false}
