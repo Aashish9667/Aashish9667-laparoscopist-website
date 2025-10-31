@@ -679,7 +679,7 @@ export default function LaparoscopicSurgery() {
       <div className="bg-[rgb(234,237,243)]">
         <div className="pt-15 p-8 md:pt-15 md:pb-15 mx-auto max-w-[1200px]">
           {/* Main Container */}
-          <div className="flex flex-col md:flex-row md:items-center md:gap-18">
+          <div className="flex flex-col md:flex-row md:items-center md:gap-28">
             {/* Left Side Text */}
             <div className="md:w-1/2">
               <h1 className="text-[32px] mb-6 md:mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">

@@ -5,16 +5,18 @@ export default function Proctology() {
     <div className="mb-20">
       <div className="space-y-10 mt-20">
         {/* section1 */}
-        <div className="bg-[rgb(234,237,243)] md:p-20 p-8 pt-18 pb-12 ">
-          <h1 className="text-[41px] font-semibold mb-6 ">Proctology</h1>
-          <p className="text-[#00000099] text-[16px] mb-4 ">
-            Proctology focuses on diagnosing and treating disorders of the rectum, anus, and
-            surrounding tissues. Advanced techniques and patient-focused care are used to manage
-            conditions effectively, ensuring optimal outcomes and relief.
-          </p>
+        <div className="bg-[rgb(234,237,243)]">
+          <div className="mx-auto max-w-[1200px] md:p-20 p-8 pt-18 pb-12 ">
+            <h1 className="text-[41px] font-semibold mb-6 ">Proctology</h1>
+            <p className="text-[#00000099] text-[16px] mb-4 ">
+              Proctology focuses on diagnosing and treating disorders of the rectum, anus, and
+              surrounding tissues. Advanced techniques and patient-focused care are used to manage
+              conditions effectively, ensuring optimal outcomes and relief.
+            </p>
+          </div>
         </div>
         {/* section2 */}
-        <div className="bg-white md:px-20 md:py-15 p-8">
+        <div className="bg-white md:px-20 md:py-15 p-8 mx-auto max-w-[1200px]">
           <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal">
             Hemorrhoid Management
           </h1>
@@ -78,24 +80,27 @@ export default function Proctology() {
           </ul>
         </div>
         {/* section3 */}
-        <div className="bg-[rgb(234,237,243)] md:p-20 p-8 py-15">
-          <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal">
-            STARR Procedure for ODS (Obstructive Defecation Syndrome)
-          </h1>
-          <p className="text-[#00000099] text-[16px] mb-4 ">
-            Obstructive Defecation Syndrome (ODS) is a condition characterized by difficulty in
-            stool passage due to rectal dysfunction. Commonly affecting older women, ODS is
-            diagnosed through a defecogram, which provides imaging of the rectum during defecation.
-          </p>
-          <p className="text-[#00000099] text-[16px] mb-4 ">
-            The <strong>Stapled Trans-Anal Resection of Rectum (STARR)</strong> procedure is an
-            effective surgical treatment for ODS. It involves resection of the rectum using a
-            stapling device, resulting in significant symptom improvement and enhanced quality of
-            life for patients
-          </p>
+        <div className="bg-[rgb(234,237,243)]">
+          <div className=" md:p-20 p-8 py-15 mx-auto max-w-[1200px]">
+            <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal">
+              STARR Procedure for ODS (Obstructive Defecation Syndrome)
+            </h1>
+            <p className="text-[#00000099] text-[16px] mb-4 ">
+              Obstructive Defecation Syndrome (ODS) is a condition characterized by difficulty in
+              stool passage due to rectal dysfunction. Commonly affecting older women, ODS is
+              diagnosed through a defecogram, which provides imaging of the rectum during
+              defecation.
+            </p>
+            <p className="text-[#00000099] text-[16px] mb-4 ">
+              The <strong>Stapled Trans-Anal Resection of Rectum (STARR)</strong> procedure is an
+              effective surgical treatment for ODS. It involves resection of the rectum using a
+              stapling device, resulting in significant symptom improvement and enhanced quality of
+              life for patients
+            </p>
+          </div>
         </div>
         {/* section4 */}
-        <div className="bg-white md:px-20 md:pt-15 md:pb-10 pt-8 px-8">
+        <div className="bg-white md:px-20 md:pt-15 md:pb-10 pt-8 px-8 mx-auto max-w-[1200px]">
           <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal">
             Anal Fistula Management
           </h1>
