@@ -5,7 +5,7 @@ export default function Endourology() {
     <div className="break-words overflow-hidden ">
       {/* Section 1 */}
       <div className="bg-[rgb(234,237,243)] w-full">
-        <div className="mt-20 p-8 pb-10  pt-18 md:pt-23  mx-auto max-w-[1200px]">
+        <div className="mt-20 p-8 md:pb-8 pb-10  pt-18 md:pt-23  mx-auto max-w-[1200px]">
           <h1 className="text-[41px] font-semibold mb-6">Endourology</h1>
           <p className="text-[16px] text-[#00000099] md:leading-relaxed pb-5 md:pb-15">
             Endourology is a specialized branch of urology that focuses on diagnosing and treating

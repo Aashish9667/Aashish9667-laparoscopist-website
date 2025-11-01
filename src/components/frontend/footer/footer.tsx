@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
       </div>
       {/*  Footer Bottom */}
-      <div className="mt-8 pt-4 text-center text-[14px] text-[#00000099]">
+      <div className="text-center text-[14px] text-[#00000099] flex justify-center">
         © Copyright Marketita and respective copyright holders
       </div>
     </footer>

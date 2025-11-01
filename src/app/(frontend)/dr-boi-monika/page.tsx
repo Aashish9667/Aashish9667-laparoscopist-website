@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 export default function Page555() {
   return (
-    <div>
+    <div className="bg-[rgb(234,237,243)] ">
       {/* Section 1: Image + Text */}
-      <div className="bg-[rgb(234,237,243)] flex flex-col md:flex-row items-start justify-between p-7 pt-15 mt-20 lg:p-15 lg:pt-20 gap-8">
+      <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-start justify-between p-6 pt-15 mt-20 lg:p-15 lg:pt-20 gap-8">
         {/* Left: Image */}
-        <div className="flex justify-start md:justify-start">
+        <div className="flex justify-center md:justify-start w-full max-h-full sm:h-full aspect-710/500 md:w-[390px] md:h-[450px]">
           <Image
             alt="doctor"
-            className="w-full h-[320px] md:w-[390px] md:h-[450px] rounded-2xl object-cover"
+            className="w-full h-full md:w-[390px] md:h-[450px] rounded-2xl object-cover"
             height={320}
             src="/Monika-tomar.png"
             width={300}
@@ -19,10 +19,11 @@ export default function Page555() {
 
         {/* Right: Text */}
         <div className="text-left md:w-2/3 pb-10">
-          <h6 className="text-[13px] text-[#000000cc] font-medium pb-2">
-            Precision. Compassion. Innovation – Redefining Women’s Healthcare
+          <h6 className="text-[14px] text-[#000000cc] pb-2 font-medium">
+            Precision. Compassion. Innovation – <br className="sm:hidden" />
+            Redefining Women’s Healthcare
           </h6>
-          <h1 className="text-[40px]  text-[#000000cc] mb-1">Dr. Monika Tomar</h1>
+          <h1 className="text-[40px]  text-[#000000cc] mb-1 font-sans">Dr. Monika Tomar</h1>
           <h4 className="text-[16px] font-semibold text-[#000000cc] mb-5">
             Chief Consultant – Obstetrics & Gynaecology
           </h4>

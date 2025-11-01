@@ -14,14 +14,14 @@ const poppins = Poppins({
 
 export default function DrMehdhavi() {
   return (
-    <div>
+    <div className="bg-[rgb(234,237,243)]">
       {/* Section 1: Image + Text */}
-      <div className="bg-[rgb(234,237,243)] flex flex-col md:flex-row items-start justify-between  p-7 pt-15 mt-20 lg:p-15 lg:pt-20  gap-8 xl:gap-15">
+      <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-start justify-between  p-6 pt-15 mt-20 lg:p-15 lg:pt-20  gap-8 xl:gap-15">
         {/* Left: Image */}
-        <div className="flex justify-start lg:justify-start">
+        <div className="flex justify-center lg:justify-start sm:max-w-full w-full  md:w-fit">
           <Image
             alt="doctor"
-            className="w-[600px] h-auto sm:w-[600x] sm:h-[600px] md:w-[400px] md:h-[450px] lg:w-[400px] lg:h-[450px]  xl:w-[400px] xl:h-[490px] rounded-2xl object-cover"
+            className="w-[600px] h-auto sm:w-full sm:h-[600px] md:w-[400px] md:h-[450px] lg:w-[400px] lg:h-[450px]  xl:w-[400px] xl:h-[490px] rounded-2xl object-cover"
             height={320}
             src="/Medhavi-Tomar.png.avif"
             width={300}
@@ -35,10 +35,7 @@ export default function DrMehdhavi() {
           >
             Laparoscopic Surgeon
           </h6>
-          <h1
-            className={`${heebo.className} text-[40px]  text-[#000000de]`}
-            style={{ fontFamily: `"Heebo", "Lora", sans-serif` }}
-          >
+          <h1 className="text-[39px] text-[#000000de] font-sans leading-10 mb-3">
             Dr. Medhavi Tomar
           </h1>
           <h4 className={`text-[16px] text-[#000000de] mb-5 font-semibold ${poppins.className}`}>
@@ -66,21 +63,24 @@ export default function DrMehdhavi() {
       </div>
 
       {/* Section 2: Mission Quote */}
-      <div className="bg-white p-5 py-15 lg:p-15 flex ">
-        <div className="border-l-4 border-[#22426e] mr-4 lg:ml-30" />
-        <p
-          className={`text-[24px] md:text-[28px] text-[#000000cc] italic leading-tight font-medium lg:pr-30 ${poppins.className}`}
-        >
-          “My mission is to provide exceptional laparoscopic care with a focus on minimally invasive
-          techniques, ensuring faster recovery, minimal discomfort, and the best possible outcomes
-          for every patient.”
-        </p>
+      <div className="bg-white">
+        <div className=" p-5 py-15 lg:p-15 flex mx-auto max-w-[1200px]">
+          <div className="border-l-4 border-[#22426e] mr-4 lg:ml-30" />
+          <p
+            className={`text-[24px] md:text-[28px] text-[#000000cc] italic leading-tight font-medium lg:pr-30 ${poppins.className}`}
+          >
+            “My mission is to provide exceptional laparoscopic care with a focus on minimally
+            invasive techniques, ensuring faster recovery, minimal discomfort, and the best possible
+            outcomes for every patient.”
+          </p>
+        </div>
       </div>
 
       {/* Section 3: Gray Section with Boxes */}
-      <div className={`bg-gray-300  p-5  lg:p-15`}>
+      <div className="bg-[rgb(234,237,243)]" />
+      <div className={`mx-auto max-w-[1200px]  p-5  lg:p-15 lg:pt-10`}>
         <p
-          className={`text-[40px]  mb-2 text-[#000000de] leading-[48px] ${heebo.className}`}
+          className={`text-[40px] pt-5 mb-2 text-[#000000de] leading-[48px] ${heebo.className}`}
           style={{ fontFamily: `"Heebo", "Lora", sans-serif` }}
         >
           Consultant Surgeon & Head, Department <br /> of General & Minimal Access Surgery

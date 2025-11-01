@@ -104,10 +104,10 @@ export default function News() {
       children: 'a',
       easing: 'cubic-bezier(0.4, 0, 0.22, 1)',
       gallery: '#photoswipe-gallery',
-      hideAnimationDuration: 400,
+      hideAnimationDuration: 10,
       padding: { bottom: 20, left: 20, right: 20, top: 20 },
       pswpModule: () => import('photoswipe'),
-      showAnimationDuration: 400,
+      showAnimationDuration: 100,
       showHideAnimationType: 'zoom', // smooth animation
       wheelToZoom: true, // zoom by wheel
     });
@@ -123,9 +123,17 @@ export default function News() {
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4" id="photoswipe-gallery">
       {images.map((src, i) => (
         <a
-          className="w-full aspect-[4/3] relative rounded-lg overflow-hidden group shadow-[0px_0px_9px_0px_#2d5289]"
-          data-pswp-height="300"
-          data-pswp-width="400"
+          ref={(el) => {
+            if (el && !el.hasAttribute('data-pswp-width')) {
+              const img = new window.Image();
+              img.src = src;
+              img.onload = () => {
+                el.setAttribute('data-pswp-width', img.naturalWidth.toString());
+                el.setAttribute('data-pswp-height', img.naturalHeight.toString());
+              };
+            }
+          }}
+          className="w-full aspect-[312/228] relative rounded-lg overflow-hidden group shadow-[0px_0px_9px_0px_#2d5289]"
           href={src}
           key={i}
           onTouchStart={() => setActiveIndex(i)}

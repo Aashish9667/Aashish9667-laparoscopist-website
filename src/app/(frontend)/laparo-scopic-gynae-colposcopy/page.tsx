@@ -221,20 +221,22 @@ export default function Laparoscopic() {
       </div>
 
       {/* Section 5 */}
-      <div className="bg-[rgb(234,237,243)] md:p-20 py-15 px-8 mx-auto max-w-[1200px]">
-        <h1 className="font-semibold text-[32px] mb-6  md:leading-normal leading-tight">
-          Vaginal Surgery
-        </h1>
-        <hr className="my-4 border-t border-gray-260" />
-        <p className="text-[25px] text-[#000000de] mb-6 font-semibold">Common Procedures:</p>
-        <ul className="list-disc pl-10 text-[16px] space-y-0 text-[#00000099] leading-relaxed">
-          <li>Repair of uterine prolapse and perineal tears</li>
-          <li>Vaginal hysterectomy (NDVH/VH) with cystocele or rectocele repair</li>
-          <li>Removal of cervical polyps and vaginal wall cysts</li>
-          <li>Treatment of stress urinary incontinence using TVT/TOT tapes</li>
-          <li>Vaginoplasty for vaginal agenesis</li>
-          <li>Vulvectomy and urinary fistula repair</li>
-        </ul>
+      <div className="bg-[rgb(234,237,243)]">
+        <div className=" md:p-20 py-15 px-8 mx-auto max-w-[1200px]">
+          <h1 className="font-semibold text-[32px] mb-6  md:leading-normal leading-tight">
+            Vaginal Surgery
+          </h1>
+          <hr className="my-4 border-t border-gray-260" />
+          <p className="text-[25px] text-[#000000de] mb-6 font-semibold">Common Procedures:</p>
+          <ul className="list-disc pl-10 text-[16px] space-y-0 text-[#00000099] leading-relaxed">
+            <li>Repair of uterine prolapse and perineal tears</li>
+            <li>Vaginal hysterectomy (NDVH/VH) with cystocele or rectocele repair</li>
+            <li>Removal of cervical polyps and vaginal wall cysts</li>
+            <li>Treatment of stress urinary incontinence using TVT/TOT tapes</li>
+            <li>Vaginoplasty for vaginal agenesis</li>
+            <li>Vulvectomy and urinary fistula repair</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -229,23 +229,28 @@ export default function AboutUs() {
           viewport={{ amount: 0.3, once: false }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <div className="border border-gray-300 rounded-lg bg-white overflow-x-auto">
+          <div className="border border-gray-300 rounded-lg bg-white overflow-x-auto shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),_0px_1px_1px_0px_rgba(0,0,0,0.14),_0px_1px_3px_0px_rgba(0,0,0,0.12)]">
             {/* Header */}
-            <table className="w-full border-collapse text-left text-[16px]">
+            <table className="w-full border-collapse text-left text-[16px] ">
               {/* Header */}
               <thead>
                 <tr className="border-b border-gray-300 text-[#000000de]">
-                  <th className="py-3 px-4 w-1/3 font-semibold">Doctor Name</th>
-                  <th className="py-3 px-4 w-1/3 font-semibold">Qualification</th>
-                  <th className="py-3 px-4 w-1/3 font-semibold">Specialization</th>
+                  <th className="py-6 px-5 w-1/3 font-semibold">Doctor Name</th>
+                  <th className="py-6 px-5 w-1/3 font-semibold">Qualification</th>
+                  <th className="py-6 px-5 w-1/3 font-semibold">Specialization</th>
                 </tr>
               </thead>
 
               {/* Body */}
-              <tbody className="divide-y divide-gray-200 text-[#00000099] ">
+              <tbody className="divide-y divide-gray-200 text-[#00000099]">
                 {[
-                  ['Dr. Medhavi Tomar', 'M.B.B.S., M.S.', 'Gen. & Laparoscopic Surgery'],
-                  ['Dr. Monika Singh', 'M.B.B.S., M.D.', 'Obs. & Gynae'],
+                  [
+                    'Dr. Medhavi Tomar',
+                    'M.B.B.S., M.S.',
+                    'Gen. & Laparoscopic Surgery',
+                    '/dr-boi-medhavi',
+                  ],
+                  ['Dr. Monika Singh', 'M.B.B.S., M.D.', 'Obs. & Gynae', '/dr-boi-monika'],
                   ['Dr. Subhash Yadav', 'M.B.B.S., M.S., M.Ch.', 'Urologist'],
                   ['Dr. Shaleen Sharma', 'M.B.B.S., M.S., M.Ch.', 'Urologist'],
                   ['Dr. Rahul Goel', 'M.B.B.S., M.S.', 'Urologist'],
@@ -260,11 +265,22 @@ export default function AboutUs() {
                   ['Dr. Nikhil Wadera', 'M.B.B.S., M.D.', 'Medicine'],
                   ['Dr. Rohit Singh', 'M.B.B.S., M.S.', 'ENT'],
                   ['Dr. Atul Rastogi', 'M.B.B.S., M.S.', 'Orthopedics'],
-                ].map(([name, qualification, specialization], i) => (
+                ].map(([name, qualification, specialization, link], i) => (
                   <tr className="hover:bg-gray-100" key={i}>
-                    <td className="py-3 px-4 align-top break-words">{name}</td>
-                    <td className="py-3 px-4 align-top break-words">{qualification}</td>
-                    <td className="py-3 px-4 align-top break-words">{specialization}</td>
+                    <td className=" align-top break-words py-[16px] px-[22px]">
+                      {link ? (
+                        <a
+                          className="hover:underline underline-offset-1 hover:text-[#22426e]"
+                          href={link}
+                        >
+                          {name}
+                        </a>
+                      ) : (
+                        name
+                      )}
+                    </td>
+                    <td className="py-[16px] px-[22px] align-top break-words">{qualification}</td>
+                    <td className="py-[16px] px-[22px] align-top break-words">{specialization}</td>
                   </tr>
                 ))}
               </tbody>
