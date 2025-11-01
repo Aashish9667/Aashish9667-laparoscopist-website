@@ -17,7 +17,7 @@ export default function AboutUs() {
           playsInline
         />
       </div>
-      <div className="bg-gray-300 mx-auto">
+      <div className="bg-[rgb(234,237,243)] mx-auto">
         <div className="max-w-[1200px] mx-auto py-8 px-6">
           <div>
             <div className="grid justify-center">
@@ -27,11 +27,13 @@ export default function AboutUs() {
                 viewport={{ amount: 0.3, once: false }}
                 whileInView={{ opacity: 1, y: 0 }}
               >
-                <h1 className="text-[32px] text-[#22426e] font-semibold align-center">ABOUT US</h1>
+                <h1 className="text-[32px] text-[#22426e] font-semibold align-center pt-5">
+                  ABOUT US
+                </h1>
               </motion.div>
             </div>
 
-            <div className="py-8">
+            <div className="py-6">
               <motion.div
                 initial={{ opacity: 0, y: 60 }}
                 transition={{ duration: 0.6 }}

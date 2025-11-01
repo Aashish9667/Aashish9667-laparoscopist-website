@@ -82,7 +82,7 @@ export default function Proctology() {
         {/* section3 */}
         <div className="bg-[rgb(234,237,243)]">
           <div className=" md:p-6 p-6 py-15 mx-auto max-w-[1200px]">
-            <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal">
+            <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal md:pt-12">
               STARR Procedure for ODS (Obstructive Defecation Syndrome)
             </h1>
             <p className="text-[#00000099] text-[16px] mb-4 ">
@@ -91,7 +91,7 @@ export default function Proctology() {
               diagnosed through a defecogram, which provides imaging of the rectum during
               defecation.
             </p>
-            <p className="text-[#00000099] text-[16px] mb-4 ">
+            <p className="text-[#00000099] text-[16px] mb-4 md:pb-10">
               The <strong>Stapled Trans-Anal Resection of Rectum (STARR)</strong> procedure is an
               effective surgical treatment for ODS. It involves resection of the rectum using a
               stapling device, resulting in significant symptom improvement and enhanced quality of

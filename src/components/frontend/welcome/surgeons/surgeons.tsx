@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export default function LaparoscopySurgeons() {
   return (
-    <div className="bg-gray-300 ">
+    <div className="bg-[rgb(234,237,243)]">
       <div className="max-w-[1200px] mx-auto lg:px-6 lg:py-20 p-5 sm:px-6 sm:py-20 px-6 py-20 ">
         {/* Parent Flex Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-0 md:gap-16">
