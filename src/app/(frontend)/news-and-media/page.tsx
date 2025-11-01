@@ -55,7 +55,7 @@ export default function News() {
   }, []);
 
   return (
-    <div className="max-w-[1200px] mx-auto md:pt-20 pt-13 px-4 md:px-4 flex flex-col md:flex-row justify-between gap-10 md:gap-10 my-20">
+    <div className="max-w-[1200px] mx-auto md:pt-20 pt-13 px-6 md:px-6 flex flex-col md:flex-row justify-between gap-10 md:gap-10 my-20">
       {/* Left side */}
       <div className="flex-1">
         <div className="mb-6">

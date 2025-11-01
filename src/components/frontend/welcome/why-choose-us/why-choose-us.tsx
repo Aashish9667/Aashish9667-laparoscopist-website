@@ -34,7 +34,7 @@ export default function Whychooseus() {
   ];
 
   return (
-    <div className={`${poppins.className} bg-[#1d3d6d] space-y-16 py-5 px-8 pb-15 lg:px-8 xl:px-8`}>
+    <div className={`${poppins.className} bg-[#1d3d6d] space-y-16 py-5 px-6 pb-15 lg:px-6 xl:px-6`}>
       <div className="flex justify-center items-center mt-10 text-white">
         <h1 className="text-[32px] font-semibold leading-[38px]">Why Choose Us?</h1>
       </div>

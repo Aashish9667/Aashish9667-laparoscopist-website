@@ -5,7 +5,7 @@ export default function Laparoscopic() {
     <div className=" space-y-10 mt-20">
       {/* Section 1 */}
       <div className="bg-[rgb(234,237,243)]">
-        <div className=" md:p-20 p-8 py-18 mx-auto max-w-[1200px]">
+        <div className=" md:py-20 md:p-6 p-6 py-18 mx-auto max-w-[1200px]">
           <h1 className="font-semibold text-[32px] mb-6 md:leading-normal leading-tight">
             Laparoscopic Gynae Colposcopy
           </h1>
@@ -69,7 +69,7 @@ export default function Laparoscopic() {
         </div>
       </div>
       {/* Section 2 */}
-      <div className="bg-white md:px-20 md:py-15 p-8 mx-auto max-w-[1200px]">
+      <div className="bg-white md:px-6 md:py-15 p-6 mx-auto max-w-[1200px]">
         <h1 className="font-semibold text-[32px] mb-6  md:leading-normal leading-tight">
           Laparoscopic Gynae Hysteroscopy
         </h1>
@@ -120,7 +120,7 @@ export default function Laparoscopic() {
 
       {/* Section 3 */}
       <div className="bg-[rgb(234,237,243)]">
-        <div className="md:p-20 p-8 py-15 mx-auto max-w-[1200px]">
+        <div className="md:py-20 md:p-6 p-6 py-15 mx-auto max-w-[1200px]">
           <h1 className="font-semibold text-[32px] mb-6  md:leading-normal leading-tight">
             Diagnostic Laparoscopy
           </h1>
@@ -156,7 +156,7 @@ export default function Laparoscopic() {
         </div>
       </div>
       {/* Section 4 */}
-      <div className="bg-white md:px-20 md:py-15 p-8 mx-auto max-w-[1200px]">
+      <div className="bg-white md:px-6 md:py-15 p-6 mx-auto max-w-[1200px]">
         <h1 className="font-semibold text-[32px] mb-6  md:leading-normal leading-tight">
           Operative Laparoscopy
         </h1>
@@ -222,7 +222,7 @@ export default function Laparoscopic() {
 
       {/* Section 5 */}
       <div className="bg-[rgb(234,237,243)]">
-        <div className=" md:p-20 py-15 px-8 mx-auto max-w-[1200px]">
+        <div className=" md:py-20 md:px-6 py-15 px-6 mx-auto max-w-[1200px]">
           <h1 className="font-semibold text-[32px] mb-6  md:leading-normal leading-tight">
             Vaginal Surgery
           </h1>

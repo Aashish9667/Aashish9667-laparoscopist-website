@@ -31,17 +31,17 @@ export default function Testimonials() {
   return (
     <div>
       <div className=" flex flex-col mt-20 max-w-[1200px] mx-auto">
-        <div className="px-8">
+        <div className="px-6">
           <h1 className="text-[#24426e] text-[14px] font-semibold leading-[24px] mb-6">
             Testimonials
           </h1>
         </div>
-        <div className="px-8">
+        <div className="px-6">
           <p className="font-medium text-[#000000ee] text-[32px] mb-2 leading-[38px]">
             Voices of Healing
           </p>
         </div>
-        <div className="px-8">
+        <div className="px-6">
           <p className="text-[14px] text-[#00000099]  md:whitespace-nowrap sm:whitespace-normal leading-[24px] font-normal">
             Read inspiring stories from our patients who have experienced transformative kidney
             care.

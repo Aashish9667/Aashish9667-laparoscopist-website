@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className={`bg-white border-t border-gray-300 ${poppins.className}`}>
       {/*  Responsive Layout */}
-      <div className={`py-8 px-8 md:mt-5 ${poppins.className} max-w-[1200px] mx-auto`}>
+      <div className={`py-8 px-6 md:mt-5 ${poppins.className} max-w-[1200px] mx-auto`}>
         <div className="flex flex-col md:flex-row justify-between items-start gap-6 lg:gap-20 text-left">
           {/*  Left Section: Logo + Social Icons */}
           <div className="flex flex-col space-y-4 justify-start items-start">
@@ -115,7 +115,7 @@ export default function Footer() {
         </div>
       </div>
       {/*  Footer Bottom */}
-      <div className="text-center text-[14px] text-[#00000099] flex justify-center">
+      <div className=" py-3 text-center text-[14px] text-[#00000099] flex justify-center">
         © Copyright Marketita and respective copyright holders
       </div>
     </footer>

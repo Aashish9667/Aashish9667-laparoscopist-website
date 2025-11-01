@@ -263,7 +263,7 @@ export default function LaparoscopicSurgery() {
   return (
     <React.Fragment>
       {/* Laparoscopic General Surgery  */}
-      <div className="mt-30 p-8 bg-white relative mx-auto max-w-[1200px]">
+      <div className="mt-30 p-6 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
@@ -351,7 +351,7 @@ export default function LaparoscopicSurgery() {
 
       {/* Laparoscopic Hernia Surgery */}
       <div className=" bg-[rgb(234,237,243)] relative w-full">
-        <div className=" mx-auto max-w-[1200px] mt-10 p-8 pt-12 md:pt-20">
+        <div className=" mx-auto max-w-[1200px] mt-10 p-6 pt-12 md:pt-20">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
@@ -442,7 +442,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Single Incision Laparoscopic Surgery */}
-      <div className="pt-15 p-8 md:pt-20 md:pb-15 mx-auto max-w-[1200px]">
+      <div className="pt-15 p-6 md:pt-20 md:pb-15 mx-auto max-w-[1200px]">
         {/* Main Container */}
         <div className="flex flex-col md:flex-row md:items-center md:gap-18">
           {/* Left Side Text */}
@@ -493,7 +493,7 @@ export default function LaparoscopicSurgery() {
 
       {/* Laparoscopic uro Surgery */}
       <div className="bg-[rgb(234,237,243)] relative w-full">
-        <div className="mt-10 p-8 pt-12  mx-auto max-w-[1200px] md:pt-20">
+        <div className="mt-10 p-6 pt-12  mx-auto max-w-[1200px] md:pt-20">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
@@ -582,7 +582,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Paediatric Laparoscopic */}
-      <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
+      <div className="mt-10 p-6 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
@@ -677,7 +677,7 @@ export default function LaparoscopicSurgery() {
 
       {/* Laparoscopy in Trauma */}
       <div className="bg-[rgb(234,237,243)]">
-        <div className="pt-15 p-8 md:pt-15 md:pb-15 mx-auto max-w-[1200px]">
+        <div className="pt-15 p-6 md:pt-15 md:pb-15 mx-auto max-w-[1200px]">
           {/* Main Container */}
           <div className="flex flex-col md:flex-row md:items-center md:gap-28">
             {/* Left Side Text */}
@@ -723,7 +723,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopic Solid Organ Surgery */}
-      <div className="mt-10 p-8 bg-white relative mx-auto max-w-[1200px]">
+      <div className="mt-10 p-6 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
@@ -817,7 +817,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* Laparoscopy For Morbid Obesity */}
-      <div className="p-8 py-15 md:pt-20 md:pb-20 bg-[rgb(234,237,243)]">
+      <div className="p-6 py-15 md:pt-20 md:pb-20 bg-[rgb(234,237,243)]">
         {/* ✅ Centered container for desktop */}
         <div className="max-w-[1200px] mx-auto">
           {/* Main Container */}
@@ -870,7 +870,7 @@ export default function LaparoscopicSurgery() {
       </div>
 
       {/* vats */}
-      <div className="mt-10 pt-8 pb-20 px-8 bg-white relative mx-auto max-w-[1200px]">
+      <div className="mt-10 pt-8 pb-20 px-6 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">

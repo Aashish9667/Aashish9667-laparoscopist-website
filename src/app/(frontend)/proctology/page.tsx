@@ -6,7 +6,7 @@ export default function Proctology() {
       <div className="space-y-10 mt-20">
         {/* section1 */}
         <div className="bg-[rgb(234,237,243)]">
-          <div className="mx-auto max-w-[1200px] md:px-20 md:pt-20 md:pb-15 p-8 pt-18 pb-12 ">
+          <div className="mx-auto max-w-[1200px] md:px-6 md:pt-20 md:pb-15 p-6 pt-18 pb-12 ">
             <h1 className="text-[41px] font-semibold mb-6 ">Proctology</h1>
             <p className="text-[#00000099] text-[16px] mb-4 ">
               Proctology focuses on diagnosing and treating disorders of the rectum, anus, and
@@ -16,7 +16,7 @@ export default function Proctology() {
           </div>
         </div>
         {/* section2 */}
-        <div className="bg-white md:px-20 md:py-10 p-8 mx-auto max-w-[1200px]">
+        <div className="bg-white md:px-6 md:py-10 p-6 mx-auto max-w-[1200px]">
           <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal">
             Hemorrhoid Management
           </h1>
@@ -81,7 +81,7 @@ export default function Proctology() {
         </div>
         {/* section3 */}
         <div className="bg-[rgb(234,237,243)]">
-          <div className=" md:p-20 p-8 py-15 mx-auto max-w-[1200px]">
+          <div className=" md:p-6 p-6 py-15 mx-auto max-w-[1200px]">
             <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal">
               STARR Procedure for ODS (Obstructive Defecation Syndrome)
             </h1>
@@ -100,7 +100,7 @@ export default function Proctology() {
           </div>
         </div>
         {/* section4 */}
-        <div className="bg-white md:px-20 md:pt-10 md:pb-6 pt-8 px-8 mx-auto max-w-[1200px]">
+        <div className="bg-white md:px-6 md:pt-10 md:pb-6 pt-8 px-6 mx-auto max-w-[1200px]">
           <h1 className="text-[32px] font-semibold mb-6 leading-tight md:leading-normal">
             Anal Fistula Management
           </h1>

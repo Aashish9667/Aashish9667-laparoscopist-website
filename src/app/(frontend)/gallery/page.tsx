@@ -152,7 +152,7 @@ export default function News() {
   );
 
   return (
-    <div className="max-w-[1200px] mx-auto pt-10 px-4 md:px-8 flex flex-col gap-10 mt-16 ">
+    <div className="max-w-[1200px] mx-auto pt-10 px-6 md:px-6 flex flex-col gap-10 mt-16 ">
       {/* section 1 */}
 
       <div className="py-10">

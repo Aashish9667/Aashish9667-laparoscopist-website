@@ -18,7 +18,7 @@ export default function AboutUs() {
         />
       </div>
       <div className="bg-gray-300 mx-auto">
-        <div className="max-w-[1200px] mx-auto py-8 px-8">
+        <div className="max-w-[1200px] mx-auto py-8 px-6">
           <div>
             <div className="grid justify-center">
               <motion.div
@@ -197,7 +197,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="max-w-[1200px] mx-auto py-20 px-8">
+      <div className="max-w-[1200px] mx-auto py-20 px-6">
         {/* Heading */}
         <div className="text-center mb-8">
           <motion.div
