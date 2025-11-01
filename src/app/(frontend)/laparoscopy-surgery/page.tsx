@@ -275,7 +275,7 @@ export default function LaparoscopicSurgery() {
           </div>
 
           {/* ✅ Arrows only visible on desktop */}
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-6 lg:pl-0">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-6 lg:pl-0 pr-4">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
               w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -293,7 +293,7 @@ export default function LaparoscopicSurgery() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative pt-2 px-2">
           <Swiper
             breakpoints={{
               1024: { slidesPerView: 3 },
@@ -361,7 +361,7 @@ export default function LaparoscopicSurgery() {
                 Commonly performed laparoscopic hernia surgery procedures:
               </p>
             </div>
-            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-8.5 lg:pl-0">
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-8.5 lg:pl-0 pr-4">
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -379,7 +379,7 @@ export default function LaparoscopicSurgery() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative pt-2 px-2">
             <Swiper
               autoplay={{
                 delay: 2000,
@@ -503,7 +503,7 @@ export default function LaparoscopicSurgery() {
                 Commonly performed Laparoscopic Urology procedures:
               </p>
             </div>
-            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-7 md:pl-0">
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-7 md:pl-1.5 pr-4">
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -521,7 +521,7 @@ export default function LaparoscopicSurgery() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative pt-2 px-2">
             <Swiper
               autoplay={{
                 delay: 2000,
@@ -592,7 +592,7 @@ export default function LaparoscopicSurgery() {
               Commonly performed paediatric laparoscopic procedures:
             </p>
           </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-5 lg:pl-0">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-5 pr-4">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -610,7 +610,7 @@ export default function LaparoscopicSurgery() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative pt-2 px-2">
           <Swiper
             autoplay={{
               delay: 2000,
@@ -733,7 +733,7 @@ export default function LaparoscopicSurgery() {
               Commonly performed Laparoscopic Solid Organ Surgery procedures:
             </p>
           </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-5 lg:pl-0">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-6 lg:pl-0 pr-4">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -751,7 +751,7 @@ export default function LaparoscopicSurgery() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative pt-2 px-2">
           <Swiper
             autoplay={{
               delay: 2000,
@@ -883,7 +883,7 @@ export default function LaparoscopicSurgery() {
               commonly are-
             </p>
           </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 md:mt-30 lg:mt-15 pl-10">
+          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 md:mt-30 lg:mt-15 pl-10 pr-4">
             <Button
               className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
@@ -901,7 +901,7 @@ export default function LaparoscopicSurgery() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative pt-2 px-2">
           <Swiper
             autoplay={{
               delay: 2000,
