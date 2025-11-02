@@ -150,7 +150,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isDrawerOpen && (
-        <div className="absolute top-13 shadow-2xl right-6 w-[250px] bg-white rounded-sm py-4 px-5 flex flex-col gap-3 z-50 md:hidden text-left">
+        <div className="absolute top-13 shadow-2xl right-6 w-[250px] bg-white rounded-sm py-4 px-5 flex flex-col gap-3 z-50 [@media(min-width:986px)]:hidden text-left">
           <NavigationMenu>
             <NavigationMenuList className="flex flex-col gap-2 items-start">
               {/* Services Dropdown */}
