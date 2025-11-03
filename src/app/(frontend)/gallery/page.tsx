@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
+import { motion } from 'framer-motion';
 
 const pressImages = [
   '/live-operative-workshop-1.png',
@@ -154,72 +155,110 @@ export default function News() {
   return (
     <div className="max-w-[1200px] mx-auto pt-10 px-6 md:px-6 flex flex-col gap-10 mt-16 ">
       {/* section 1 */}
-
-      <div className="py-10">
-        <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">LIVE OPERATIVE WORKSHOP</h1>
-        {renderImageGrid(pressImages)}
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <div className="py-10">
+          <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">LIVE OPERATIVE WORKSHOP</h1>
+          {renderImageGrid(pressImages)}
+        </div>
+      </motion.div>
 
       {/* section 2 */}
-
-      <div className="py-10">
-        <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">COLPOSCOPY CME CUM WORKSHOP</h1>
-        {renderImageGrid(COLPOSCOPY)}
-      </div>
-
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <div className="py-10">
+          <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">
+            COLPOSCOPY CME CUM WORKSHOP
+          </h1>
+          {renderImageGrid(COLPOSCOPY)}
+        </div>
+      </motion.div>
       {/* section 3 */}
-
-      <div className="py-10">
-        <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">MIPH</h1>
-        {renderImageGrid(MIPH)}
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <div className="py-10">
+          <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">MIPH</h1>
+          {renderImageGrid(MIPH)}
+        </div>
+      </motion.div>
 
       {/* section 4 */}
-
-      <div className="py-10">
-        <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">SAGES</h1>
-        {renderImageGrid(SAGES)}
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <div className="py-10">
+          <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">SAGES</h1>
+          {renderImageGrid(SAGES)}
+        </div>
+      </motion.div>
 
       {/* section 5 */}
-
-      <div className="py-10">
-        <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">AIIMS</h1>
-        {renderImageGrid(AIIMS)}
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <div className="py-10">
+          <h1 className="text-[24px] font-medium text-[#0f2239] mb-4">AIIMS</h1>
+          {renderImageGrid(AIIMS)}
+        </div>
+      </motion.div>
 
       {/* section 6 — Videos */}
-      <div>
-        <div className="flex-1 pt-10 pb-20">
-          <div className="mb-6">
-            <h1 className="text-[24px] font-medium text-[#0f2239] mb-2">Videos</h1>
-          </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <div>
+          <div className="flex-1 pt-10 pb-20">
+            <div className="mb-6">
+              <h1 className="text-[24px] font-medium text-[#0f2239] mb-2">Videos</h1>
+            </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 gap-y-8">
-            {Videos.map((video, i) => (
-              <div className="flex flex-col items-center [text-shadow:0_0_1.5px_#000]" key={i}>
-                <Link
-                  className="w-full relative rounded-lg overflow-hidden"
-                  href={video.videoUrl}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <Image
-                    alt={video.caption}
-                    className="object-cover rounded-lg shadow-2xl "
-                    height={1000}
-                    src={video.src}
-                    width={1000}
-                  />
-                </Link>
-                <p className="text-center mt-2 text-[14px] text-[rgba(0,0,0,0.6)] [text-shadow:0_0_1.5px_#000]">
-                  {video.caption}
-                </p>
-              </div>
-            ))}
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-4 gap-y-8">
+              {Videos.map((video, i) => (
+                <div className="flex flex-col items-center [text-shadow:0_0_1.5px_#000]" key={i}>
+                  <Link
+                    className="w-full relative rounded-lg overflow-hidden"
+                    href={video.videoUrl}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <Image
+                      alt={video.caption}
+                      className="object-cover rounded-lg shadow-2xl "
+                      height={1000}
+                      src={video.src}
+                      width={1000}
+                    />
+                  </Link>
+                  <p className="text-center mt-2 text-[14px] text-[rgba(0,0,0,0.6)] [text-shadow:0_0_1.5px_#000]">
+                    {video.caption}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

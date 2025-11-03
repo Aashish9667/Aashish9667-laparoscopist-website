@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import { motion } from 'framer-motion';
 
 const testimonials = [
   {
@@ -31,51 +32,80 @@ export default function Testimonials() {
   return (
     <div>
       <div className=" flex flex-col mt-20 max-w-[1200px] mx-auto">
-        <div className="px-6">
-          <h1 className="text-[#24426e] text-[14px] font-semibold leading-[24px] mb-6">
-            Testimonials
-          </h1>
-        </div>
-        <div className="px-6">
-          <p className="font-medium text-[#000000ee] text-[32px] mb-2 leading-[38px]">
-            Voices of Healing
-          </p>
-        </div>
-        <div className="px-6">
-          <p className="text-[14px] text-[#00000099]  md:whitespace-nowrap sm:whitespace-normal leading-[24px] font-normal">
-            Read inspiring stories from our patients who have experienced transformative kidney
-            care.
-          </p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <div className="px-6">
+            <h1 className="text-[#24426e] text-[14px] font-semibold leading-[24px] mb-6">
+              Testimonials
+            </h1>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <div className="px-6">
+            <p className="font-medium text-[#000000ee] text-[32px] mb-2 leading-[38px]">
+              Voices of Healing
+            </p>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <div className="px-6">
+            <p className="text-[14px] text-[#00000099]  md:whitespace-nowrap sm:whitespace-normal leading-[24px] font-normal">
+              Read inspiring stories from our patients who have experienced transformative kidney
+              care.
+            </p>
+          </div>
+        </motion.div>
 
         <div className="w-full flex justify-center pt-15 px-4  md:pb-20 pb-15  overflow-hidden">
-          <div className="w-full max-w-[1200px] mx-auto px-5">
-            <Swiper
-              autoplay={{
-                delay: 4500,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                0: { slidesPerView: 1 },
-                1024: { slidesPerView: 2 },
-                768: { slidesPerView: 2 },
-              }}
-              modules={[Autoplay]}
-              spaceBetween={15}
-              loop
-            >
-              {testimonials.map((t, index) => (
-                <SwiperSlide key={index}>
-                  <div className="flex justify-center h-full px-5 py-4 pb-4">
-                    <div className="bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] mb-2 py-4 px-6  min-h-[210px] flex flex-col justify-between transition-transform duration-300">
-                      <p className="text-[#00000099] text-[16px] leading-[26px] mb-4">{t.text}</p>
-                      <h3 className="font-semibold text-[#00000099] text-[18px]">{t.author}</h3>
+          <motion.div
+            className="w-full max-w-[1200px] mx-auto px-5"
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div>
+              <Swiper
+                autoplay={{
+                  delay: 4500,
+                  disableOnInteraction: false,
+                }}
+                breakpoints={{
+                  0: { slidesPerView: 1 },
+                  1024: { slidesPerView: 2 },
+                  768: { slidesPerView: 2 },
+                }}
+                modules={[Autoplay]}
+                spaceBetween={15}
+                loop
+              >
+                {testimonials.map((t, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="flex justify-center h-full px-5 py-4 pb-4">
+                      <div className="bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] mb-2 py-4 px-6  min-h-[210px] flex flex-col justify-between transition-transform duration-300">
+                        <p className="text-[#00000099] text-[16px] leading-[26px] mb-4">{t.text}</p>
+                        <h3 className="font-semibold text-[#00000099] text-[18px]">{t.author}</h3>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

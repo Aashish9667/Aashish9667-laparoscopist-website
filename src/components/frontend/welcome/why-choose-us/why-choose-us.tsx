@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { Poppins } from 'next/font/google';
+import { motion } from 'framer-motion';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -35,15 +36,27 @@ export default function Whychooseus() {
 
   return (
     <div className={`${poppins.className} bg-[#1d3d6d] space-y-16 py-5 px-6 pb-15 lg:px-6 xl:px-6`}>
-      <div className="flex justify-center items-center mt-10 text-white">
-        <h1 className="text-[32px] font-semibold leading-[38px]">Why Choose Us?</h1>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <div className="flex justify-center items-center mt-10 text-white">
+          <h1 className="text-[32px] font-semibold leading-[38px]">Why Choose Us?</h1>
+        </div>
+      </motion.div>
+
       {procedures.map((item, idx) => (
-        <div
+        <motion.div
           className={`max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-start ${
             idx === 1 ? 'lg:flex-row-reverse' : ''
           }`}
+          initial={{ opacity: 0, y: 40 }}
           key={idx}
+          transition={{ duration: 0.6 }}
+          viewport={{ amount: 0.3, once: false }} // ye tab tab chalega jab card view me aaye
+          whileInView={{ opacity: 1, y: 0 }}
         >
           {/* Image Section */}
           <div className="relative z-10">
@@ -63,17 +76,17 @@ export default function Whychooseus() {
   w-[85%] sm:w-[85%] md:w-[90%] lg:w-[50%] xl:w-[55%] 
   h-auto
   flex flex-col justify-center 
-  ${idx === 0 ? 'py-6 px-5 lg:py-8 lg:px-8' : 'py-6 px-5 lg:py-8 lg:px-8'}
+  ${idx === 0 ? 'p-8' : 'p-8'}
   ${idx === 1 ? 'lg:-mr-28 -mt-10 lg:mt-0' : 'lg:-ml-28 -mt-10 lg:mt-0'}`}
           >
-            <h2 className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] font-medium text-[#24426E] mb-2 lg:mb-4 leading-snug">
+            <h2 className="text-[28px] sm:text-[24px] md:text-[26px] lg:text-[28px] font-medium text-[#24426E] mb-2 lg:mb-4 leading-snug">
               {item.title}
             </h2>
-            <p className="text-[14px] sm:text-[15px] md:text-[16px] text-[#000000de] leading-normal font-normal">
+            <p className=" text-[16px] sm:text-[15px] md:text-[16px] text-[#000000de] leading-normal font-normal">
               {item.desc}
             </p>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
