@@ -30,7 +30,7 @@ export default function Page555() {
         {/* Right: Text */}
         <div>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 60 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: false }}
             whileInView={{ opacity: 1, y: 0 }}
