@@ -1,6 +1,6 @@
 'use client';
 import * as React from 'react';
-
+import { motion } from 'framer-motion';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -263,116 +263,36 @@ export default function LaparoscopicSurgery() {
   return (
     <React.Fragment>
       {/* Laparoscopic General Surgery  */}
-      <div className="mt-30 p-6 bg-white relative mx-auto max-w-[1200px]">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
-              Laparoscopic General Surgery
-            </h2>
-            <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
-              Commonly performed laparoscopic general surgery procedures:
-            </p>
-          </div>
-
-          {/* ✅ Arrows only visible on desktop */}
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-6 lg:pl-0 pr-4">
-            <Button
-              className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-              w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-              ref={prevGeneralRef}
-            >
-              <FaArrowLeft className="text-lg" />
-            </Button>
-            <Button
-              className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-              w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-              ref={nextGeneralRef}
-            >
-              <FaArrowRight className="text-lg" />
-            </Button>
-          </div>
-        </div>
-
-        <div className="relative pt-2 px-2">
-          <Swiper
-            breakpoints={{
-              1024: { slidesPerView: 3 },
-              768: { slidesPerView: 2 },
-            }}
-            onBeforeInit={(swiper) => {
-              // safely attach navigation buttons
-              if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-                swiper.params.navigation.prevEl = prevGeneralRef.current!;
-                swiper.params.navigation.nextEl = nextGeneralRef.current!;
-              }
-            }}
-            autoplay={false} // ✅ no autoplay anywhere
-            className="hidden md:flex"
-            loop={false}
-            modules={[Navigation]} // ✅ no Autoplay module
-            onSlideChange={(swiper) => setActiveIndexGeneral(swiper.realIndex)}
-            slidesPerView={1}
-            spaceBetween={20}
-            autoHeight
-          >
-            {generalSurgeries.map((surgery, index) => (
-              <SwiperSlide key={index}>
-                <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] transition-all duration-300 p-5 mt-10 mb-10">
-                  <div>
-                    <div className="relative w-full  overflow-hidden rounded-lg mb-6">
-                      <Image
-                        alt={surgery.title}
-                        className="object-fill rounded-lg aspect-[304/240] max-w-[300px] mx-auto w-full"
-                        height={500}
-                        src={surgery.img}
-                        width={500}
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-[#000000de]">{surgery.title}</h3>
-                    <p className="text-[#6d6d6d] text-base leading-relaxed">{surgery.desc}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-
-            <div className="flex justify-center mb-10 gap-3">
-              {Array.from({ length: dotCountGeneral }).map((_, i) => (
-                <div
-                  className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
-                    activeIndexGeneral === i ? 'bg-black scale-150' : 'bg-gray-400'
-                  }`}
-                  key={i}
-                />
-              ))}
-            </div>
-          </Swiper>
-        </div>
-      </div>
-
-      {/* Laparoscopic Hernia Surgery */}
-      <div className=" bg-[rgb(234,237,243)] relative w-full">
-        <div className=" mx-auto max-w-[1200px] mt-10 p-6 pt-12 md:pt-20">
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        <div className="mt-30 p-6 bg-white relative mx-auto max-w-[1200px]">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
-                Laparoscopic Hernia Surgery
+                Laparoscopic General Surgery
               </h2>
               <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
-                Commonly performed laparoscopic hernia surgery procedures:
+                Commonly performed laparoscopic general surgery procedures:
               </p>
             </div>
-            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-8.5 lg:pl-0 pr-4">
+
+            {/* ✅ Arrows only visible on desktop */}
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-6 lg:pl-0 pr-4">
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-                ref={prevHerniaRef}
+              w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                ref={prevGeneralRef}
               >
                 <FaArrowLeft className="text-lg" />
               </Button>
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-                ref={nextHerniaRef}
+              w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                ref={nextGeneralRef}
               >
                 <FaArrowRight className="text-lg" />
               </Button>
@@ -381,37 +301,34 @@ export default function LaparoscopicSurgery() {
 
           <div className="relative pt-2 px-2">
             <Swiper
-              autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
-              }}
               breakpoints={{
                 1024: { slidesPerView: 3 },
-                768: { autoplay: false, slidesPerView: 2 },
+                768: { slidesPerView: 2 },
               }}
               onBeforeInit={(swiper) => {
-                // cast to any to bypass TypeScript errors
+                // safely attach navigation buttons
                 if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-                  swiper.params.navigation.prevEl = prevHerniaRef.current!;
-                  swiper.params.navigation.nextEl = nextHerniaRef.current!;
+                  swiper.params.navigation.prevEl = prevGeneralRef.current!;
+                  swiper.params.navigation.nextEl = nextGeneralRef.current!;
                 }
               }}
+              autoplay={false} // ✅ no autoplay anywhere
               className="hidden md:flex"
               loop={false}
               modules={[Navigation]} // ✅ no Autoplay module
-              onSlideChange={(swiper) => setActiveIndexHernia(swiper.realIndex)}
+              onSlideChange={(swiper) => setActiveIndexGeneral(swiper.realIndex)}
               slidesPerView={1}
               spaceBetween={20}
               autoHeight
             >
-              {herniaSurgeries.map((surgery, index) => (
+              {generalSurgeries.map((surgery, index) => (
                 <SwiperSlide key={index}>
-                  <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                  <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_0px_0px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] transition-all duration-300 p-5 mt-10 mb-10">
                     <div>
-                      <div className="relative w-full overflow-hidden rounded-lg mb-6">
+                      <div className="relative w-full  overflow-hidden rounded-lg mb-6">
                         <Image
                           alt={surgery.title}
-                          className="object-fill rounded-lg aspect-304/240 w-full max-w-[300px] mx-auto"
+                          className="object-fill rounded-lg aspect-[304/240] max-w-[300px] mx-auto w-full"
                           height={500}
                           src={surgery.img}
                           width={500}
@@ -427,10 +344,10 @@ export default function LaparoscopicSurgery() {
               ))}
 
               <div className="flex justify-center mb-10 gap-3">
-                {Array.from({ length: dotCountHernia }).map((_, i) => (
+                {Array.from({ length: dotCountGeneral }).map((_, i) => (
                   <div
                     className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
-                      activeIndexHernia === i ? 'bg-black scale-150' : 'bg-gray-400'
+                      activeIndexGeneral === i ? 'bg-black scale-150' : 'bg-gray-400'
                     }`}
                     key={i}
                   />
@@ -438,6 +355,126 @@ export default function LaparoscopicSurgery() {
               </div>
             </Swiper>
           </div>
+        </div>
+      </motion.div>
+
+      {/* Laparoscopic Hernia Surgery */}
+      <div className=" bg-[rgb(234,237,243)] relative w-full">
+        <div className=" mx-auto max-w-[1200px] mt-10 p-6 pt-12 md:pt-20">
+          <div className="flex items-center justify-between">
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
+                  Laparoscopic Hernia Surgery
+                </h2>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
+                  Commonly performed laparoscopic hernia surgery procedures:
+                </p>
+              </motion.div>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 focus:outline-none active:outline-none select-none pl-8.5 lg:pl-0 pr-4">
+                <Button
+                  className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                  ref={prevHerniaRef}
+                >
+                  <FaArrowLeft className="text-lg" />
+                </Button>
+                <Button
+                  className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                  ref={nextHerniaRef}
+                >
+                  <FaArrowRight className="text-lg" />
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+          <motion.div
+            className="relative pt-2 px-2"
+            initial={{ opacity: 0, y: 80 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div>
+              <Swiper
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                }}
+                breakpoints={{
+                  1024: { slidesPerView: 3 },
+                  768: { autoplay: false, slidesPerView: 2 },
+                }}
+                onBeforeInit={(swiper) => {
+                  // cast to any to bypass TypeScript errors
+                  if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+                    swiper.params.navigation.prevEl = prevHerniaRef.current!;
+                    swiper.params.navigation.nextEl = nextHerniaRef.current!;
+                  }
+                }}
+                className="hidden md:flex"
+                loop={false}
+                modules={[Navigation]} // ✅ no Autoplay module
+                onSlideChange={(swiper) => setActiveIndexHernia(swiper.realIndex)}
+                slidesPerView={1}
+                spaceBetween={20}
+                autoHeight
+              >
+                {herniaSurgeries.map((surgery, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                      <div>
+                        <div className="relative w-full overflow-hidden rounded-lg mb-6">
+                          <Image
+                            alt={surgery.title}
+                            className="object-fill rounded-lg aspect-304/240 w-full max-w-[300px] mx-auto"
+                            height={500}
+                            src={surgery.img}
+                            width={500}
+                          />
+                        </div>
+                        <h3 className="text-xl font-semibold mb-2 text-[#000000de]">
+                          {surgery.title}
+                        </h3>
+                        <p className="text-[#6d6d6d] text-base leading-relaxed">{surgery.desc}</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+
+                <div className="flex justify-center mb-10 gap-3">
+                  {Array.from({ length: dotCountHernia }).map((_, i) => (
+                    <div
+                      className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
+                        activeIndexHernia === i ? 'bg-black scale-150' : 'bg-gray-400'
+                      }`}
+                      key={i}
+                    />
+                  ))}
+                </div>
+              </Swiper>
+            </div>
+          </motion.div>
         </div>
       </div>
 
@@ -447,47 +484,82 @@ export default function LaparoscopicSurgery() {
         <div className="flex flex-col md:flex-row md:items-center md:gap-18">
           {/* Left Side Text */}
           <div className="md:w-1/2">
-            <h1 className="text-[32px]  md:mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
-              Single Incision Laparoscopic Surgery
-            </h1>
-
+            <motion.div
+              className="relative pt-2 px-2"
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <h1 className="text-[32px]  md:mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
+                Single Incision Laparoscopic Surgery
+              </h1>
+            </motion.div>
             {/*  Image between h1 and p only on mobile */}
-            <div className="block md:hidden">
-              <Image
-                alt="Surgery"
-                className="rounded-lg object-contain w-fit aspect-304/300  sm:max-w-[300] mx-auto"
-                height={600} // required
-                src="/Single-Incision-Laparoscopic-Surgery.png"
-                width={800} // required
-              />
-            </div>
-
-            <p className="text-[16px] text-[#000000de] mb-5 leading-relaxed">
-              Single Incision Laparoscopic surgery (SILS) is a further advancement in laparoscopic
-              surgery. It is now possible to do almost all laparoscopic procedures through a single
-              incision instead of the multiple incisions used in conventional multi-port
-              laparoscopy. Special instruments are required for these procedures. The most commonly
-              performed SILS procedures are:
-            </p>
-
-            <ul className="text-[#000000de] text-[16px] list-disc ml-6 md:ml-10 space-y-1">
-              <li>Cholecystectomy</li>
-              <li>Hysterectomy</li>
-              <li>Ovarian Cystectomy</li>
-              <li>Appendectomy</li>
-            </ul>
+            <motion.div
+              className="block md:hidden"
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <div>
+                <Image
+                  alt="Surgery"
+                  className="rounded-lg object-contain w-fit aspect-304/300  sm:max-w-[300] mx-auto"
+                  height={600} // required
+                  src="/Single-Incision-Laparoscopic-Surgery.png"
+                  width={800} // required
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <p className="text-[16px] text-[#000000de] mb-5 leading-relaxed">
+                Single Incision Laparoscopic surgery (SILS) is a further advancement in laparoscopic
+                surgery. It is now possible to do almost all laparoscopic procedures through a
+                single incision instead of the multiple incisions used in conventional multi-port
+                laparoscopy. Special instruments are required for these procedures. The most
+                commonly performed SILS procedures are:
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <ul className="text-[#000000de] text-[16px] list-disc ml-6 md:ml-10 space-y-1">
+                <li>Cholecystectomy</li>
+                <li>Hysterectomy</li>
+                <li>Ovarian Cystectomy</li>
+                <li>Appendectomy</li>
+              </ul>
+            </motion.div>
           </div>
 
           {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-          <div className="hidden md:block w-[400px] mt-10">
-            <Image
-              alt="Surgery"
-              className="rounded-lg w-full h-auto object-cover "
-              height={600}
-              src="/Single-Incision-Laparoscopic-Surgery.png"
-              width={800}
-            />
-          </div>
+          <motion.div
+            className="hidden md:block w-[400px] mt-10"
+            initial={{ opacity: 0, y: 80 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div>
+              <Image
+                alt="Surgery"
+                className="rounded-lg w-full h-auto object-cover "
+                height={600}
+                src="/Single-Incision-Laparoscopic-Surgery.png"
+                width={800}
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
 
@@ -496,64 +568,216 @@ export default function LaparoscopicSurgery() {
         <div className="mt-10 p-6 pt-12  mx-auto max-w-[1200px] md:pt-20">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
-                Laparoscopic Urology
-              </h2>
-              <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
-                Commonly performed Laparoscopic Urology procedures:
-              </p>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
+                  Laparoscopic Urology
+                </h2>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
+                  Commonly performed Laparoscopic Urology procedures:
+                </p>
+              </motion.div>
             </div>
-            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-7 md:pl-1.5 pr-4">
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-7 md:pl-1.5 pr-4">
+                <Button
+                  className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                  ref={prevUrologyRef}
+                >
+                  <FaArrowLeft className="text-lg" />
+                </Button>
+                <Button
+                  className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                  ref={nextUrologyRef}
+                >
+                  <FaArrowRight className="text-lg" />
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+          <motion.div
+            className="relative pt-2 px-2"
+            initial={{ opacity: 0, y: 80 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div>
+              <Swiper
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                }}
+                breakpoints={{
+                  1024: { slidesPerView: 3 },
+                  768: { autoplay: false, slidesPerView: 2 },
+                }}
+                onBeforeInit={(swiper) => {
+                  // cast to any to bypass TypeScript errors
+                  if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+                    swiper.params.navigation.prevEl = prevUrologyRef.current!;
+                    swiper.params.navigation.nextEl = nextUrologyRef.current!;
+                  }
+                }}
+                className="hidden md:flex"
+                loop={false}
+                modules={[Navigation]} // ✅ no Autoplay module
+                onSlideChange={(swiper) => setActiveIndexUrology(swiper.realIndex)}
+                slidesPerView={1}
+                spaceBetween={20}
+                autoHeight
+              >
+                {urologySurgeries.map((surgery, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                      <div>
+                        <div className="relative w-full  overflow-hidden rounded-lg mb-6">
+                          <Image
+                            alt={surgery.title}
+                            className="object-fill rounded-lg aspect-304/240 w-full mx-auto max-w-[300px]"
+                            height={500}
+                            src={surgery.img}
+                            width={500}
+                          />
+                        </div>
+                        <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                          {surgery.title}
+                        </h3>
+                        <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+
+                <div className="flex justify-center mb-10 gap-3">
+                  {Array.from({ length: dotCountUrology }).map((_, i) => (
+                    <div
+                      className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
+                        activeIndexUrology === i ? 'bg-black scale-150' : 'bg-gray-400'
+                      }`}
+                      key={i}
+                    />
+                  ))}
+                </div>
+              </Swiper>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Paediatric Laparoscopic */}
+      <div className="mt-10 p-6 bg-white relative mx-auto max-w-[1200px]">
+        <div className="flex items-center justify-between">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
+                Paediatric Laparoscopic
+              </h2>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
+                Commonly performed paediatric laparoscopic procedures:
+              </p>
+            </motion.div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-5 pr-4">
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-                ref={prevUrologyRef}
+                ref={prevPaediatricRef}
               >
                 <FaArrowLeft className="text-lg" />
               </Button>
               <Button
                 className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
             w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-                ref={nextUrologyRef}
+                ref={nextPaediatricRef}
               >
                 <FaArrowRight className="text-lg" />
               </Button>
             </div>
-          </div>
-
-          <div className="relative pt-2 px-2">
+          </motion.div>
+        </div>
+        <motion.div
+          className="relative pt-2 px-2"
+          initial={{ opacity: 0, y: 80 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <div>
             <Swiper
               autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
+                stopOnLastSlide: true,
               }}
               breakpoints={{
+                0: { slidesPerView: 1 },
                 1024: { slidesPerView: 3 },
                 768: { autoplay: false, slidesPerView: 2 },
+              }}
+              navigation={{
+                nextEl: nextPaediatricRef.current,
+                prevEl: prevPaediatricRef.current,
               }}
               onBeforeInit={(swiper) => {
                 // cast to any to bypass TypeScript errors
                 if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-                  swiper.params.navigation.prevEl = prevUrologyRef.current!;
-                  swiper.params.navigation.nextEl = nextUrologyRef.current!;
+                  swiper.params.navigation.prevEl = prevPaediatricRef.current!;
+                  swiper.params.navigation.nextEl = nextPaediatricRef.current!;
                 }
               }}
               className="hidden md:flex"
               loop={false}
               modules={[Navigation]} // ✅ no Autoplay module
-              onSlideChange={(swiper) => setActiveIndexUrology(swiper.realIndex)}
+              onSlideChange={(swiper) => setActiveIndexaPediatric(swiper.realIndex)}
               slidesPerView={1}
               spaceBetween={20}
               autoHeight
             >
-              {urologySurgeries.map((surgery, index) => (
+              {paediatric.map((surgery, index) => (
                 <SwiperSlide key={index}>
                   <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
                     <div>
                       <div className="relative w-full  overflow-hidden rounded-lg mb-6">
                         <Image
                           alt={surgery.title}
-                          className="object-fill rounded-lg aspect-304/240 w-full mx-auto max-w-[300px]"
+                          className="object-fill rounded-lg aspect-304/240 w-full max-w-[300px] mx-auto"
                           height={500}
                           src={surgery.img}
                           width={500}
@@ -567,10 +791,10 @@ export default function LaparoscopicSurgery() {
               ))}
 
               <div className="flex justify-center mb-10 gap-3">
-                {Array.from({ length: dotCountUrology }).map((_, i) => (
+                {Array.from({ length: dotCountPaediatric }).map((_, i) => (
                   <div
                     className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
-                      activeIndexUrology === i ? 'bg-black scale-150' : 'bg-gray-400'
+                      activeIndexPaediatric === i ? 'bg-black scale-150' : 'bg-gray-400'
                     }`}
                     key={i}
                   />
@@ -578,101 +802,7 @@ export default function LaparoscopicSurgery() {
               </div>
             </Swiper>
           </div>
-        </div>
-      </div>
-
-      {/* Paediatric Laparoscopic */}
-      <div className="mt-10 p-6 bg-white relative mx-auto max-w-[1200px]">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
-              Paediatric Laparoscopic
-            </h2>
-            <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
-              Commonly performed paediatric laparoscopic procedures:
-            </p>
-          </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-5 pr-4">
-            <Button
-              className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-              ref={prevPaediatricRef}
-            >
-              <FaArrowLeft className="text-lg" />
-            </Button>
-            <Button
-              className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-              ref={nextPaediatricRef}
-            >
-              <FaArrowRight className="text-lg" />
-            </Button>
-          </div>
-        </div>
-
-        <div className="relative pt-2 px-2">
-          <Swiper
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              stopOnLastSlide: true,
-            }}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              1024: { slidesPerView: 3 },
-              768: { autoplay: false, slidesPerView: 2 },
-            }}
-            navigation={{
-              nextEl: nextPaediatricRef.current,
-              prevEl: prevPaediatricRef.current,
-            }}
-            onBeforeInit={(swiper) => {
-              // cast to any to bypass TypeScript errors
-              if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-                swiper.params.navigation.prevEl = prevPaediatricRef.current!;
-                swiper.params.navigation.nextEl = nextPaediatricRef.current!;
-              }
-            }}
-            className="hidden md:flex"
-            loop={false}
-            modules={[Navigation]} // ✅ no Autoplay module
-            onSlideChange={(swiper) => setActiveIndexaPediatric(swiper.realIndex)}
-            slidesPerView={1}
-            spaceBetween={20}
-            autoHeight
-          >
-            {paediatric.map((surgery, index) => (
-              <SwiperSlide key={index}>
-                <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
-                  <div>
-                    <div className="relative w-full  overflow-hidden rounded-lg mb-6">
-                      <Image
-                        alt={surgery.title}
-                        className="object-fill rounded-lg aspect-304/240 w-full max-w-[300px] mx-auto"
-                        height={500}
-                        src={surgery.img}
-                        width={500}
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-
-            <div className="flex justify-center mb-10 gap-3">
-              {Array.from({ length: dotCountPaediatric }).map((_, i) => (
-                <div
-                  className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
-                    activeIndexPaediatric === i ? 'bg-black scale-150' : 'bg-gray-400'
-                  }`}
-                  key={i}
-                />
-              ))}
-            </div>
-          </Swiper>
-        </div>
+        </motion.div>
       </div>
 
       {/* Laparoscopy in Trauma */}
@@ -682,42 +812,78 @@ export default function LaparoscopicSurgery() {
           <div className="flex flex-col md:flex-row md:items-center md:gap-28">
             {/* Left Side Text */}
             <div className="md:w-1/2">
-              <h1 className="text-[32px] mb-6 md:mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
-                Laparoscopy in Trauma
-              </h1>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <h1 className="text-[32px] mb-6 md:mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
+                  Laparoscopy in Trauma
+                </h1>
+              </motion.div>
 
               {/*  Image between h1 and p only on mobile */}
-              <div className="block md:hidden mb-6 ">
-                <Image
-                  alt="Surgery"
-                  className="rounded-lg object-contain w-fit aspect-[300/240]  sm:max-w-[400px] mx-auto"
-                  height={600} // required
-                  src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
-                  width={800} // required
-                />
-              </div>
-
-              <p className="text-[20px] mb-5 font-semibold text-[#000000de] ">
-                Haematoma / Haemoperitonium Drainage
-              </p>
-              <p className="text-[16px] text-[#000000de] mb-5 leading-relaxed">
-                Laparoscopic surgery is emerging as an alternative in patients with abdominal
-                injuries .It helps to quantify the injury correctly in haemodynamically stable
-                patients with abdominal trauma .Blood in abdominal cavity can be drained and
-                bleeding controlled .In addition to this damaged spleen can also be removed.
-              </p>
+              <motion.div
+                className="block md:hidden mb-6 "
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <div>
+                  <Image
+                    alt="Surgery"
+                    className="rounded-lg object-contain w-fit aspect-[300/240]  sm:max-w-[400px] mx-auto"
+                    height={600} // required
+                    src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
+                    width={800} // required
+                  />
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <p className="text-[20px] mb-5 font-semibold text-[#000000de] ">
+                  Haematoma / Haemoperitonium Drainage
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <p className="text-[16px] text-[#000000de] mb-5 leading-relaxed">
+                  Laparoscopic surgery is emerging as an alternative in patients with abdominal
+                  injuries .It helps to quantify the injury correctly in haemodynamically stable
+                  patients with abdominal trauma .Blood in abdominal cavity can be drained and
+                  bleeding controlled .In addition to this damaged spleen can also be removed.
+                </p>
+              </motion.div>
             </div>
 
             {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-            <div className="hidden md:block  mt-10">
-              <Image
-                alt="Surgery"
-                className="rounded-sm w-full h-auto object-cover max-w-[300px] "
-                height={600}
-                src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
-                width={800}
-              />
-            </div>
+            <motion.div
+              className="hidden md:block  mt-10"
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <div>
+                <Image
+                  alt="Surgery"
+                  className="rounded-sm w-full h-auto object-cover max-w-[300px] "
+                  height={600}
+                  src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
+                  width={800}
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -726,94 +892,122 @@ export default function LaparoscopicSurgery() {
       <div className="mt-10 p-6 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
-              Laparoscopic Solid Organ Surgery
-            </h2>
-            <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
-              Commonly performed Laparoscopic Solid Organ Surgery procedures:
-            </p>
-          </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-6 lg:pl-0 pr-4">
-            <Button
-              className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-              ref={prevSolidRef}
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
-              <FaArrowLeft className="text-lg" />
-            </Button>
-            <Button
-              className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-              ref={nextSolidRef}
+              <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
+                Laparoscopic Solid Organ Surgery
+              </h2>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
-              <FaArrowRight className="text-lg" />
-            </Button>
+              <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
+                Commonly performed Laparoscopic Solid Organ Surgery procedures:
+              </p>
+            </motion.div>
           </div>
-        </div>
-
-        <div className="relative pt-2 px-2">
-          <Swiper
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              stopOnLastSlide: true,
-            }}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              1024: { slidesPerView: 3 },
-              768: { autoplay: false, slidesPerView: 2 },
-            }}
-            navigation={{
-              nextEl: nextSolidRef.current,
-              prevEl: prevSolidRef.current,
-            }}
-            onBeforeInit={(swiper) => {
-              // cast to any to bypass TypeScript errors
-              if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-                swiper.params.navigation.prevEl = prevSolidRef.current!;
-                swiper.params.navigation.nextEl = nextSolidRef.current!;
-              }
-            }}
-            className="hidden md:flex"
-            loop={false}
-            modules={[Navigation]} // ✅ no Autoplay module
-            onSlideChange={(swiper) => setActiveIndexSolid(swiper.realIndex)}
-            slidesPerView={1}
-            spaceBetween={20}
-            autoHeight
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
-            {solidOrganSurgeries.map((surgery, index) => (
-              <SwiperSlide key={index}>
-                <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
-                  <div>
-                    <div className="relative w-full  overflow-hidden rounded-lg mb-6">
-                      <Image
-                        alt={surgery.title}
-                        className="object-fill aspect-304/240 w-full rounded-lg max-w-[300px] mx-auto"
-                        height={500}
-                        src={surgery.img}
-                        width={500}
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
-                    <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-
-            <div className="flex justify-center mb-10 gap-3 lg:hidden">
-              {solidOrganSurgeries.map((_, i) => (
-                <div
-                  className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
-                    activeIndexSolid === i ? 'bg-black scale-150' : 'bg-gray-400'
-                  }`}
-                  key={i}
-                />
-              ))}
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 pl-6 lg:pl-0 pr-4">
+              <Button
+                className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                ref={prevSolidRef}
+              >
+                <FaArrowLeft className="text-lg" />
+              </Button>
+              <Button
+                className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                ref={nextSolidRef}
+              >
+                <FaArrowRight className="text-lg" />
+              </Button>
             </div>
-          </Swiper>
+          </motion.div>
         </div>
+        <motion.div
+          className="relative pt-2 px-2"
+          initial={{ opacity: 0, y: 80 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <div>
+            <Swiper
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+                stopOnLastSlide: true,
+              }}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                1024: { slidesPerView: 3 },
+                768: { autoplay: false, slidesPerView: 2 },
+              }}
+              navigation={{
+                nextEl: nextSolidRef.current,
+                prevEl: prevSolidRef.current,
+              }}
+              onBeforeInit={(swiper) => {
+                // cast to any to bypass TypeScript errors
+                if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+                  swiper.params.navigation.prevEl = prevSolidRef.current!;
+                  swiper.params.navigation.nextEl = nextSolidRef.current!;
+                }
+              }}
+              className="hidden md:flex"
+              loop={false}
+              modules={[Navigation]} // ✅ no Autoplay module
+              onSlideChange={(swiper) => setActiveIndexSolid(swiper.realIndex)}
+              slidesPerView={1}
+              spaceBetween={20}
+              autoHeight
+            >
+              {solidOrganSurgeries.map((surgery, index) => (
+                <SwiperSlide key={index}>
+                  <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                    <div>
+                      <div className="relative w-full  overflow-hidden rounded-lg mb-6">
+                        <Image
+                          alt={surgery.title}
+                          className="object-fill aspect-304/240 w-full rounded-lg max-w-[300px] mx-auto"
+                          height={500}
+                          src={surgery.img}
+                          width={500}
+                        />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2 text-gray-900">{surgery.title}</h3>
+                      <p className="text-gray-600 text-base leading-relaxed">{surgery.desc}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+
+              <div className="flex justify-center mb-10 gap-3 lg:hidden">
+                {solidOrganSurgeries.map((_, i) => (
+                  <div
+                    className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
+                      activeIndexSolid === i ? 'bg-black scale-150' : 'bg-gray-400'
+                    }`}
+                    key={i}
+                  />
+                ))}
+              </div>
+            </Swiper>
+          </div>
+        </motion.div>
       </div>
 
       {/* Laparoscopy For Morbid Obesity */}
@@ -824,47 +1018,98 @@ export default function LaparoscopicSurgery() {
           <div className="flex flex-col md:flex-row  md:gap-25">
             {/* Left Side Text */}
             <div className="md:w-1/2 lg:pl-7">
-              <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
-                Laparoscopy For Morbid Obesity
-              </h1>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <h1 className="text-[32px] mb-5 font-semibold text-[#000000de] md:tracking-wide md:whitespace-nowrap leading-tight md:leading-normal">
+                  Laparoscopy For Morbid Obesity
+                </h1>
+              </motion.div>
               {/* Image between h1 and p only on mobile */}
-              <div className="block md:hidden mb-5  rounded-2xl">
+              <motion.div
+                className="block md:hidden mb-5  rounded-2xl"
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <div>
+                  <Image
+                    alt="Surgery"
+                    className="rounded-lg   object-contain w-fit aspect-300/300  max-w-[300] mx-auto"
+                    height={600}
+                    src="/Laparoscopy_for_morbid_Obesity.png"
+                    width={800}
+                  />
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <p className="text-[16px] text-[#000000de] mb-5 leading-normal">
+                  The patients with morbid obesity or obesity with metabolic disorders like diabetes
+                  have a surgical option to help them overcome their problems. The diabetes goes
+                  into remission immediately after surgery.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <p className="text-[16px] text-[#000000de] mb-5">The procedures available are :-</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <ul className="text-[16px] text-[#000000de] mb-5 list-disc ml-6">
+                  <li>Sleeve Gastrectomy</li>
+                  <li>Gastric Bypass</li>
+                  <li>Gastric Banding</li>
+                </ul>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false }}
+                whileInView={{ opacity: 1, y: 0 }}
+              >
+                <p className="text-[16px] text-[#000000de] mb-5">
+                  Surgery is reserved for patients who have exhausted all other options for weight
+                  loss. Proper counseling is done by the bariatric team to decide the best procedure
+                  for each patient.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Right Side Image (Hidden on mobile, shown on desktop) */}
+            <motion.div
+              className="hidden md:block w-[335px] mt-15"
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <div>
                 <Image
                   alt="Surgery"
-                  className="rounded-lg   object-contain w-fit aspect-300/300  max-w-[300] mx-auto"
+                  className="rounded-lg w-full h-auto object-cover "
                   height={600}
                   src="/Laparoscopy_for_morbid_Obesity.png"
                   width={800}
                 />
               </div>
-              <p className="text-[16px] text-[#000000de] mb-5 leading-normal">
-                The patients with morbid obesity or obesity with metabolic disorders like diabetes
-                have a surgical option to help them overcome their problems. The diabetes goes into
-                remission immediately after surgery.
-              </p>
-              <p className="text-[16px] text-[#000000de] mb-5">The procedures available are :-</p>
-              <ul className="text-[16px] text-[#000000de] mb-5 list-disc ml-6">
-                <li>Sleeve Gastrectomy</li>
-                <li>Gastric Bypass</li>
-                <li>Gastric Banding</li>
-              </ul>
-              <p className="text-[16px] text-[#000000de] mb-5">
-                Surgery is reserved for patients who have exhausted all other options for weight
-                loss. Proper counseling is done by the bariatric team to decide the best procedure
-                for each patient.
-              </p>
-            </div>
-
-            {/* Right Side Image (Hidden on mobile, shown on desktop) */}
-            <div className="hidden md:block w-[335px] mt-15">
-              <Image
-                alt="Surgery"
-                className="rounded-lg w-full h-auto object-cover "
-                height={600}
-                src="/Laparoscopy_for_morbid_Obesity.png"
-                width={800}
-              />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -873,97 +1118,127 @@ export default function LaparoscopicSurgery() {
       <div className="mt-10 pt-8 pb-20 px-6 bg-white relative mx-auto max-w-[1200px]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
-              Thoracoscopy & VATS
-            </h2>
-            <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
-              Video Assisted Thoracic Surgery or thoracoscopic surgery is the method to do surgery
-              inside the chest with the help of instruments inserted through small holes in the
-              chest wall, without opening the chest. Procedures which are done thoracoscopilly
-              commonly are-
-            </p>
-          </div>
-          <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 md:mt-30 lg:mt-15 pl-10 pr-4">
-            <Button
-              className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-              ref={prevVatsRef}
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
-              <FaArrowLeft className="text-lg" />
-            </Button>
-            <Button
-              className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
-            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
-              ref={nextVatsRef}
+              <h2 className="text-[32px] font-semibold text-gray-900 mb-3 md:leading-normal md:tracking-wide leading-tight">
+                Thoracoscopy & VATS
+              </h2>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false }}
+              whileInView={{ opacity: 1, y: 0 }}
             >
-              <FaArrowRight className="text-lg" />
-            </Button>
+              <p className="text-gray-600 md:leading-relaxed text-[20px] md:tracking-wide leading-tight">
+                Video Assisted Thoracic Surgery or thoracoscopic surgery is the method to do surgery
+                inside the chest with the help of instruments inserted through small holes in the
+                chest wall, without opening the chest. Procedures which are done thoracoscopilly
+                commonly are-
+              </p>
+            </motion.div>
           </div>
-        </div>
-
-        <div className="relative pt-2 px-2">
-          <Swiper
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              stopOnLastSlide: true,
-            }}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              1024: { slidesPerView: 3 },
-              768: { autoplay: false, slidesPerView: 2 },
-            }}
-            navigation={{
-              nextEl: nextVatsRef.current,
-              prevEl: prevVatsRef.current,
-            }}
-            onBeforeInit={(swiper) => {
-              // cast to any to bypass TypeScript errors
-              if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-                swiper.params.navigation.prevEl = prevVatsRef.current!;
-                swiper.params.navigation.nextEl = nextVatsRef.current!;
-              }
-            }}
-            className="hidden md:flex"
-            loop={false}
-            modules={[Navigation]} // ✅ no Autoplay module
-            onSlideChange={(swiper) => setActiveIndexVats(swiper.realIndex)}
-            slidesPerView={1}
-            spaceBetween={20}
-            autoHeight
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
-            {vats.map((surgery, index) => (
-              <SwiperSlide key={index}>
-                <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
-                  <div>
-                    <div className="relative w-full overflow-hidden rounded-lg mb-6">
-                      <Image
-                        alt={surgery.title}
-                        className="object-fill rounded-lg w-full aspect-304/240 max-w-[300px] mx-auto"
-                        height={500}
-                        src={surgery.img}
-                        width={500}
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-[#000000de]">{surgery.title}</h3>
-                    <p className="text-[#6d6d6d] text-base leading-relaxed">{surgery.desc}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-
-            <div className="flex justify-center mb-1 gap-3 lg:hidden">
-              {vats.map((_, i) => (
-                <div
-                  className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
-                    activeIndexVats === i ? 'bg-black scale-150' : 'bg-gray-400'
-                  }`}
-                  key={i}
-                />
-              ))}
+            <div className="right-4 top-0 hidden md:flex flex-row gap-3 z-10 md:mt-30 lg:mt-15 pl-10 pr-4">
+              <Button
+                className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                ref={prevVatsRef}
+              >
+                <FaArrowLeft className="text-lg" />
+              </Button>
+              <Button
+                className="bg-white border-2 border-[#1e3a8a] text-black rounded-full 
+            w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition-all shadow-md"
+                ref={nextVatsRef}
+              >
+                <FaArrowRight className="text-lg" />
+              </Button>
             </div>
-          </Swiper>
+          </motion.div>
         </div>
+        <motion.div
+          className="relative pt-2 px-2"
+          initial={{ opacity: 0, y: 80 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <div>
+            <Swiper
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+                stopOnLastSlide: true,
+              }}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                1024: { slidesPerView: 3 },
+                768: { autoplay: false, slidesPerView: 2 },
+              }}
+              navigation={{
+                nextEl: nextVatsRef.current,
+                prevEl: prevVatsRef.current,
+              }}
+              onBeforeInit={(swiper) => {
+                // cast to any to bypass TypeScript errors
+                if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
+                  swiper.params.navigation.prevEl = prevVatsRef.current!;
+                  swiper.params.navigation.nextEl = nextVatsRef.current!;
+                }
+              }}
+              className="hidden md:flex"
+              loop={false}
+              modules={[Navigation]} // ✅ no Autoplay module
+              onSlideChange={(swiper) => setActiveIndexVats(swiper.realIndex)}
+              slidesPerView={1}
+              spaceBetween={20}
+              autoHeight
+            >
+              {vats.map((surgery, index) => (
+                <SwiperSlide key={index}>
+                  <div className="m-2 flex flex-col justify-between min-h-[560px] overflow-hidden rounded-lg shadow-[0px_2px_1px_-1px_rgba(0,0,0,0.2),0px_1px_1px_0px_rgba(0,0,0,0.14),0px_1px_3px_0px_rgba(0,0,0,0.12)] hover:shadow-[0px_2px_4px_-1px_rgba(0,0,0,0.3),0px_2px_4px_0px_rgba(0,0,0,0.25),0px_3px_6px_0px_rgba(0,0,0,0.2)] hover:rounded-lg  transition-all duration-300 p-5 mt-10 mb-10 bg-white">
+                    <div>
+                      <div className="relative w-full overflow-hidden rounded-lg mb-6">
+                        <Image
+                          alt={surgery.title}
+                          className="object-fill rounded-lg w-full aspect-304/240 max-w-[300px] mx-auto"
+                          height={500}
+                          src={surgery.img}
+                          width={500}
+                        />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2 text-[#000000de]">
+                        {surgery.title}
+                      </h3>
+                      <p className="text-[#6d6d6d] text-base leading-relaxed">{surgery.desc}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+
+              <div className="flex justify-center mb-1 gap-3 lg:hidden">
+                {vats.map((_, i) => (
+                  <div
+                    className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-300 ${
+                      activeIndexVats === i ? 'bg-black scale-150' : 'bg-gray-400'
+                    }`}
+                    key={i}
+                  />
+                ))}
+              </div>
+            </Swiper>
+          </div>
+        </motion.div>
       </div>
     </React.Fragment>
   );
