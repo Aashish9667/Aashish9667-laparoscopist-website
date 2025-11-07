@@ -21,7 +21,7 @@ export default function Page555() {
               alt="doctor"
               className="w-full h-full md:w-[390px] md:h-[450px] rounded-2xl object-cover"
               height={320}
-              src="/Monika-tomar.png"
+              src="/welcome/Monika-tomar.png"
               width={300}
             />
           </motion.div>

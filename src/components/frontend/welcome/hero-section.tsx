@@ -32,14 +32,14 @@ export default function Homehero() {
         <Image
           alt="Background"
           className="object-cover hidden sm:block"
-          src="/background-desktop.jpg"
+          src="/welcome/background-desktop.jpg"
           fill
           priority
         />
         <Image
           alt="Background"
           className="object-cover md:hidden w-auto h-auto"
-          src="/background-mobile.jpg"
+          src="/welcome/background-mobile.jpg"
           fill
           priority
         />
@@ -72,7 +72,7 @@ export default function Homehero() {
                 alt="Doctors"
                 className="object-contain"
                 height={600}
-                src="/Medhavi-and-monika-Tomar-photo-for-website-1.png (1).avif"
+                src="/welcome/Medhavi-and-monika-Tomar-photo-for-website-1.png (1).avif"
                 width={600}
                 priority
               />
@@ -109,7 +109,7 @@ export default function Homehero() {
               alt="Doctors"
               className="object-contain md:object-bottom"
               height={600}
-              src="/Medhavi-and-monika-Tomar-photo-for-website.png (1).avif"
+              src="/welcome/Medhavi-and-monika-Tomar-photo-for-website.png (1).avif"
               width={600}
               priority
             />

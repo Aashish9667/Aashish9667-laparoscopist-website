@@ -67,7 +67,7 @@ export default function LaparoscopySurgeons() {
                   alt="Dr. Medhavi"
                   className="rounded-full border-2 border-[#24426d]"
                   height={96}
-                  src="/Medhavi-Tomar.png.avif"
+                  src="/welcome/Medhavi-Tomar.png.avif"
                   width={96}
                 />
               </div>
@@ -77,7 +77,7 @@ export default function LaparoscopySurgeons() {
                 alt="Dr. Medhavi"
                 className="hidden md:block rounded-full lg:h-30 lg:w-30 md:h-25 md:w-25 absolute -left-12 top-1/2 transform -translate-y-1/2 border-2 border-[#24426d] z-10"
                 height={96}
-                src="/Medhavi-Tomar.png.avif"
+                src="/welcome/Medhavi-Tomar.png.avif"
                 width={96}
               />
 
@@ -116,7 +116,7 @@ export default function LaparoscopySurgeons() {
                     alt="Dr. Monika"
                     className="rounded-full border-2 border-[#24426d]"
                     height={96}
-                    src="/Monika-tomar.png.avif"
+                    src="/welcome/Monika-tomar.png.avif"
                     width={96}
                   />
                 </div>
@@ -126,7 +126,7 @@ export default function LaparoscopySurgeons() {
                   alt="Dr. Monika"
                   className="hidden md:block rounded-full lg:h-30 lg:w-30 md:h-25 md:w-25 absolute -left-12 top-1/2 transform -translate-y-1/2 border-2 border-[#24426d] z-10"
                   height={96}
-                  src="/Monika-tomar.png.avif"
+                  src="/welcome/Monika-tomar.png.avif"
                   width={96}
                 />
 

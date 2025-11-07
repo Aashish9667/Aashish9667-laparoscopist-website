@@ -11,162 +11,162 @@ import 'swiper/css';
 const generalSurgeries = [
   {
     desc: 'Laparoscopic cholecystectomy is the gold standard, cost-effective, and safe treatment for gallbladder stones, making it one of the most frequently performed laparoscopic procedures.',
-    img: '/laparoscopic-cholecystectomy.jpeg',
+    img: '/services/laparoscopic-general-surgery/laparoscopic-cholecystectomy.jpeg',
     title: 'Cholecystectomy',
   },
   {
     desc: 'Appendectomy, the removal of the appendix, is a safe, common, and cost-effective procedure. Laparoscopic appendectomy is widely preferred for treating a diseased appendix due to its minimal invasiveness.',
-    img: '/appendix.jpg (1).avif',
+    img: '/services/laparoscopic-general-surgery/appendix.jpg (1).avif',
     title: 'Appendectomy',
   },
   {
     desc: 'Laparoscopic removal of common bile duct stones is an advanced procedure using a flexible fiber optic choledochoscope for direct visualization and extraction under laparoscopic guidance.',
-    img: '/C14-FF1-3.jpg',
+    img: '/services/laparoscopic-general-surgery/C14-FF1-3.jpg',
     title: 'CBD Exploration',
   },
   {
     desc: 'Laparoscopic drainage of Liver Abscess is an established treatment option for Abscesses which cannot be aspirated under ultrasound guidance because of their size and site.',
-    img: '/Liver-Abscess-300x193.png',
+    img: '/services/laparoscopic-general-surgery/Liver-Abscess-300x193.png',
     title: 'Liver Abscess',
   },
   {
     desc: 'Laparoscopic removal of part or complete colon as required in cancer of large intestine is being done successfully all over the world. It has a great advantage of early recovery without compromising the principles of cancer surgery.',
-    img: '/Colonic-Resection-300x245.png',
+    img: '/services/laparoscopic-general-surgery/Colonic-Resection-300x245.png',
     title: 'Colonic Resection',
   },
   {
     desc: 'The Rectum is anchored to the sacral promontory laparoscopically to prevent it’s sliding down and prolapse. This can be done by using a prosthetic mesh or simple stitches. It is a very successful procedure for treatment of Rectal prolapse.',
-    img: '/rectopexy.jpg.avif',
+    img: '/services/laparoscopic-general-surgery/rectopexy.jpg.avif',
     title: 'Rectopexy',
   },
   {
     desc: 'Nissen’s Fundoplication is the most accepted procedure for GERD and Hiatus Hernia. Laparoscopic Fundoplication is a routine procedure in most advanced laparoscopic surgery programmes.',
-    img: '/fundoplication.jpg.avif',
+    img: '/services/laparoscopic-general-surgery/fundoplication.jpg.avif',
     title: 'Fundoplication',
   },
   {
     desc: 'Laparoscopic treatment for achalasia, known as Heller myotomy, involves cutting the lower esophageal sphincter to improve swallowing by allowing food to pass more easily into the stomach, minimizing symptoms.',
-    img: '/dilation_000-1920w.jpg',
+    img: '/services/laparoscopic-general-surgery/dilation_000-1920w.jpg',
     title: 'Achalasia',
   },
 ];
 const herniaSurgeries = [
   {
     desc: 'Laparoscopic inguinal hernia surgery offers better outcomes than open surgery, treating the defect at its origin. It also covers inguinal, obturator, and femoral sites with mesh, unlike open surgery.',
-    img: '/ingunial-hernia-1.jpg.avif',
+    img: '/services/hernia-surgeries/ingunial-hernia-1.jpg.avif',
     title: 'Inguinal Hernia',
   },
   {
     desc: 'Simple Procedure done laparoscopically which obviates the need for a lot of dissection which is required in open surgery thus reducing the operative time, the recovery time and the pain associated with surgery.',
-    img: '/umbilical-hernia.jpg.avif',
+    img: '/services/hernia-surgeries/umbilical-hernia.jpg.avif',
     title: 'Umbilical Hernia',
   },
   {
     desc: 'Laparoscopic surgery is a boon for patients having Diaphragmatic hernia or defects. As laparoscopic assess to this area is much easier and better then open surgery for which a very large incision is required.',
-    img: '/Diaphragmatic-Hernia.png',
+    img: '/services/hernia-surgeries/Diaphragmatic-Hernia.png',
     title: 'Diaphragmatic Hernia',
   },
   {
     desc: 'Simple procedure done laparoscopically where a prosthetic mesh is applied from within to cover the hernia defect. Less dissection is required, early recovery and less peri-operative pain',
-    img: '/epigastric-hernia.jpg.avif',
+    img: '/services/hernia-surgeries/epigastric-hernia.jpg.avif',
     title: 'Epigastric Hernia',
   },
   {
     desc: 'Any incisional or ventral hernia irrespective of it’s size and location can be repaired laparoscopically with rewarding results .A prosthetic mesh is applied from within to cover the hernia defect and fixed in place with the help of tacker and stitches.',
-    img: '/incisional-hernia.jpg.avif',
+    img: '/services/hernia-surgeries/incisional-hernia.jpg.avif',
     title: 'Incisional Hernia',
   },
   {
     desc: 'Hiatus hernia occurs when part of the stomach slides into the chest through the diaphragm. Laparoscopic surgery repairs the defect and wraps the fundus around the lower esophagus.',
-    img: '/hiatus-hernia.jpg.avif',
+    img: '/services/hernia-surgeries/hiatus-hernia.jpg.avif',
     title: 'Hiatus Hernia',
   },
 ];
 const urologySurgeries = [
   {
     desc: 'Laparoscopic Pyelolithotomy, using a retroperitoneal approach, treats solitary renal pelvic stones without entering the abdominal cavity, avoiding kidney tissue disruption compared to the percutaneous method.',
-    img: '/Pyelolithotomy.png',
+    img: '/services/urology-surgeries/Pyelolithotomy.png',
     title: 'Pyelolithotomy',
   },
   {
     desc: 'Non-functioning kidneys are removed to prevent infections, tumors, or hypertension. Laparoscopy, including in radical nephrectomy and donor nephrectomy, is the preferred method for kidney removal and transplant procedures.',
-    img: '/nephrectomy.jpg.avif',
+    img: '/services/urology-surgeries/nephrectomy.jpg.avif',
     title: 'Nephrectomy',
   },
   {
     desc: 'Transperitoneal and retroperitoneal Ureterolithotomy has its role in large stones of the ureter which are difficult to remove by ureterorenoscopy (URS).',
-    img: '/Ureterolithotomy.png',
+    img: '/services/urology-surgeries/Ureterolithotomy.png',
     title: 'Ureterolithotomy',
   },
   {
     desc: 'Laparoscopic trans-abdominal pyeloplasty (Classical Anderson Hynes or Y-V Plasty) is a routine laparoscopic procedure with comparable results as with open surgery.',
-    img: '/Pyeloplasty.webp',
+    img: '/services/urology-surgeries/Pyeloplasty.webp',
     title: 'Pyeloplasty',
   },
 ];
 const paediatric = [
   {
     desc: 'Laparoscopy offers a very good approach for Herniotomy in Paediatric age group .The contra-lateral side can also be assessed simultaneously and dealt with if impending herniation is detected.',
-    img: '/inguinal-hernia.jpg',
+    img: '/services/paediatric/inguinal-hernia.jpg',
     title: 'Congenital Hernia',
   },
   {
     desc: 'Laparoscopic transabdominal pyeloplasty (Anderson Hynes or Y-V Plasty) offers results comparable to open surgery, with the added benefit of faster recovery, especially in pediatric patients who struggle with prolonged rest.',
-    img: '/pyeloplasty.jpg.avif',
+    img: '/services/paediatric/pyeloplasty.jpg.avif',
     title: 'Pyeloplasty',
   },
   {
     desc: 'Removal of Appendix is called Appendectomy or Appendicectomy. Lap. Appendectomy is a common safe and cost effective method of removing the diseased appendix. ',
-    img: '/appendix.jpg (3).avif',
+    img: '/services/paediatric/appendix.jpg (3).avif',
     title: 'Appendectomy',
   },
   {
     desc: ' The Colon can be mobilized laparoscopically and a perineal anastomosis can be performed with a circular stapling device. A proximal colostomy can be done under laparoscopic guidance for additional safety without opening the abdomen.',
-    img: '/mega-colon.jpg.avif',
+    img: '/services/paediatric/mega-colon.jpg.avif',
     title: 'Colectomy for Mega Colon',
   },
   {
     desc: 'A simple procedure which avoids a laparotomy and gives us the liberty to choose the best lymph node which can be taken and subjected to histo-pathological examination to reach a diagnosis of the disease process.',
-    img: '/Abdominal-Lymph-Node-Biopsy.png',
+    img: '/services/paediatric/Abdominal-Lymph-Node-Biopsy.png',
     title: 'Abdominal Lymph Node Biopsy',
   },
   {
     desc: 'Laparoscopic mobilization of intra-abdominal testes allows easier, single-stage descent, compared to open surgery, which often requires a two-stage procedure for similar results.',
-    img: '/Orchipexy-768x895.jpg',
+    img: '/services/paediatric/Orchipexy-768x895.jpg',
     title: 'Orchipexy',
   },
 ];
 const solidOrganSurgeries = [
   {
     desc: 'Elective laparoscopic splenectomy is a very feasible alternative to open splenectomy. It is usually done in patients of splenic enlargement caused by medical disorders.',
-    img: '/Splenectomy.jpg',
+    img: '/services/solid-organ-surgeries/Splenectomy.jpg',
     title: 'Splenectomy',
   },
   {
     desc: 'Laparoscopic removal of adrenal tumours is a safe and better procedure than open surgery where a large incision is necessary.',
-    img: '/Adrenalectomy.jpg',
+    img: '/services/solid-organ-surgeries/Adrenalectomy.jpg',
     title: 'Adrenalectomy',
   },
   {
     desc: 'Non-functioning kidneys are removed to prevent infections, tumors, or hypertension, often laparoscopically. Types include radical, donor, and partial nephrectomy.',
-    img: '/Nephrectomy-1.png',
+    img: '/services/solid-organ-surgeries/Nephrectomy-1.png',
     title: 'Nephrectomy',
   },
 ];
 const vats = [
   {
     desc: 'Lymphnodes from within the chest are removed for the purpose of arriving at an accurate diagnosis after histopathological examination.',
-    img: '/19565.jpg',
+    img: '/services/vats/19565.jpg',
     title: 'Mediastinal Lymphnode Biopsy',
   },
   {
     desc: 'Removal of thickened covering layer of lung to facilitate it’s expansion is called Decortication. Thoracoscopic decortications is a fairly commonly performed procedure and is a good alternative to open thoracotomy and decortications.',
-    img: '/vats.jpg',
+    img: '/services/vats/vats.jpg',
     title: 'Thoracoscopic Decortication',
   },
   {
     desc: 'VATS is now the method of choice for removal of thymus tumours.',
-    img: '/Thymus-removal-768x870.png',
+    img: '/services/vats/Thymus-removal-768x870.png',
     title: 'Thymus removal',
   },
 ];
@@ -508,7 +508,7 @@ export default function LaparoscopicSurgery() {
                   alt="Surgery"
                   className="rounded-lg object-contain w-fit aspect-304/300  sm:max-w-[300] mx-auto"
                   height={600} // required
-                  src="/Single-Incision-Laparoscopic-Surgery.png"
+                  src="/services/Single-Incision-Laparoscopic-Surgery.png"
                   width={800} // required
                 />
               </div>
@@ -836,7 +836,7 @@ export default function LaparoscopicSurgery() {
                     alt="Surgery"
                     className="rounded-lg object-contain w-fit aspect-[300/240]  sm:max-w-[400px] mx-auto"
                     height={600} // required
-                    src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
+                    src="/service/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
                     width={800} // required
                   />
                 </div>
@@ -1041,7 +1041,7 @@ export default function LaparoscopicSurgery() {
                     alt="Surgery"
                     className="rounded-lg   object-contain w-fit aspect-300/300  max-w-[300] mx-auto"
                     height={600}
-                    src="/Laparoscopy_for_morbid_Obesity.png"
+                    src="/services/Laparoscopy_for_morbid_Obesity.png"
                     width={800}
                   />
                 </div>

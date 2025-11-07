@@ -30,7 +30,7 @@ export default function DrMehdhavi() {
             alt="doctor"
             className="w-[600px] h-auto sm:w-full sm:h-[600px] md:w-[400px] md:h-[450px] lg:w-[400px] lg:h-[450px]  xl:w-[400px] xl:h-[490px] rounded-2xl object-cover"
             height={320}
-            src="/Medhavi-Tomar.png.avif"
+            src="/welcome/Medhavi-Tomar.png.avif"
             width={300}
           />
         </motion.div>
