@@ -159,7 +159,9 @@ export default function Navbar() {
                   className="w-full flex items-center justify-between !text-[#22426e] text-[14px] px-2 gap-30 !bg-transparent !hover:bg-transparent !focus:bg-transparent !ring-0 !shadow-none"
                   onClick={() => setShowServices(!showServices)}
                 >
-                  <span className="text-left !bg-transparent !hover:bg-transparent ">Services</span>
+                  <span className="text-left !bg-transparent !hover:bg-transparent !hover:underline !hover:decoration-[#22426e] !font-normal">
+                    Services
+                  </span>
                 </NavigationMenuTrigger>
 
                 {/* Render services text/content below the trigger */}
@@ -206,7 +208,7 @@ export default function Navbar() {
               <NavigationMenuItem className="w-full">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="text-[#22426e] text-[14px] block w-full text-left"
+                    className="text-[#22426e] text-[14px] block w-full text-left !hover:underline !hover:decoration-[#22426e]"
                     href="/about-us"
                     onClick={() => setIsDrawerOpen(false)}
                   >
@@ -218,7 +220,7 @@ export default function Navbar() {
               <NavigationMenuItem className="w-full">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="text-[#22426e] text-[14px] block w-full text-left"
+                    className="text-[#22426e] text-[14px] block w-full text-left !hover:underline !hover:decoration-[#22426e]"
                     href="/news-media"
                     onClick={() => setIsDrawerOpen(false)}
                   >
@@ -230,7 +232,7 @@ export default function Navbar() {
               <NavigationMenuItem className="w-full">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="text-[#22426e] text-[14px] block w-full text-left"
+                    className="text-[#22426e] text-[14px] block w-full text-left !hover:underline !hover:decoration-[#22426e]"
                     href="/gallery"
                     onClick={() => setIsDrawerOpen(false)}
                   >
@@ -242,7 +244,7 @@ export default function Navbar() {
               <NavigationMenuItem className="w-full bg-transparent hover:underline">
                 <NavigationMenuLink asChild>
                   <Link
-                    className="text-[#22426e] text-[14px] block w-full text-left"
+                    className="text-[#22426e] text-[14px] block w-full text-left !hover:underline !hover:decoration-[#22426e]"
                     href="/blogs"
                     onClick={() => setIsDrawerOpen(false)}
                   >
