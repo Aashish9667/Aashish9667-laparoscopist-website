@@ -230,7 +230,10 @@ export default function Navbar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem className="w-full">
-                <NavigationMenuLink asChild>
+                <NavigationMenuLink
+                  className="!hover:underline underline-offset-2 !hover:decoration-[#22426e]"
+                  asChild
+                >
                   <Link
                     className="text-[#22426e] text-[14px] block w-full text-left !hover:underline !hover:decoration-[#22426e]"
                     href="/gallery"
@@ -241,7 +244,7 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-              <NavigationMenuItem className="w-full bg-transparent hover:underline">
+              <NavigationMenuItem className="w-full bg-transparent !hover:underline">
                 <NavigationMenuLink asChild>
                   <Link
                     className="text-[#22426e] text-[14px] block w-full text-left !hover:underline !hover:decoration-[#22426e]"
