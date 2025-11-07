@@ -7,91 +7,95 @@ import 'photoswipe/style.css';
 import { motion } from 'framer-motion';
 
 const pressImages = [
-  '/live-operative-workshop-1.png',
-  '/live-operative-workshop-2.png',
-  '/live-operative-workshop-3.png',
-  '/live-operative-workshop-4.png',
-  '/live-operative-workshop-5.png',
-  '/live-operative-workshop-6.png',
+  '/gallery/live/live-operative-workshop-1.png',
+  '/gallery/live/live-operative-workshop-2.png',
+  '/gallery/live/live-operative-workshop-3.png',
+  '/gallery/live/live-operative-workshop-4.png',
+  '/gallery/live/live-operative-workshop-5.png',
+  '/gallery/live/live-operative-workshop-6.png',
 ];
 
 const COLPOSCOPY = [
-  '/colpocopy-cme-cum-workshop-1.png',
-  '/colpocopy-cme-cum-workshop-2.png',
-  '/colpocopy-cme-cum-workshop-3.png',
-  '/colpocopy-cme-cum-workshop-4.png',
-  '/colpocopy-cme-cum-workshop-5.png',
-  '/colpocopy-cme-cum-workshop-6.png',
+  '/gallery/colposcopy/colpocopy-cme-cum-workshop-1.png',
+  '/gallery/colposcopy/colpocopy-cme-cum-workshop-2.png',
+  '/gallery/colposcopy/colpocopy-cme-cum-workshop-3.png',
+  '/gallery/colposcopy/colpocopy-cme-cum-workshop-4.png',
+  '/gallery/colposcopy/colpocopy-cme-cum-workshop-5.png',
+  '/gallery/colposcopy/colpocopy-cme-cum-workshop-6.png',
 ];
 
-const MIPH = ['/imph-1.png', '/imph-2.png'];
-const SAGES = ['/sages-1.png', '/sages-2.png', '/sages-3.png'];
-const AIIMS = ['/aiims.png'];
+const MIPH = ['/gallery/miph/imph-1.png', '/gallery/miph/imph-2.png'];
+const SAGES = [
+  '/gallery/sages/sages-1.png',
+  '/gallery/sages/sages-2.png',
+  '/gallery/sages/sages-3.png',
+];
+const AIIMS = ['/gallery/aiims/aiims.png'];
 
 const Videos = [
   {
     caption: 'CA Rectum-Laparoscopic colostomy',
-    src: '/CA-Rectum-Laparoscopic-colostomy.png',
+    src: '/gallery/videos/CA-Rectum-Laparoscopic-colostomy.png',
     videoUrl: 'https://www.youtube.com/watch?v=GHcogXI7lro',
   },
   {
     caption: 'Laparoscopic Appendicetomy',
-    src: '/Laparoscopic-Appendicetomy.png',
+    src: '/gallery/videos/Laparoscopic-Appendicetomy.png',
     videoUrl: 'https://www.youtube.com/watch?v=fD__NLI4N-s',
   },
   {
     caption: 'Laparoscopic-Myomectomy',
-    src: '/Laparoscopic-Myomectomy.png',
+    src: '/gallery/videos/Laparoscopic-Myomectomy.png',
     videoUrl: 'https://www.youtube.com/watch?v=rgfFTy3eOfA',
   },
   {
     caption: 'Laparoscopic Ovarian Dermoid',
-    src: '/Laparoscopic-Ovarian-Dermoid.png',
+    src: '/gallery/videos/Laparoscopic-Ovarian-Dermoid.png',
     videoUrl: 'https://www.youtube.com/watch?v=NzRC_U6Mcpc',
   },
   {
     caption: 'Laproscopic Splenectomy',
-    src: '/Laproscopic-Splenectomy.png',
+    src: '/gallery/videos/Laproscopic-Splenectomy.png',
     videoUrl: 'https://www.youtube.com/watch?v=5vdRETyl6ak',
   },
   {
     caption: 'Laparoscopic Ureterolithotomy',
-    src: '/Laparoscopic-Ureterolithotomy.png',
+    src: '/gallery/videos/Laparoscopic-Ureterolithotomy.png',
     videoUrl: 'https://www.youtube.com/watch?v=gw4lced-Tpg',
   },
   {
     caption: 'Lap Nephrectomy Rt',
-    src: '/Lap-Nephrectomy-Rt.png',
+    src: '/gallery/videos/Lap-Nephrectomy-Rt.png',
     videoUrl: 'https://www.youtube.com/watch?v=IpwBAyvK2jw',
   },
   {
     caption: 'Pyelolithotomy in ectopic Kidney',
-    src: '/Pyelolithotomy-in-ectopic-Kidney.png',
+    src: '/gallery/videos/Pyelolithotomy-in-ectopic-Kidney.png',
     videoUrl: 'https://www.youtube.com/watch?v=WKH90fwgZQY',
   },
   {
     caption: 'Liver-Laceration',
-    src: '/Liver-Laceration.png',
+    src: '/gallery/videos/Liver-Laceration.png',
     videoUrl: 'https://www.youtube.com/watch?v=yk5_rfx46Yk',
   },
   {
     caption: 'Laparoscopic-TEP ',
-    src: '/Laparoscopic-TEP (1).png',
+    src: '/gallery/videos/Laparoscopic-TEP (1).png',
     videoUrl: 'https://www.youtube.com/watch?v=a8UZUwnRFxc',
   },
   {
     caption: 'Tubal-Conservation-Right-Ectopic',
-    src: '/Tubal-Conservation-Right-Ectopic.png',
+    src: '/gallery/videos/Tubal-Conservation-Right-Ectopic.png',
     videoUrl: 'https://www.youtube.com/watch?v=0YDO6X_Ab2k',
   },
   {
     caption: 'Umbilical-Hernia',
-    src: '/Umbilical-Hernia.png',
+    src: '/gallery/videos/Umbilical-Hernia.png',
     videoUrl: 'https://www.youtube.com/watch?v=lUY8nLG2DsE',
   },
   {
     caption: 'Interesting-videos',
-    src: '/Interesting-videos.png',
+    src: '/gallery/videos/Interesting-videos.png',
     videoUrl: 'https://www.youtube.com/watch?v=hLLQ28Vb9YU',
   },
 ];

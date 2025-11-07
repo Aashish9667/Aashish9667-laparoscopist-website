@@ -55,7 +55,7 @@ export default function Navbar() {
                     <NavigationMenuLink asChild>
                       <Link
                         className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
-                        href="/laparoscopy-surgery"
+                        href="/services/laparoscopy-surgery"
                       >
                         Laparoscopy Surgery
                       </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
                     <NavigationMenuLink asChild>
                       <Link
                         className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
-                        href="/laparo-scopic-gynae-colposcopy"
+                        href="/services/laparoscopic-gynae"
                       >
                         Laparoscopic Gynae
                       </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
                     <NavigationMenuLink asChild>
                       <Link
                         className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium "
-                        href="/proctology"
+                        href="/services/proctology"
                       >
                         Proctology
                       </Link>
@@ -79,7 +79,7 @@ export default function Navbar() {
                     <NavigationMenuLink asChild>
                       <Link
                         className="block px-5 py-4 hover:bg-gray-50 !text-[#22426e] text-[14px] font-medium"
-                        href="/endourology"
+                        href="/services/endourology"
                       >
                         Endourology
                       </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     className="text-[14px] font-medium bg-transparent hover:text-[#22426e] !text-[#22426e]  hover:bg-transparent hover:underline hover:decoration-[#22426e] hover:decoration-1 hover:underline-offset-4"
-                    href="/news-and-media"
+                    href="/news-media"
                   >
                     News & Media
                   </Link>
@@ -169,7 +169,7 @@ export default function Navbar() {
                     <div className="absolute left-2 top-1 bottom-0  w-[1px]  bg-gray-100" />
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
-                      href="/laparoscopy-surgery"
+                      href="/services/laparoscopy-surgery"
                       onClick={() => setIsDrawerOpen(false)}
                     >
                       Laparoscopy Surgery
@@ -177,7 +177,7 @@ export default function Navbar() {
 
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
-                      href="/laparo-scopic-gynae-colposcopy"
+                      href="/services/laparoscopic-gynae"
                       onClick={() => setIsDrawerOpen(false)}
                     >
                       Laparoscopic Gynae
@@ -185,7 +185,7 @@ export default function Navbar() {
 
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
-                      href="/proctology"
+                      href="/services/proctology"
                       onClick={() => setIsDrawerOpen(false)}
                     >
                       Proctology
@@ -193,7 +193,7 @@ export default function Navbar() {
 
                     <Link
                       className="py-1 !text-[#22426e] ml-1 text-left hover:underline"
-                      href="/endourology"
+                      href="/services/endourology"
                       onClick={() => setIsDrawerOpen(false)}
                     >
                       Endourology
@@ -219,7 +219,7 @@ export default function Navbar() {
                 <NavigationMenuLink asChild>
                   <Link
                     className="text-[#22426e] text-[14px] block w-full text-left"
-                    href="/news-and-media"
+                    href="/news-media"
                     onClick={() => setIsDrawerOpen(false)}
                   >
                     News & Media

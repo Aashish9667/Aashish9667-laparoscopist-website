@@ -9,66 +9,107 @@ export default function Laparoscopic() {
       {/* Section 1 */}
       <div className="bg-[rgb(234,237,243)]">
         <div className=" md:py-20 md:p-6 p-6 py-18 mx-auto max-w-[1200px]">
-          <h1 className="font-semibold text-[32px] mb-6 md:leading-normal leading-tight">
-            Laparoscopic Gynae Colposcopy
-          </h1>
-          <p className="text-[16px] mb-6  text-[#00000099]">
-            Colposcopy is a specialized diagnostic procedure that allows detailed examination of the
-            uterine cervix using a colposcope. This instrument is critical in diagnosing
-            abnormalities in the lower genital tract by analyzing the surface epithelium, connective
-            tissue (stroma), and vascular patterns.
-          </p>
-
-          <h1 className="font-semibold text-[25px] mb-6 md:leading-normal leading-tight">
-            Evaluation Of Lower Genital Tract
-          </h1>
-          <ul className="list-disc pl-10 text-[16px] space-y-0 text-[#00000099]">
-            <li className="font-semibold md:ml-4">Lugol Iodine</li>
-            <p className="md:ml-4 md:leading-normal">
-              Lugol’s iodine is commonly used in medical examinations to help differentiate between
-              normal and abnormal epithelial cells. When applied, healthy epithelial cells
-              containing glycogen absorb the iodine and turn a dark brown color. In contrast, areas
-              that do not take up the dark brown stain indicate abnormal or potentially unhealthy
-              tissue. These suspicious regions can be identified instantly during the procedure and
-              are typically investigated further through cytology or biopsy for accurate diagnosis.
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <h1 className="font-semibold text-[32px] mb-6 md:leading-normal leading-tight">
+              Laparoscopic Gynae Colposcopy
+            </h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <p className="text-[16px] mb-6  text-[#00000099]">
+              Colposcopy is a specialized diagnostic procedure that allows detailed examination of
+              the uterine cervix using a colposcope. This instrument is critical in diagnosing
+              abnormalities in the lower genital tract by analyzing the surface epithelium,
+              connective tissue (stroma), and vascular patterns.
             </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <h1 className="font-semibold text-[25px] mb-6 md:leading-normal leading-tight">
+              Evaluation Of Lower Genital Tract
+            </h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <ul className="list-disc pl-10 text-[16px] space-y-0 text-[#00000099]">
+              <li className="font-semibold md:ml-4">Lugol Iodine</li>
+              <p className="md:ml-4 md:leading-normal">
+                Lugol’s iodine is commonly used in medical examinations to help differentiate
+                between normal and abnormal epithelial cells. When applied, healthy epithelial cells
+                containing glycogen absorb the iodine and turn a dark brown color. In contrast,
+                areas that do not take up the dark brown stain indicate abnormal or potentially
+                unhealthy tissue. These suspicious regions can be identified instantly during the
+                procedure and are typically investigated further through cytology or biopsy for
+                accurate diagnosis.
+              </p>
 
-            <li className="font-semibold md:ml-4">Acetic Acid</li>
-            <p className="md:ml-4  md:leading-tight">
-              Applying 3–5% acetic acid highlights metaplastic and dysplastic areas, turning them
-              into distinct aceto-white regions.
-            </p>
+              <li className="font-semibold md:ml-4">Acetic Acid</li>
+              <p className="md:ml-4  md:leading-tight">
+                Applying 3–5% acetic acid highlights metaplastic and dysplastic areas, turning them
+                into distinct aceto-white regions.
+              </p>
 
-            <li className="font-semibold md:ml-4">Green filter</li>
-            <p className="md:ml-4 md:leading-tight">
-              Improves visualization by absorbing red tones, making blood vessels appear as black
-              streaks for better assessment.
-            </p>
+              <li className="font-semibold md:ml-4">Green filter</li>
+              <p className="md:ml-4 md:leading-tight">
+                Improves visualization by absorbing red tones, making blood vessels appear as black
+                streaks for better assessment.
+              </p>
 
-            <li className="font-semibold md:ml-4">Directed Biopsy</li>
-            <p className="md:ml-4 md:leading-tight">
-              Tissue samples are collected from the most abnormal areas under colposcopic guidance
-              for accurate diagnosis. This is the gold standard for identifying cervical
-              pre-cancerous conditions.
-            </p>
-          </ul>
+              <li className="font-semibold md:ml-4">Directed Biopsy</li>
+              <p className="md:ml-4 md:leading-tight">
+                Tissue samples are collected from the most abnormal areas under colposcopic guidance
+                for accurate diagnosis. This is the gold standard for identifying cervical
+                pre-cancerous conditions.
+              </p>
+            </ul>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <h1 className="font-semibold text-[25px] mt-6 mb-6 ">Treatment Modalities</h1>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <ul className="list-disc pl-10 text-[16px] space-y-0 md:ml-4 md:leading-normal text-[#00000099]">
+              <li className="font-semibold">Cryocautery</li>
+              <p>
+                This procedure involves freezing abnormal tissue to -20°C or lower using a
+                cryoprobe, resulting in tissue destruction (cryo-necrosis). The dead tissue is
+                naturally replaced with healthy tissue.
+              </p>
 
-          <h1 className="font-semibold text-[25px] mt-6 mb-6 ">Treatment Modalities</h1>
-          <ul className="list-disc pl-10 text-[16px] space-y-0 md:ml-4 md:leading-normal text-[#00000099]">
-            <li className="font-semibold">Cryocautery</li>
-            <p>
-              This procedure involves freezing abnormal tissue to -20°C or lower using a cryoprobe,
-              resulting in tissue destruction (cryo-necrosis). The dead tissue is naturally replaced
-              with healthy tissue.
-            </p>
-
-            <li className="font-semibold">LEEP (Loop Electrosurgical Excision Procedure)</li>
-            <p>
-              A minimally invasive procedure to remove deeper cervical lesions. The excised tissue
-              can be sent for histopathological examination, serving as both a diagnostic and
-              therapeutic method.
-            </p>
-          </ul>
+              <li className="font-semibold">LEEP (Loop Electrosurgical Excision Procedure)</li>
+              <p>
+                A minimally invasive procedure to remove deeper cervical lesions. The excised tissue
+                can be sent for histopathological examination, serving as both a diagnostic and
+                therapeutic method.
+              </p>
+            </ul>
+          </motion.div>
         </div>
       </div>
       {/* Section 2 */}

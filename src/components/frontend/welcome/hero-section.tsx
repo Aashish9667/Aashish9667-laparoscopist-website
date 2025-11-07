@@ -51,25 +51,48 @@ export default function Homehero() {
       >
         {/* Left Content */}
         <div className="grid grid-col justify-center md:justify-start px-2 md:pb-35 pb-0">
-          <h1 className="text-[#132238] text-[27px] md:text-[40px] leading-tight font-bold md:mb-16 mt-15 md:mt-25">
+          <motion.h1
+            className="block md:hidden text-[#132238] text-[27px] leading-tight font-bold mt-15"
+            initial={{ opacity: 0, y: -80 }}
+            transition={{ duration: 0.6 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            Redefining Surgical Excellence with Advanced Laparoscopic Solutions
+          </motion.h1>
+          <h1 className="hidden md:block text-[#132238] text-[27px] md:text-[40px] leading-tight font-bold md:mb-16 mt-15 md:mt-25">
             Redefining Surgical Excellence with Advanced Laparoscopic Solutions
           </h1>
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            transition={{ duration: 0.6 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div className="relative md:hidden block w-full mt-8">
+              <Image
+                alt="Doctors"
+                className="object-contain"
+                height={600}
+                src="/Medhavi-and-monika-Tomar-photo-for-website-1.png (1).avif"
+                width={600}
+                priority
+              />
+            </div>
 
-          <div className="relative md:hidden block w-full mt-8">
-            <Image
-              alt="Doctors"
-              className="object-contain"
-              height={600}
-              src="/Medhavi-and-monika-Tomar-photo-for-website-1.png (1).avif"
-              width={600}
-              priority
-            />
-          </div>
+            <div className="mb-10 md:hidden block">
+              <p className="bg-[#132238] text-white font-semibold text-[23px] md:p-3 md:pr-5 px-2 py-3 rounded-r-3xl w-full sm:w-auto md:w-fit">
+                Dr. Medhavi and Dr. Monika Tomar
+              </p>
+              <p className="text-[#000000ee] bg-white font-normal text-[16px] rounded-br-2xl px-3 py-1 w-fit leading-[26px]">
+                Laparoscopic Surgeons
+              </p>
+            </div>
+          </motion.div>
+          {/* only on md: screen */}
           <motion.div
             animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="mb-10">
+            <div className="mb-10 hidden md:block">
               <p className="bg-[#132238] text-white font-semibold text-[23px] md:p-3 md:pr-5 px-2 py-3 rounded-r-3xl w-full sm:w-auto md:w-fit">
                 Dr. Medhavi and Dr. Monika Tomar
               </p>

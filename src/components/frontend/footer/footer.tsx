@@ -3,11 +3,27 @@ import * as React from 'react';
 import Image from 'next/image';
 import { Poppins } from 'next/font/google';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
+import Link from 'next/link';
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
 });
+
+const services = [
+  { name: 'Laparoscopy Surgery', url: '/services/laparoscopy-surgery' },
+  { name: 'Laparoscopic Gynae', url: '/services/laparoscopic-gynae' },
+  { name: 'Proctology', url: '/services/proctology' },
+  { name: 'Endourology', url: '/services/endourology' },
+];
+
+const navigation = [
+  { name: 'About Us', url: '/about-us' },
+  { name: 'News & Media', url: '/news-media' },
+  { name: 'Gallery', url: '/gallery' },
+  { name: 'Dr. Medhavi Tomar', url: 'dr-medhavi-tomar' },
+  { name: 'Dr. Monika Tomar', url: 'dr-monika-tomar' },
+];
 
 export default function Footer() {
   return (
@@ -18,13 +34,15 @@ export default function Footer() {
           {/*  Left Section: Logo + Social Icons */}
           <div className="flex flex-col space-y-4 justify-start items-start">
             <div className="md:relative">
-              <Image
-                alt="Laparoscopic Surgeons Logo"
-                className="object-contain w-40 h-auto md:w-120 align-top md:-mt-8 md:-ml-6 -ml-4"
-                height={176}
-                src="/Laparoscopic-Surgeons-Logo.webp.avif"
-                width={249}
-              />
+              <Link href="/">
+                <Image
+                  alt="Laparoscopic Surgeons Logo"
+                  className="object-contain w-40 h-auto md:w-120 align-top md:-mt-8 md:-ml-6 -ml-4"
+                  height={176}
+                  src="/Laparoscopic-Surgeons-Logo.webp.avif"
+                  width={249}
+                />
+              </Link>
             </div>
             <div className="flex space-x-6 md:-mt-4 text-[20px] lg:ml-5">
               <a
@@ -54,44 +72,42 @@ export default function Footer() {
             <div className="flex flex-col space-y-1 space-x-1 items-start break-words">
               <h3 className="font-semibold text-[#000000de] text-[16px] mb-2">Our Services</h3>
 
-              {['Laparoscopy Surgery', 'Laparoscopic Gynae', 'Proctology', 'Endourology'].map(
-                (service) => (
-                  <a
-                    className="text-[#00000099] text-[14px] hover:underline hover:text-[#2D5289]"
-                    href="(#)"
-                    key={service}
-                  >
-                    {service}
-                  </a>
-                ),
-              )}
+              {services.map((item) => (
+                <a
+                  className="text-[#00000099] text-[14px] hover:underline hover:text-[#2D5289]"
+                  href={item.url}
+                  key={item.name}
+                >
+                  {item.name}
+                </a>
+              ))}
             </div>
 
             {/* Column 2 */}
             <div className="flex flex-col space-y-1 space-x-1 items-start break-words">
               <h3 className="font-semibold text-[#000000de] text-[16px] mb-2">Quick Links</h3>
 
-              {['About Us', 'News & Media', 'Gallery', 'Dr. Medhavi Tomar', 'Dr. Monika Tomar'].map(
-                (link) => (
-                  <a
-                    className="text-[#00000099] text-[14px] hover:underline hover:text-[#2D5289]"
-                    href="(#)"
-                    key={link}
-                  >
-                    {link}
-                  </a>
-                ),
-              )}
+              {navigation.map((item) => (
+                <a
+                  className="text-[#00000099] text-[14px] hover:underline hover:text-[#2D5289]"
+                  href={item.url}
+                  key={item.name}
+                >
+                  {item.name}
+                </a>
+              ))}
             </div>
 
             {/* Column 3 */}
             <div className="flex flex-col space-y-1 space-x-1 items-start">
               <h3 className="font-semibold text-[#000000de] text-[16px] mb-2">Address</h3>
-              <p className="text-[#00000099] text-[14px] leading-5">
-                M-2, Jawahar Quarters,
-                <br />
-                Meerut, (U.P.) India. 250001.
-              </p>
+              <Link href="https://maps.app.goo.gl/uPNkQhp6CxB9dpxp8" target="_blank">
+                <p className="text-[#00000099] text-[14px] leading-5">
+                  M-2, Jawahar Quarters,
+                  <br />
+                  Meerut, (U.P.) India. 250001.
+                </p>
+              </Link>
 
               <h4 className="font-semibold text-[#000000de] mt-3">Inquiries</h4>
               <div className="text-[#00000099] text-[14px] leading-6 break-all">

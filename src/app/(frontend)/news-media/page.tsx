@@ -9,16 +9,16 @@ import 'photoswipe/style.css'; //
 import { motion } from 'framer-motion';
 
 const pressImages = [
-  '/press-release-1.png',
-  '/press-release-2.png',
-  '/press-release-3.png',
-  '/press-release-4.png',
-  '/press-release-5.png',
-  '/press-release-6.png',
-  '/press-release-7.png',
-  '/press-release-8.png',
-  '/press-release-9.png',
-  '/press-release-10.png',
+  '/news-media/press-release-1.png',
+  '/news-media/press-release-2.png',
+  '/news-media/press-release-3.png',
+  '/news-media/press-release-4.png',
+  '/news-media/press-release-5.png',
+  '/news-media/press-release-6.png',
+  '/news-media/press-release-7.png',
+  '/news-media/press-release-8.png',
+  '/news-media/press-release-9.png',
+  '/news-media/press-release-10.png',
 ];
 const newsItems = [
   'Delivered a talk on “Laparo-endoscopic Single Site Surgery (LESS) –An Indian experience“ in North Zone-Asicon at AIIMS New Delhi on 25-01-200.',
