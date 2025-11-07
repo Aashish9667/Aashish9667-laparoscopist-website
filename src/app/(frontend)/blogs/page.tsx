@@ -20,7 +20,7 @@ const pressImages = [
     description:
       'Laparoscopic surgery is a minimally invasive technique that typically offers faster recovery and less pain compared to traditional open surgery. However, proper care during the post-surgery recovery phase is crucial to ensure optimal healing and avoid complications. This article provides detailed recovery after laparoscopic surgery tips to help patients heal faster and return to normal…',
     link: '/press-release/recovery-tips',
-    src: '/WhatsApp-Image-2025-09-29-at-2.06.35-PM.jpeg.avif',
+    src: '/blog/WhatsApp-Image-2025-09-29-at-2.06.35-PM.jpeg.avif',
     title: 'Post-Surgery Recovery Tips: How to Heal Faster After Laparoscopy',
   },
   {
@@ -28,7 +28,7 @@ const pressImages = [
     description:
       'Laparoscopic surgery has revolutionized modern surgical techniques, offering patients minimally invasive alternatives to traditional open surgery. Among its variants, two key types stand out: Single-Incision Laparoscopic Surgery (SILS) and Multi-Port Laparoscopic Surgery (MPL). Understanding the differences, benefits, and considerations of these options is essential for patients considering laparoscopic procedures. This article delves into single-incision vs multi-port…',
     link: '/press-release/laparoscopy-guide',
-    src: '/WhatsApp-Image-2025-09-29-at-1.28.29-PM.jpeg.avif',
+    src: '/blog/WhatsApp-Image-2025-09-29-at-1.28.29-PM.jpeg.avif',
     title: 'Single-Incision vs. Multi-Port Laparoscopic Surgery: What Patients Should Know',
   },
   {
@@ -36,7 +36,7 @@ const pressImages = [
     description:
       'Rectal prolapse is a distressing condition where the rectum slips out of its normal position, leading to discomfort, pain, and sometimes even social embarrassment. Thankfully, modern surgical techniques like Laparoscopic Rectopexy offer an effective, safe, and minimally invasive solution for patients dealing with this condition. This article provides a complete guide to the procedure, its…',
     link: '/press-release/liver-treatment',
-    src: '/How-Laparoscopic-Surgery-is-Transforming-Pancreatic-Cancer-Treatment-2.png',
+    src: '/blog/How-Laparoscopic-Surgery-is-Transforming-Pancreatic-Cancer-Treatment-2.png',
     title: 'What is Laparoscopic Rectopexy? A Complete Guide to the Procedure',
   },
   {
@@ -44,7 +44,7 @@ const pressImages = [
     description:
       'Pancreatic cancer is one of the most challenging cancers to diagnose and treat due to its late presentation and complex location in the body. Traditional open surgery for pancreatic cancer often involves large incisions, significant blood loss, and prolonged recovery times. However, with the advancement of Laparoscopic Surgery, patients now have access to a safer,… ',
     link: '/press-release/single-vs-multi-port',
-    src: '/How-Laparoscopic-Surgery-is-Transforming-Pancreatic-Cancer-Treatment.png',
+    src: '/blog/How-Laparoscopic-Surgery-is-Transforming-Pancreatic-Cancer-Treatment.png',
     title: 'How Laparoscopic Surgery is Transforming Pancreatic Cancer Treatment',
   },
   {
@@ -52,7 +52,7 @@ const pressImages = [
     description:
       'When it comes to Liver Abscess Treatment, accuracy, safety, and rapid recovery are paramount. Traditional open surgeries are being replaced by minimally invasive techniques like laparoscopic surgery, setting new benchmarks for patient care. Understanding Liver Abscess and Its Challenges A liver abscess is a pus-filled cavity in the liver caused by bacterial, parasitic, or fungal infections. Typical symptoms…',
     link: '/press-release/pre-surgery-consultation',
-    src: '/Blue-and-White-Simple-Medical-Center-Banner.jpg',
+    src: '/blog/Blue-and-White-Simple-Medical-Center-Banner.jpg',
     title:
       'How Laparoscopic Surgery Offers a Safe and Effective Solution for Liver Abscess Treatment',
   },
@@ -61,7 +61,7 @@ const pressImages = [
     description:
       'Cervical health is a critical aspect of a woman’s overall well-being. Early detection of cervical issues can make a life-saving difference, especially when it comes to preventing or managing serious conditions like cervical cancer. One advanced diagnostic technique gaining importance is Laparoscopic Gynae Colposcopy. In this blog, Dr. Medhavi Tomar and Dr. Monika Singh Tomar,…',
     link: '/press-release/gallbladder-removal',
-    src: '/WhatsApp-Image-2025-07-09-at-8.01.50-PM.jpeg',
+    src: '/blog/WhatsApp-Image-2025-07-09-at-8.01.50-PM.jpeg',
     title: 'How Laparoscopic Gynae Colposcopy Helps in Early Detection of Cervical Problems',
   },
   {
@@ -69,7 +69,7 @@ const pressImages = [
     description:
       'When your child needs surgery, it’s natural to feel anxious. One of the most common childhood emergencies is appendicitis, often requiring surgical removal of the appendix. Today, Laparoscopic Appendectomy, a form of Minimally Invasive Surgery, has become the preferred choice for children due to its safety and faster recovery. In this blog, Dr. Medhavi Tomar…',
     link: '/press-release/cancer-treatment',
-    src: '/WhatsApp-Image-2025-07-09-at-7.51.02-PM-1.jpeg',
+    src: '/blog/WhatsApp-Image-2025-07-09-at-7.51.02-PM-1.jpeg',
     title: 'Understanding Laparoscopic Appendectomy in Children: What Parents Should Expect',
   },
   {
@@ -77,7 +77,7 @@ const pressImages = [
     description:
       'Laparoscopic surgery, also called keyhole surgery or Minimally Invasive Surgery (MIS), has revolutionized patient care. With smaller cuts, faster healing, and less pain compared to traditional open surgery, it’s no surprise patients in Meerut are increasingly opting for this advanced technique. But before you proceed, it’s crucial to feel confident and fully informed. Whether it’s… ',
     link: '/press-release/hernia-repair',
-    src: '/WhatsApp-Image-2025-07-09-at-7.51.20-PM.jpeg',
+    src: '/blog/WhatsApp-Image-2025-07-09-at-7.51.20-PM.jpeg',
     title: '10 Questions to Ask Your Surgeon Before Laparoscopic Surgery',
   },
   {
@@ -85,7 +85,7 @@ const pressImages = [
     description:
       'In the rapidly advancing field of modern medicine, laparoscopy has emerged as a revolutionary surgical technique. Offering minimally…',
     link: '/press-release/diet-after-surgery',
-    src: '/unlocking-the-benefits-of-laproscopy.webp',
+    src: '/blog/unlocking-the-benefits-of-laproscopy.webp',
     title:
       'Discover the Life-Changing Benefits of Laparoscopy: When to See a Doctor and Why It’s Revolutionising Surgery',
   },
@@ -94,7 +94,7 @@ const pressImages = [
     description:
       'Introduction: Laparoscopic surgery, often referred to as minimally invasive surgery, has revolutionized the way surgeons approach a variety… ',
     link: '/press-release/exercise-routine',
-    src: '/laproscopic-surgery-and-its-benifits-to-patients.webp',
+    src: '/blog/laproscopic-surgery-and-its-benifits-to-patients.webp',
     title: 'Common Conditions Treated with Laparoscopic Surgery and How It Benefits Patients',
   },
   {
@@ -102,7 +102,7 @@ const pressImages = [
     description:
       'In today’s fast-paced world, medical breakthroughs are transforming the way surgeries are performed, and leading the charge is Dr. Medhavi…',
     link: '/press-release/pain-management',
-    src: '/advancing-healthcare-with-precision.webp',
+    src: '/blog/advancing-healthcare-with-precision.webp',
     title:
       'Revolutionizing Surgery with Precision: Meet Dr. Medhavi Tomar, India’s Leading Laparoscopic Surgeon',
   },
@@ -111,7 +111,7 @@ const pressImages = [
     description:
       'Hernias are a common condition affecting millions of people worldwide, causing discomfort, pain, and in some cases, complications that…',
     link: '/press-release/appendectomy',
-    src: '/laproscopic-hernia-surgery.webp',
+    src: '/blog/laproscopic-hernia-surgery.webp',
     title: 'The Best Option for Hernia Repair: Why Laparoscopic Surgery is Leading the Way',
   },
 ];
