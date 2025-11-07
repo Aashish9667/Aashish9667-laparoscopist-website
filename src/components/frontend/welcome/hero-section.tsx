@@ -109,7 +109,7 @@ export default function Homehero() {
               alt="Doctors"
               className="object-contain md:object-bottom"
               height={600}
-              src="/welcome/Medhavi-and-monika-Tomar-photo-for-website-1.png"
+              src="/welcome/Medhavi-and-monika-Tomar-photo-for-website.png"
               width={600}
               priority
             />
