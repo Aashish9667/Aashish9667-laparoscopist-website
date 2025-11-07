@@ -555,7 +555,7 @@ export default function LaparoscopicSurgery() {
                 alt="Surgery"
                 className="rounded-lg w-full h-auto object-cover "
                 height={600}
-                src="/Single-Incision-Laparoscopic-Surgery.png"
+                src="/services/Single-Incision-Laparoscopic-Surgery.png"
                 width={800}
               />
             </div>
@@ -836,7 +836,7 @@ export default function LaparoscopicSurgery() {
                     alt="Surgery"
                     className="rounded-lg object-contain w-fit aspect-[300/240]  sm:max-w-[400px] mx-auto"
                     height={600} // required
-                    src="/service/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
+                    src="/services/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
                     width={800} // required
                   />
                 </div>
@@ -879,7 +879,7 @@ export default function LaparoscopicSurgery() {
                   alt="Surgery"
                   className="rounded-sm w-full h-auto object-cover max-w-[300px] "
                   height={600}
-                  src="/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
+                  src="/services/Haematoma-_-Haemoperitonium-Drainage-768x768.png"
                   width={800}
                 />
               </div>
@@ -1105,7 +1105,7 @@ export default function LaparoscopicSurgery() {
                   alt="Surgery"
                   className="rounded-lg w-full h-auto object-cover "
                   height={600}
-                  src="/Laparoscopy_for_morbid_Obesity.png"
+                  src="/services/Laparoscopy_for_morbid_Obesity.png"
                   width={800}
                 />
               </div>

@@ -19,17 +19,17 @@ export default function Whychooseus() {
   const procedures: Procedure[] = [
     {
       desc: 'Specializing in laparoscopic, endoscopic, and microscopic surgeries, the hospital offers cutting-edge treatments with minimal recovery time and reduced post-operative pain.',
-      img: '/advanced-minimally-invasive-procedures.jpg (1).avif',
+      img: '/welcome/advanced-minimally-invasive-procedures.jpg (1).avif',
       title: 'Advanced Minimally Invasive Procedures',
     },
     {
       desc: 'The center provides a wide range of surgical specialties, including general surgery, urology, gynecology, and pediatric surgeries, ensuring comprehensive care for various medical needs.',
-      img: '/comprehensive-surgical-services-1024x683.jpg.avif',
+      img: '/welcome/comprehensive-surgical-services-1024x683.jpg.avif',
       title: 'Comprehensive Surgical Services',
     },
     {
       desc: 'Equipped with two modern operation theatres and a 22-bed facility, the hospital ensures high standards of patient care and comfort, with accommodations ranging from deluxe rooms to general wards.',
-      img: '/state-of-the-art-facilities-1-1024x683.jpg.avif',
+      img: '/welcome/state-of-the-art-facilities-1-1024x683.jpg.avif',
       title: 'State-of-the-Art Facilities',
     },
   ];

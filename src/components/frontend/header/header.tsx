@@ -35,7 +35,7 @@ export default function Navbar() {
               alt="Logo"
               className="object-fill max-w-[150px] cursor-pointer  w-full"
               height={50}
-              src="/Laparoscopic-Surgeons-Logo.webp.avif"
+              src="/logo/Laparoscopic-Surgeons-Logo.webp.avif"
               width={150}
             />
           </Link>

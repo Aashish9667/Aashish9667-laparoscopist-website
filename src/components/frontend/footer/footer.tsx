@@ -39,7 +39,7 @@ export default function Footer() {
                   alt="Laparoscopic Surgeons Logo"
                   className="object-contain w-40 h-auto md:w-120 align-top md:-mt-8 md:-ml-6 -ml-4"
                   height={176}
-                  src="/Laparoscopic-Surgeons-Logo.webp.avif"
+                  src="/logo/Laparoscopic-Surgeons-Logo.webp.avif"
                   width={249}
                 />
               </Link>
