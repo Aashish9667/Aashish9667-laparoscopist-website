@@ -13,7 +13,7 @@ import {
   NavigationMenuLink,
 } from '@/components/ui/navigation-menu';
 import { Button } from '@/components/ui/button';
-import { ChevronUp } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -133,7 +133,7 @@ export default function Navbar() {
             type="button"
           >
             Services
-            <ChevronUp
+            <ChevronDown
               className={`transition-transform duration-900 ${showServices ? 'rotate-180' : 'rotate-0'} text-[#22426e] size-3`}
               strokeWidth={4}
             />
