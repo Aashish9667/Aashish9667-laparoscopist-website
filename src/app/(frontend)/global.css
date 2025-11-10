@@ -162,7 +162,9 @@
   color: black !important; 
 }
 
-
+[data-radix-popper-content-wrapper] {
+  border: 0 !important;
+}
 
 
    

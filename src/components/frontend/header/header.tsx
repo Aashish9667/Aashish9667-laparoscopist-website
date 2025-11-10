@@ -77,7 +77,7 @@ export default function Navbar() {
                   Services
                 </NavigationMenuTrigger>
                 <div className="rounded-none">
-                  <NavigationMenuContent className="!bg-white data-[state=open]:!rounded-none data-[state=open]:!shadow-2xl !border-0 !p-0 min-w-[220px]">
+                  <NavigationMenuContent className="!bg-white data-[state=open]:!rounded-none data-[state=open]:!shadow-2xl  data-[state=open]:!border-0 !border-0 !p-0 min-w-[220px]">
                     {desktopServices.map((item) => (
                       <NavigationMenuLink key={item.href} asChild>
                         <Link
